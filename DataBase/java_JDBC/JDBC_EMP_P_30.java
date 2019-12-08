@@ -29,7 +29,7 @@ public class JDBC_EMP_P_30 {
 			// conn.setAutoCommit(false); //자동 커밋을 거짓으로 바꿔놓음.
 
 			//인스턴스 1번 생성
-			EMP_DAO_P30 empdao = EMP_DAO_P30.getInstance();
+			EMP_DAO_P_30 empdao = EMP_DAO_P_30.getInstance();
 			
 			//데이터 입력, 출력, 수정, 삭제 메서드 실행
 			
