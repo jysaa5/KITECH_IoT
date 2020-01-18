@@ -18,7 +18,7 @@
 			<li class="nav-item"><a class="nav-link" href="<c:url value ="/member/insert"/>">회원가입</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">회원로그인</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">회원로그아웃</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">회원리스트</a></li>
+			<li class="nav-item"><a class="nav-link" href="<c:url value ="/member/list"/>">회원리스트</a></li>
 
 			<!-- 큰 메뉴의 작은 메뉴들 -->
 			<li class="nav-item dropdown">

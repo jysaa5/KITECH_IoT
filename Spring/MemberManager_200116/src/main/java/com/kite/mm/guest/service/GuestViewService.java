@@ -17,7 +17,7 @@ public class GuestViewService {
 	//인터페이스 
 	private GuestDao dao;
 	
-	//getArticle: 게시글 번호를 반으면 조회하여 찾아주는 메서드
+	//getArticle: 게시글 번호를 받으면 조회하여 찾아주는 메서드
 	public GuestArticleVo getArticle(int idx) {
 
 		//인터페이스 구현, SQL문 실행
