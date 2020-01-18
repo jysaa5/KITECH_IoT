@@ -44,26 +44,31 @@
 	</select>
 
 	<!--조회: idx값을 전달해서 조회 -->
-	<select id="selectGuestByIdx" resultMap="MemberInfo">
+	<select id="selectMemberByIdx" resultMap="MemberInfo">
 	
-		select * from GUESTBOOK where idx=#{idx}
+		select * from OPMEMBER where idx=#{idx}
 	
 	</select>
 
 	<!-- //////////////수정/////////////// -->
-	<!--수정: idx값을 전달해서 수정 -->
-	<update id="editArticle" parameterType="com.kite.mm.guest.domain.WriteRequest">
+	<!--수정: idx값을 전달해서 수정, 이메일(아이디)는 수정하지 않고 다른 것은 수정가능 하도록 한다. -->
+	<update id="editMember" parameterType="com.kite.mm.member.domain.MemberRequest">
 
-		update GUESTBOOK set title = #{title}, content=#{content}, editdate = now() where idx=#{idx}
+		update OPMEMBER set uname = #{uname}, upw=#{upw}, gender=#{gender}, byear=#{byear}, uphoto=#{uphoto} where idx=#{idx}
 		
 	</update>
 	
 	<!-- //////////////삭제/////////////// -->
-	<delete id="deleteArticle" parameterType="com.kite.mm.guest.domain.WriteRequest"> 
+	<delete id="deleteMember" parameterType="com.kite.mm.member.domain.MemberRequest"> 
 	
-	delete from GUESTBOOK where idx=#{idx}
+	delete from OPMEMBER where idx=#{idx}
 	
 	</delete>
 	
-
+	<!-- //////////////로그인/////////////// -->
+	<select id="loginMember" resultMap="MemberInfo">
+	
+		select * from OPMEMBER where uemail=#{uemail} AND upw=#{upw}
+	
+	</select>
 </mapper>

@@ -40,4 +40,4 @@ public class MemberInsertController {
 		return "member/insert";
 	}
 	
-}//GusetWriteController 컨트롤러 클래스 끝
+}//MemberInsertController 컨트롤러 클래스 끝

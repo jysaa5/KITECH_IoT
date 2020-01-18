@@ -45,41 +45,44 @@ margin: 10px;
 		</div>
 
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">회원가입 양식 작성</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">회원정보 수정 작성</h6>
 			<div class="media text-muted pt-3">
 				
 				<form method ="post" id= "form">
-				
+				<input type="hidden" name ="idx" value="${member.idx}">
 					<div class="form-group" >
 				 <label for="uname"> 이름</label>
-				 <input type="text" class="form-control" id="uname" name ="uname" required>
+				 <input type="text" class="form-control" id="uname" name ="uname" required value="${member.uname}">
 				</div>
 				
 				<div class="form-group" >
 				 <label for="uemail"> 이메일(아이디)</label>
-				 <input type="email" class="form-control" id="uemail" name ="uemail" required>
-				 이메일(아이디) 중복확인<input type="checkbox" id="idcheck"><span id="idchk_msg"></span>
+				 <input type="email" class="form-control" id="uemail" name ="uemail" readonly value="${member.uemail}">
+				 <!-- 이메일(아이디) 중복확인<input type="checkbox" id="idcheck"><span id="idchk_msg"></span> -->
 				</div>
 				
 				<div class="form-group" >
 				 <label for="password">비밀번호</label>
-				 <input type="password" id="upw" class="form-control" name ="upw" required>
+				 <input type="password" id="upw" class="form-control" name ="upw" required value="${member.upw}">
 				</div>
 				
 				<div class="form-group" >
 				 <label for="gender">성별</label><br>
-				 남성<input type="radio" class="gender" id="gender1" name ="gender" value="m" checked="checked"><br>
+				 남성<input type="radio" class="gender" id="gender1" name ="gender" value="m"><br>
 				 여성<input type="radio" class="gender" id="gender2"  name ="gender" value="w">
+				 <br> 이전 정보(m = 남성 /w = 여성): ${member.gender}
 				</div>
 				
 				<div class="form-group" >
 				 <label for="byear">태어난 년도</label>
 				 <select id="byear" class="form-control" name="byear"></select>
+				 <br> 이전 정보: ${member.byear}
 				</div>
 				
 				<div class="form-group" >
 				 <label for="uphoto">사진</label>
 				 <input type="file" id="uphoto" class="form-control" name ="uphoto">
+				 <br> 이전 정보: ${member.uphoto}
 				</div>
 				
 				
@@ -133,12 +136,12 @@ margin: 10px;
 				return false; //submit이 처리되지 않게 한다.
 			}
 
-			var f_idcheck = $('#idcheck');
+			/* var f_idcheck = $('#idcheck');
 			if (!f_idcheck.prop('checked')) {
 				alert('사용자의 아이디가 사용가능 유무를 체크해주셔야합니다.');
 				return false;
 			}
-
+ */
 			$.ajax({
 
 				url: 'reg_ajax',

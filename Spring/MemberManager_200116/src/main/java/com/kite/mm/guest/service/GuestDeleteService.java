@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.kite.mm.guest.dao.GuestDao;
 import com.kite.mm.guest.domain.WriteRequest;
 
-//GuestDeleteService: 회원정보를 삭제하는 sql문을 실행하는 서비스 클래스 (게시글 삭제 기능)
+//GuestDeleteService: 게시글을 삭제하는 sql문을 실행하는 서비스 클래스 (게시글 삭제 기능)
 @Service
 public class GuestDeleteService {
 	

@@ -16,7 +16,7 @@
 			<li class="nav-item"><a class="nav-link" href="<c:url value ="/"/>">HOME
 			<span class="sr-only">(current)</span></a></li>
 			<li class="nav-item"><a class="nav-link" href="<c:url value ="/member/insert"/>">회원가입</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">회원로그인</a></li>
+			<li class="nav-item"><a class="nav-link" href="<c:url value ="/member/login"/>">회원로그인</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">회원로그아웃</a></li>
 			<li class="nav-item"><a class="nav-link" href="<c:url value ="/member/list"/>">회원리스트</a></li>
 

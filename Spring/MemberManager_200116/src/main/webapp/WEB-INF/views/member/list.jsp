@@ -56,10 +56,10 @@
 						<td>${member.gender}</td>
 						<td>${member.byear}</td>
 						<td>${member.uphoto}</td>
-						<%-- <td>
-						<a href="<c:url value ="/guest/edit?idx=${article.idx}"/>" class="btn btn-primary">수정</a>
-						<a href="<c:url value ="/guest/delete?idx=${article.idx}"/>" class="btn btn-danger">삭제</a>
-						</td> --%>
+						 <td>
+						<a href="<c:url value ="/member/edit?idx=${member.idx}"/>" class="btn btn-primary">수정</a>
+						<a href="<c:url value ="/member/delete?idx=${member.idx}"/>" class="btn btn-danger">삭제</a>
+						</td> 
 					</tr>
 				</c:forEach>
 				<!-- 리스트 끝-->

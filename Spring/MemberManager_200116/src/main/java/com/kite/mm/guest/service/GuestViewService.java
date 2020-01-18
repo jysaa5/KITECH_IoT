@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.kite.mm.guest.dao.GuestDao;
 import com.kite.mm.guest.domain.GuestArticleVo;
 
-//GuestViewService: 회원 정보에서 idx와 일치하는 회원 정보를 가져다주는 서비스 클래스 (조회 기능)
+//GuestViewService: 게시물 정보에서 idx와 일치하는 게시물를 가져다주는 서비스 클래스 (조회 기능)
 @Service
 public class GuestViewService {
 

@@ -39,49 +39,26 @@ margin: 10px;
 		<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
 			<!-- <img class="mr-3" src="https://getbootstrap.com/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48"> -->
 			<div class="lh-100">
-				<h6 class="mb-0 text-white lh-100">회원가입</h6>
+				<h6 class="mb-0 text-white lh-100">로그인</h6>
 				<small>Since 2020</small>
 			</div>
 		</div>
 
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">회원가입 양식 작성</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">로그인</h6>
 			<div class="media text-muted pt-3">
 				
 				<form method ="post" id= "form">
-				
-					<div class="form-group" >
-				 <label for="uname"> 이름</label>
-				 <input type="text" class="form-control" id="uname" name ="uname" required>
-				</div>
-				
+				<input type="hidden" name="refererPage" value="${referer}">
 				<div class="form-group" >
 				 <label for="uemail"> 이메일(아이디)</label>
 				 <input type="email" class="form-control" id="uemail" name ="uemail" required>
-				 이메일(아이디) 중복확인<input type="checkbox" id="idcheck"><span id="idchk_msg"></span>
 				</div>
 				
 				<div class="form-group" >
 				 <label for="password">비밀번호</label>
 				 <input type="password" id="upw" class="form-control" name ="upw" required>
 				</div>
-				
-				<div class="form-group" >
-				 <label for="gender">성별</label><br>
-				 남성<input type="radio" class="gender" id="gender1" name ="gender" value="m" checked="checked"><br>
-				 여성<input type="radio" class="gender" id="gender2"  name ="gender" value="w">
-				</div>
-				
-				<div class="form-group" >
-				 <label for="byear">태어난 년도</label>
-				 <select id="byear" class="form-control" name="byear"></select>
-				</div>
-				
-				<div class="form-group" >
-				 <label for="uphoto">사진</label>
-				 <input type="file" id="uphoto" class="form-control" name ="uphoto">
-				</div>
-				
 				
 				<input type="submit" value="작성" class="btn btn-primary">
 			

@@ -16,4 +16,16 @@ public interface Member {
 	// 전체 멤버의 수
 	int selectMemberCount();
 
+	//회원 정보 수정
+	int editMember(MemberRequest request);
+
+	//회원 정보 조회
+	MemberRequest selectMemberByIdx(int idx);
+
+	//회원 정보 삭제
+	int deleteMember(int idx);
+
+	//회원 로그인 
+	String loginMember(MemberRequest request);
+
 }
