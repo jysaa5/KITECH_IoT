@@ -1,12 +1,13 @@
 package com.kite.mm.member.service;
 
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 import com.kite.mm.member.dao.Member;
 import com.kite.mm.member.domain.MemberRequest;
+
 
 //서비스 bean으로 등록하기 
 @Service
@@ -17,22 +18,19 @@ public class MemberLoginService {
 	private SqlSessionTemplate template;
 	
 	//인터페이스
-	private Member mdao;
+	private Member mDao;
 	
-	//login 메서드: 게시글을 작성하고 게시글 번호를 반환하는 메서드
-	public String login(MemberRequest request) {
+	//login 메서드: 로그인 폼을 작성하고 로그인 여부를 반환하는 메서드
+	public MemberRequest login(MemberRequest request){
+	
+		mDao = template.getMapper(Member.class);
 		
-		String logintry = "fail";
-		//인터페이스 구현, SQL문 실행
-		mdao = template.getMapper(Member.class);
+		MemberRequest userlogin = mDao.loginMember(request);
 		
-		
-		if(!mdao.loginMember(request).equals(null)) {
-			logintry = "success";
-		}
+		System.out.println(userlogin);
 		
 		
-		return logintry;
+		return userlogin;
+		
 	}
-	
 }

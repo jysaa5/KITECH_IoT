@@ -19,11 +19,16 @@ public class MemberInsertService {
 	//인터페이스
 	private Member mdao;
 	
-	//write 메서드: 게시글을 작성하고 게시글 번호를 반환하는 메서드
+	//insert 메서드: 회원정보를 작성하고 idx를 반환하는 메서드
 	public int insert(MemberRequest request) {
 		
 		//인터페이스 구현, SQL문 실행
 		mdao = template.getMapper(Member.class);
+		
+		
+		if(mdao.selectMemberByuemail(request.getUemail()) != null) {
+			return -1;
+		}
 		
 		return mdao.insertMember(request);
 	}

@@ -106,18 +106,18 @@ margin: 10px;
 		//회원가입시 빈 공란인 것을 체크하는 것.
 		$('#form').submit(function() {
 
-			var f_uemail = $('#uemail');
+			var f_uid = $('#uemail');
 
-			if (f_uemail.val().length < 1) {
+			if (f_uid.val().length < 1) {
 				alert('아이디(이메일) 데이터를 입력해야 합니다.');
-				f_uemail.focus();
+				f_uid.focus();
 				return false;
 			}
 
-			var f_upw = $('#upw');
-			if (f_upw.val().length < 1) {
+			var f_pw = $('#upw');
+			if (f_pw.val().length < 1) {
 				alert('비밀번호 입력은 필수 항목입니다.');
-				f_upw.focus();
+				f_pw.focus();
 				return false;
 			}
 
@@ -140,8 +140,8 @@ margin: 10px;
 			if (!f_idcheck.prop('checked')) {
 				alert('사용자의 아이디가 사용가능 유무를 체크해주셔야합니다.');
 				return false;
-			}
- */
+			} */
+
 			$.ajax({
 
 				url: 'reg_ajax',
@@ -223,9 +223,7 @@ margin: 10px;
 		});
 
 	});
-	
-	
-	</script>
+</script>
 
 	<!-- 메인 컨텐트 끝 -->
 

@@ -1,12 +1,14 @@
 package com.kite.mm.member.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.kite.mm.member.domain.MemberRequest;
-import com.kite.mm.member.service.MemberInsertService;
 import com.kite.mm.member.service.MemberLoginService;
 
 //MemberLoginController: 로그인 데이터를 보내는 컨트롤러 클래스
@@ -28,20 +30,23 @@ public class MemberLoginController {
 	//login 메서드: 작성한 로그인 폼을 DB에 저장하도록 서비스 클래스에게 전달하는 메서드
 	//커맨드형식 
 	@RequestMapping(method = RequestMethod.POST)
-	public String login(MemberRequest request) {
+	public String login(MemberRequest request, Model model, HttpSession httpsession ){
 		
 		//System.out.println(request);
 		//System.out.println("요청 idx: " + request.getIdx() );
 		
-		String result = service.login(request);
+		MemberRequest result = service.login(request);
 		boolean loginChk = false;
 		//System.out.println("결과: " + result );
 		//System.out.println("결과 idx: " + request.getIdx());
 		
-		if(result != "fail") {
+		if(result != null) {
+			httpsession.setAttribute("loginInfo", request);
 			loginChk = true;
-			
+			model.addAttribute("loginInfo", request);
 		}
+		
+		model.addAttribute("loginChk", loginChk);
 		
 		return "member/login";
 	}

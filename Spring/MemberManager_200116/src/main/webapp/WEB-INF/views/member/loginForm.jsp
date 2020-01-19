@@ -49,7 +49,6 @@ margin: 10px;
 			<div class="media text-muted pt-3">
 				
 				<form method ="post" id= "form">
-				<input type="hidden" name="refererPage" value="${referer}">
 				<div class="form-group" >
 				 <label for="uemail"> 이메일(아이디)</label>
 				 <input type="email" class="form-control" id="uemail" name ="uemail" required>
