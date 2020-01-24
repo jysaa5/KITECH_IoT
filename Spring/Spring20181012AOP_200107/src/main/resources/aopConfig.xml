@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean id="exeTimeAspect" class="aop.ExeTimeAspect" />
+	
+	<aop:config>
+		<aop:aspect id="measureAspect" ref="exeTimeAspect" >
+			<aop:pointcut id="publicMethod"
+			 	expression="execution(public * aop..*(..))" />
+			 	
+			<aop:around method="measure" pointcut-ref="publicMethod"/>
+		
+		</aop:aspect>
+		
+	</aop:config>
+	
+	
+	
+	
+	<bean id="cal1" class="aop.RecCalcurator" />
+	<bean id="cal2" class="aop.CalcuratorImp" />
+	
+	
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</beans>

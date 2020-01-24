@@ -20,7 +20,7 @@
 	<resources mapping="/resources/**" location="/resources/" />
 
 	<!-- 업로드 폴더 -->
-	<resources mapping="/upload/**" location="/upload/" />
+	<resources mapping="/uploadfile/**" location="/uploadfile/" />
 
 	<!-- 이미지, CSS, JavaScript -->
 	<resources mapping="/images/**" location="/images/" />
@@ -50,7 +50,7 @@
 		class="org.apache.commons.dbcp2.BasicDataSource"
 		p:driverClassName="com.mysql.jdbc.Driver"
 		p:url="jdbc:mysql://localhost:3306/project?characterEncoding=UTF-8&amp;serverTimezone=UTC"
-		p:username="kite" p:password="test1111" />
+		p:username="kite" p:password="kite1111" />
 
 	<!-- JdbcTemplate 빈등록 -->
 	<!-- <beans:bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" 

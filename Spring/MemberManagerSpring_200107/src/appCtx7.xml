@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+
+	<!-- MemberDao 객체 = bean를 등록 -->
+	<bean id="memberDao" class="member.MemberDao" />
+
+	<!-- member.MemberRegisterService 빈 등록 -->
+	
+	<!-- byName을 쓰므로 memberDao의 이름과 매칭된다. -->
+	<!-- <bean id="registService" class="member.MemberRegisterService" autowire="byName"/> -->
+	
+	<!--MemberDao 타입의 객체 -->
+	<bean id="registService" class="member.MemberRegisterService"
+		autowire="byType" />
+
+
+	<!-- member.ChangePasswordService 빈 등록 -->
+<!-- 	<bean id="changePwService" class="member.ChangePasswordService"
+		autowire="byName" /> -->
+			<bean id="changePwService" class="member.ChangePasswordService"
+		autowire="byType" />
+
+
+</beans>

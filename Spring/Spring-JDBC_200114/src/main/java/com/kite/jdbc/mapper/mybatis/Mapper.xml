@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper에서 namespace는 필수이다. -->
+<!-- 인터페이스의 패키지명과 namespace가 같아야 된다. -->
+<mapper namespace="com.kite.jdbc.dao.MemberDaoInterface">
+
+	<!-- resultMap 해주는게 좋다. -->
+	<!-- select의 결과를 매핑하는 resultMap 설정: 행1개씩을 바인딩해줌 -->
+	<resultMap id="resultMember"
+		type="com.kite.jdbc.domain.Member"> <!-- 해당 객체를 만들어 놓기 -->
+		<id property="id" column="id" />
+		<!-- DB의 컬럼명과 객체의 필드명이 맞지 않을 때 resultMap을 꼭 해줘야됨. -->
+		<result property="email" column="email" />
+		<result property="password" column="password" />
+		<result property="name" column="name" />
+		<result property="regdate" column="regdate" />
+	</resultMap>
+
+
+	<!-- 전체 리스트 -->
+	<select id="getMemberList"
+		resultType="com.kite.jdbc.domain.Member">
+
+		select * from project.member order by email desc
+	</select>
+
+
+	<!-- 검색: 이메일, 이름으로 검색 -->
+	<select id="list" parameterType="map"
+		resultType="com.kite.jdbc.domain.Member">
+		select * from project.member
+
+		<where>
+			<!-- 패턴 검색: like CONCAT('%', , '%') = 양쪽에 어떤 문자가 들어가도 상관없다. -->
+			<if test="stype == 'both'">
+				email like CONCAT('%', #{keyword} , '%')
+				or
+				name like
+				CONCAT('%', #{keyword} , '%')
+			</if>
+
+			<if test="stype == 'email'">
+				email like CONCAT('%', #{keyword} , '%')
+			</if>
+
+			<if test="stype == 'name'">
+				name like CONCAT('%', #{keyword} , '%')
+			</if>
+		</where>
+
+		order by email desc
+	</select>
+
+	<!-- 검색 -->
+	<!-- 이메일로 검색 -->
+	<select id="getMemberByEmail" resultMap="resultMember">
+		select * from
+		project.member where email = #{email}
+	</select>
+
+	<!-- 아이디로 검색 -->
+	<select id="getMemberById" resultMap="resultMember">
+		select * from
+		project.member
+		where id = #{id}
+	</select>
+
+	<!-- <insert id=""></insert> <update id=""></update> <delete id=""></delete> 
+		<resultMap type="" id=""></resultMap> -->
+	<!-- <sql id=""></sql> -->
+
+	<!-- 회원 정보 삽입 -->
+	<insert id="insertMember"
+		parameterType="com.kite.jdbc.domain.RequestMemberReg">
+
+		INSERT INTO project.member (EMAIL, PASSWORD, NAME,
+		REGDATE)
+		VALUES (#{email},#{password},#{name}, now())
+	</insert>
+
+	<!-- 수정 -->
+	<!-- 회원 정보 수정 -->
+	<!-- 이메일은 수정하지 않음. -->
+	<update id="updateMember"
+		parameterType="com.kite.jdbc.domain.Member">
+		update project.member set name=#{name},
+		password=#{password} where id=#{id}
+
+	</update>
+
+	<!-- 삭제 -->
+	<!-- 회원 정보 삭제 -->
+	<!-- #{id}은 진짜 아이디 값이 넘어오는지 모름 -->
+	<delete id="deleteMember">
+		delete from project.member where id = #{id}
+	</delete>
+</mapper>
