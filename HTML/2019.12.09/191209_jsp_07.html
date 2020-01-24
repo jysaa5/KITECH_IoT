@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>문서 객체</title>
+
+
+    <script>
+        //이벤트 속성에는 함수를 등록 해준다.
+        window.onload = function(){
+            
+            //엘리먼트 생성(태그 생성): h1
+            var h1 = document.createElement('h1');
+            
+            //텍스트 엘리먼트 생성: hello~!!
+            var text = document.createTextNode('Hello~~!');
+            
+            //노드 연결
+            h1.appendChild(text);
+            document.body.appendChild(h1);
+            
+            
+            var img = document.createElement('img');
+//            img.src = 'sony.jpg';
+//            img.width = 500;
+//            img.height = 500;
+            
+            img.setAttribute('src','sony.jpg');
+            img.setAttribute('width',300);
+            img.setAttribute('height',300);
+            
+            document.body.appendChild(img);
+            
+        }; //핸들러 함수
+    </script>
+
+</head>
+
+
+
+<body>
+
+
+
+</body>
+
+</html>

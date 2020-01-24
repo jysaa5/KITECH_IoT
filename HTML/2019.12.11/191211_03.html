@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Basic</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .img {
+            height: 50px;
+            width: 150px;
+            margin: 10px;
+        }
+
+        #imgBox {
+            width: 170px;
+            height: 70px;
+            border: 5px solid #DDD;
+            overflow: hidden;
+
+
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+    <div id="imgBox">
+        <img class="img" src="pang02.jpg">
+        <img class="img" src="pang03.jpg">
+        <img class="img" src="pang04.jpg">
+        <img class="img" src="pang05.jpg">
+        <img class="img" src="pang06.jpg">
+    </div>
+
+    <!--
+    <select id="year">
+    <option>2019</option>
+    <option>2020</option>
+    <option>2021</option>
+    <option>2022</option>
+    <option>2023</option>
+</select>
+    
+    
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+-->
+
+    <script>
+        //jQuery 코딩 
+        //ready = onload
+        $(document).ready(function() {
+            //            
+            //            setTimeout(function(){
+            //                   //div 맨 밑으로 들어감.
+            //                  $('div').append(function() {
+            //                var year = $('#year').val(); 
+            //
+            //                return '<h1>'+year+'</h1>';
+            //            })
+            //                
+            //            }, 1000*10);
+
+
+
+            setInterval(function() {
+                //$('div#imgBox>img.img:first').appendTo('div#imgBox'); 
+                $('div#imgBox>img.img').first().appendTo('div#imgBox');
+            }, 1000 * 1);
+
+        }); //jquery 끝
+    </script>
+</body>
+
+</html>

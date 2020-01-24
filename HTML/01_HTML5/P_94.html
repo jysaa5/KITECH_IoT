@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>회원로그인</title>
+    <style>
+        h3 {
+            padding-top: 5%;
+            padding-left: 33%;
+        }
+
+        .idtable {
+            margin-left: 42%;
+            margin-top: 10px;
+        }
+
+        td {
+           
+            padding: 10px;
+
+        }
+
+        #ide, #pw, #uname {
+            height: 30px;
+            width: 200px;
+            font-size: 1.3em;
+            padding: 0 1px;
+        }
+
+        #login {
+            padding: 10px;
+            margin: 0, auto;
+            position: relative;
+            left: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>회원 로그인</h3>
+    <hr>
+<form action="memberReg.html" method="get">
+    <table class=idtable>
+
+        <tr>
+            <td>아이디(이메일)</td>
+            <td><input id="ide" type="text"></td>
+        </tr>
+
+        <tr>
+            <td>비밀번호</td>
+            <td><input id="pw" type="password"></td>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td><input id="uname" type="text"></td>
+        </tr>
+        <tr>
+            <td>사진</td>
+            <td><input id="img" type="file"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input id="login" type="submit" value="등록"></td>
+
+        </tr>
+    </table>
+    </form>
+</body>
+
+</html>

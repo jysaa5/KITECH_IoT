@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>문서 객체</title>
+
+
+    <script>
+        //        var header1 = document.getElementById('header1');
+        //        header1.innerHTML = '해더-1';
+        
+            window.onload = function(){
+    //id 속성으로 테그를 선택해서 문서객체로 만든다(Casting)
+    var header1 = document.getElementById('header1');
+    header1.innerHTML = '해더-1';
+    
+    //var header2 = document.getElementById('header2');
+    var header2 = document.querySelector('#header2');
+    //header2.innerHTML = '해더-2';
+        
+        document.body.removeChild('header2');
+            }
+    </script>
+
+</head>
+
+
+
+<body>
+
+    <h1 id="header1"></h1>
+    <h1 id="header2">헤더-2</h1>
+
+</body>
+<script>
+    
+   
+    
+</script></html>

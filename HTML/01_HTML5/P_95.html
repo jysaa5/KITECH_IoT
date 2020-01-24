@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>회원가입</title>
+
+    <style>
+        table {
+            border: 1px solid aqua;
+        }
+
+        th {
+            text-align: left;
+            padding-right: 10px;
+            border: 1px solid aqua;
+            background-color: azure;
+        }
+
+        td {
+            padding-right: 40px;
+            border: 1px solid aqua;
+            background-color: azure;
+        }
+
+        #idcardchk {
+            padding: 0 20px;
+            border-radius: 5px;
+        }
+
+        #intro {
+            width: 800px;
+            height: 200px;
+            overflow-y: scroll;
+        }
+
+        #button {
+            text-align: center;
+        }
+
+        #complete {
+            padding: 0 10px;
+        }
+
+        #cancel {
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <h2>회원가입</h2>
+    <form action="#" method="get">
+    <table>
+        <tr>
+            <th>*이름</th>
+            <td><input id="uname" type="text"></td>
+        </tr>
+        <tr>
+            <th>*ID</th>
+            <td><input id="id" type="text"></td>
+        </tr>
+        <tr>
+            <th>*비밀번호</th>
+            <td><input id="pw" type="password"></td>
+        </tr>
+        <tr>
+            <th>*비밀번호 확인</th>
+            <td><input id="pwchk" type="password"></td>
+        </tr>
+        <tr>
+            <th>*주민등록번호</th>
+            <td>
+                <input id="idcardf" type="password">-<input id="idcardb" type="password"> <input id="idcardchk" type="button" onclick="alert('확인')" value="주민등록번호 확인">
+            </td>
+        </tr>
+        <tr>
+            <th>*직업</th>
+            <td>
+                <select>
+                    <option>직업명</option>
+                    <option>직장인</option>
+                    <option>학생</option>
+                    <option>주부</option>
+                    <option>기타</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>*성 별</th>
+            <td>
+                <input id="man" type="radio" name="gender" value="m">남 <input id="woman" type="radio" name="gender" value="w"> 여
+            </td>
+        </tr>
+
+        <tr>
+            <th>*취 미</th>
+            <td>
+                <input id="book" type="checkbox" value="h1">독서 
+                <input id="drive" type="checkbox" value="h2">드라이브 <input id="movie" type="checkbox" value="h3">영화<br> <input id="concert" type="checkbox" value="h4">콘서트 <input id="shopping" type="checkbox" value="h5">쇼핑 <input id="amuse" type="checkbox" value="h6">놀이동산
+            </td>
+        </tr>
+        <tr>
+            <th>*자기소개</th>
+            <td>
+                <div><textarea id="intro" type="text"></textarea></div>
+            </td>
+        </tr>
+        <tr>
+            <td id="button" colspan="2">
+                <input id="complete" type="submit" value="가입완료"> <input id="cancel" type="submit" value="취   소">
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

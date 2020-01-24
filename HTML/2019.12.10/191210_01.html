@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>자바스크립트 FORM 이벤트 처리</title>
+
+<!--
+    <style>
+        div{
+            border: 1px solid red;
+        }
+        
+        p{
+            border: 1px solid blue;
+        }
+    </style>
+-->
+
+</head>
+
+<body>
+    
+<!--
+    <div id="div">
+        
+    <p id="p">click!!</p>
+    
+    </div>
+-->
+
+    <br>
+    <form id="form" action="http://www.naver.com" method="get" onsubmit="return chkPw()">
+        <!--submit을 누르면 네이버로 이동하면서 데이터가 파라미터 형식으로 url 주소 뒤로 전달됨.-->
+        <!--onsubmit : 인라인 방식-->
+        메시지<input type="text" id=msg value="비밀번호를 입력해주세요."><br>
+        비밀번호 <input type="password" id="pw" name="pw"> <br>
+        비밀번호 확인 <input type="text" id="repw" name="repw"> <br>
+        이용약관 동의 <input type="checkbox" id="chk">
+        <br>
+        <input type="submit" value="확인">
+    </form>
+    
+    <input type ="text" placeholder="이름을 입력해주세요.">
+    <!--placeholder: 텍스트를 입력하기 전에 쓰여있는 글씨. 입력하면 없어짐 -->
+    
+    <input type="button" value="삭제" onclick="del(1)">
+    <!--삭제는 인라인 방식을 많이 사용함. -->
+    
+
+
+</body>
+    
+    
+
+<script>
+    //    window.onload = function(){
+    //    //핸들러함수 = function(){}
+    //    var form = document.getElementById('form');
+    //    form.onsubmit = function(){
+    //        
+    //       //alert('submit btn click~!!')
+    //      //return false; //정상적인 처리를 하지 않도록 한다. -> 확인버튼을 눌러도 네이버로 이동하지 않음.
+    //    
+    //        var pw = document.getElementById('pw').value; //데이터를 set한 것과 같다.
+    //        var repw = document.getElementById('repw').value;
+    // <!--var repw = document.getElementById('repw'): document , value: 사용자가 작성한 값을 가져옴.-->
+    //    
+    //        //alert(pw+':'+repw);
+    //        
+    //        if(pw===repw){
+    //            alert('비밀번호 확인 결과 일치합니다.');
+    //            return true;
+    //        }else{
+    //            alert('비밀번호 확인결과 일치하지 않습니다.');
+    //            return false;
+    //        }
+    //            
+    //        
+    //        
+    //        
+    //    };
+    //    };
+
+
+    function chkPw() {
+        var pw = document.getElementById('pw').value; //데이터를 set한 것과 같다.
+        var repw = document.getElementById('repw').value;
+        var msg = document.getElementById('msg'); //문서객체까지만 넣음.
+        
+        //alert(msg.value);
+
+        //alert(pw+':'+repw);
+        
+        var chk = document.getElementById('chk');
+        
+        //alert(chk.checked);
+        
+        if(!chk.checked){
+            alert('이용약관에 동의해주세요.');
+            return false;
+        };
+        
+        if(pw == null || pw.length==0){
+            alert('비밀번호를 입력해주세요.');
+            document.getElementById('pw').focus();
+            return false;
+        };
+        //length가 속성이다. 
+        //focus(): 커서를 해당하는 곳으로 옮겨준다.
+        
+        if(repw == null || repw.length==0){
+            alert('비밀번호 확인을 입력해주세요.');
+            document.getElementById('repw').focus();
+            return false;
+        };
+        
+
+        if (pw === repw) {
+            alert('비밀번호 확인 결과 일치합니다.');
+            return true;
+        } else {
+            alert('비밀번호 확인 결과 일치하지 않습니다.');
+            msg.value='비밀번호 확인 결과 일치하지 않습니다.';
+            return false;
+        };
+        
+        
+    };//chkPw 함수 끝
+    
+//    window.onload = function(){
+//        
+//        var div =document.getElementById('div');
+//        var p = document.getElementById('p');
+//        
+//        div.onclick = function(){
+//            alert('div click~!');
+//        };
+//        
+//        p.onclick = function(e){
+//            
+//            var event = e|| window.event;
+//            
+//            alert('p click~!');
+//            
+//            //이벤트를 부모로 전달하지 않도록 막는 것.
+//            if(event.stopPropagation){
+//                event.stopPropagation();
+//            };
+//            
+//            
+//        };
+//    };
+    
+    
+    function del(idx){
+      
+        var chk = confirm('삭제하시겠습니까?');
+        //confirm: 물어봄 -> 확인 또는 취소
+        
+        if(chk){
+            alert('삭제되었습니다.');
+            
+            //여기서 지워주는 게 있어야 될듯?
+        }
+    };
+    
+    
+</script>
+
+
+
+</html>

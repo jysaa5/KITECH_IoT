@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html>
+
+
+<title>자바스크립트 팝업 페이지 입니다.</title>
+
+
+<script>
+    //함수 생성
+    function moveDaum (){
+        location.href = 'http://www.daum.net';
+    }
+
+
+</script>
+
+<head>
+
+
+
+</head>
+
+
+<body>
+    <h1>자바스크립트 팝업 페이지 입니다.</h1>
+    <a href="javascript:window.close();">윈도우 닫기 x</a>
+    
+    <h1 onClick = "window.close();">닫기</h1>
+    <!--on: 이벤트 속성, onClick: 요소에 클릭 이벤트-->
+
+    <!--<a href="javascript:location.href='http://www.daum.net';">다음으로 이동</a>-->
+    <a href="javascript:moveDaum();">다음으로 이동</a>
+    
+    
+</body>
+
+</html>

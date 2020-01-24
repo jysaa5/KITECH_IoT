@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>자바스크립트</title>
+
+    <script>
+        var html = ''; //문자열 타입 
+
+        html += '<ul>'; //html = html +'<ul>'
+        html += ' <li>hello</li>';
+        html += ' <li>javaScript~~!!!!</li>';
+        html += '<ul>';
+        
+        alert('body tag 이전 실행');
+        
+        window.onload = function(){
+            
+            alert(document.body.innerHTML);
+            document.body.innerHTML = html;
+            alert(document.body.innerHTML);
+            
+        }; //다른거 다 실행하고 나서 실행됨. 
+    </script>
+
+</head>
+
+<body>
+<h1>이곳은 H1 테그 위치합니다.</h1>
+
+</body>
+<script>
+    //var str = document.body.innerHTML;
+    // alert(str);
+//    document.body.innerHTML = html;
+</script>
+
+</html>

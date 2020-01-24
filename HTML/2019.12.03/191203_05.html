@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS 속성</title>
+    <style>
+        body {
+            background-image: url('pangha02.jpg');
+            background-size: 200px;
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-attachment: fixed;
+            
+            padding: 0px; //<!-- 윈도우가 갖는 기본값이 있다-->
+            margin=0;
+        }
+
+
+        #box1 {
+            background-color: aqua;
+
+            /*box size*/
+            width: 150px;
+            height: 150px;
+            /*border 속성*/
+            /*두께*/
+            border-width: 1px;
+            /* or 3px*/
+            /*선의 모양*/
+            border-style: solid;
+            /*컬러*/
+            border-color: #DDDDDD;
+
+            /*            border: 1px solid #DDDDDD;*/
+
+            /*            padding*/
+            padding: 30px;
+            /*            상하 좌우*/
+            /*            padding: 50px, 0px;*/
+            /*
+            padding-top: 30px;*/
+            /*margin*/
+            margin=10px;
+
+            /*테두리 굴림*/
+            /*            border-radius :20px;*/
+            /*                 border-radius:10px 20px 30px 40px;*/
+            border-radius: 50%;
+            /*            <!--원이 됨-->*/
+            /*            display: inline;*/
+        }
+
+        img {
+            border-radius: 50%;
+
+        }
+
+        span {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+
+        }
+
+        div.bg {
+            width: 80%;
+            height: 600px;
+            background-color: bisque;
+            background-image: url('pangha01.jpg');
+            /*            background-size:20%;*/
+            background-repeat: no-repeat;
+
+        }
+        
+        h1{
+        font-style:italic;
+        text-align: center;
+            
+        }
+        h4{
+            text-align: right;
+        }
+        
+        p{
+            line-height: 400%;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <h1>네이버 앱으로 국민연금 신청•납부한다</h1>
+    <h4>2013.12.09</h4>
+    <p>이번 MOU를 통해 양사는 ▲네이버 플랫폼에서 다양한 국민연금 관련 정보를 제공하고 ▲네이버 앱을 통해 국민연금 신청부터 신고, 모바일 납부까지 원스톱으로 가능하게 하는 등 사용자 편의성을 증진시키고 다양한 사회적 가치를 창출하기 위해 상호협력하기로 했다. 내년 3월 중으로는 모바일 네이버 기반의 연금 서비스를 선보일 계획이다.
+    </p>
+
+    <div class="bg"></div>
+
+    <!--BOX 속성-->
+    <!--border-->
+    <div id="box1">text</div>
+    <img src="pangha01.jpg" width="200px" height="200px">
+    <span>펭하</span>
+
+</body>
+
+</html>

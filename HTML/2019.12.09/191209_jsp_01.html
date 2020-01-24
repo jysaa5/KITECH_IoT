@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>자바스크립트</title>
+
+    <script>
+        //alert(1);
+        /*변수 선언
+        저장 공간 생성, 타입은 정하지 않는다.
+        변수에 데이터가 할당되기 전까지는 undefined 타입이다. 
+        */
+        
+        var num;
+        var uname;
+        var chk;
+        var func;
+        var obj;
+        var und;
+        
+        alert(typeof(num));
+        
+        num = 1;
+        uname = 'son';
+        chk = true;
+        func = function() {alert('function~~!')}; //익명함수: 함수 이름이 없음. 
+        obj = { //객체: 변수, 메서드 등등 
+        oNum:10, //프러퍼티, 변수
+        uName1: 'hong',
+        uMethod: function(){
+            alert('객체에서의 함수 -> 메서드');
+        } //함수 -> 메서드(객체 안에 있는 함수)
+        };
+        
+        //타입 확인
+        alert(typeof(num)=='number');
+        alert(typeof(uname)=='string');
+        alert(typeof(chk));
+        alert(typeof(func));
+        alert(typeof(obj));
+        
+        if(typeof(num)=='number'){
+            
+        }else{
+            
+        }
+        
+        //함수 생성
+        function sayHello(){
+            alert('Hello~~~! JavaScript~!');
+        };
+        
+        //매개변수를 통한 데이터 받기
+        function add(n1, n2){
+            alert(n1+n2);
+        };
+        
+        //함숭에서의 데이터 반환
+        function add(n3,n4){
+            return n3+n4; //1. 함수를 종료시킴. 2. 값의 반환 처리
+        }
+        
+        //함수 호출
+        //func();
+        //sayHello();
+        //add(10,20);
+        
+        var num2 = add2(50,100);
+        
+        /*객체 참조*/
+        //obj.uMethod();
+        //alert(obj.oNum);
+
+        
+        //alert(num+' :\n'+uname+' :\n'+chk+' :\n'+func+' :\n'+obj+' :\n'+und);
+        
+    </script>
+
+</head>
+
+
+
+<body>
+
+
+    <script>
+        //alert(2);
+    </script>
+</body>
+
+<script>
+    //alert(3);
+</script>
+
+</html>
+
+<script>
+    //alert(4);
+</script>

@@ -1,0 +1,33 @@
+h1 {
+    color : aqua;
+/*  background: black;*/
+}
+
+h1.title{
+    padding-left: 30px;
+    color: #000;/*#000000 와 같다*/
+}
+
+table.inputBox{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+input[type=text],input[type=password]{
+    width: 200px;
+    height: 30px;
+    
+    font-size: 1.3em;
+    
+    padding: 0 5px; /*상하:0, 좌우:5px*/
+}
+
+input[type=submit]{
+    padding: 10px;
+}
+
+
+table.inputBox td{
+    /*후손*/
+    padding: 10px;
+}

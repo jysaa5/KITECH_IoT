@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Basic</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            margin: 10px;
+        }
+
+        .select {
+            border: 5px solid red;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- <h1 class="box">box</h1>-->
+
+    <!--../ : 상위디렉토리로 감-->
+    <!--<img src =../>-->
+<!--
+    <img id="img" class="img" src="pang.jpg">
+    <img class="img" src="pang.jpg">
+    <img class="img" src="pang.jpg">
+-->
+    
+    <div class = "box select">box-1</div>
+    <div class = "box select">box-2</div>
+    <div class = "box select">box-3</div>
+    <div class = "box select">box-4</div>
+
+    <script>
+        //jQuery 코딩 
+        //ready = onload
+        $(document).ready(function() {
+
+            //클래스 속성
+            //캐스팅, 클래스 추가
+            // $('h1.box').addClass('select');
+
+            //캐스팅, 클래스 삭제
+            // $('h1.box').removeClass('box');
+
+            //속성: attr
+//            var src = $('img#img').attr('src');
+//            alert(src);
+            
+            
+            //setter-1
+            //이미지 경로를 다른 이미지 경로로 변경
+//            $('#img').attr('src', 'pang01.jpg');
+            
+            //setter-2
+            //함수의 결과값이 width의 값으로 들어가야하므로 상수이어야함.
+            //jQuery index는 0부터 시작한다.
+//            $('img.img').attr('width',function(index){
+//                var w = (index+1) * 100; 
+//                return w;
+//            });
+
+            //setter-3
+            //클래스 앞에 태그를 써주는 게 좋다.
+//            $('.img').attr({
+//               src:'pang01.jpg',
+//                width: function(index){
+//                    return (index+1)*100
+//                },
+//                height: 100
+//                
+//            });
+            
+            //딱 한번 실행
+            //setTimeout: ms / 1000ms 이면 1000ms일때 함수 실행후 종료
+            
+//            setTimeout(function(){
+//                
+//                $('img').removeAttr('height');
+//                
+//            }, 3000);
+            
+            
+            //setInterval ms / 1000ms 이면 1000ms 마다 반복 실행
+            
+            
+            //css getter
+            //:first = div중에서 첫 번째 요소를 찾음. 
+            var bcolor = $('div.box:first').css('backgroundColor');
+            //alert(bcolor);
+            
+            //css setter-1
+//            $('div.box').css('color','blue');
+//            $('div.box').css('fontSize', 30);
+        
+            //css setter-2
+            $('div.box').css('padding', function(index){
+                
+                return(index+1)*5;
+            });
+            
+            //css setter-3
+            $('div.box:even').css({
+                color: 'yellow',
+                fontSize: 32,
+                fontWeight: 'bold',
+                margin: function(index){
+                return(index+1)*5;
+            },
+                backgroundColor: 'black'
+            });
+            
+
+        });//jquery 끝
+    </script>
+</body>
+
+</html>

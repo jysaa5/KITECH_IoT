@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>jQuery Basic</title>
+
+
+    <style>
+        .light {
+            width: 50%;
+            height: 50px;
+        }
+    </style>
+
+
+    <!--CDN방식으로 jQuery라이브러리 가져오기-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous">
+
+    </script>
+
+    <script>
+        //onload 이벤트와 같다. 
+        //$(document).ready();
+        $(document).ready(function() {
+
+            //문서객체 생성
+            //*: 전체 선택
+            $('*').css('color', 'red');
+
+            //태그 선택
+            $('h1').css('background', 'black');
+
+            //id 선택
+            $('h1#two').css('color', 'yellow');
+
+            //클래스 선택
+            $('h1.title').css('color', 'orange');
+
+            //:first
+            $('h1:first').css('background', 'gray');
+
+            //:last
+            $('h1:last').css('background', 'gray');
+
+            //:even //짝수
+            $('h1:even').css('background', 'gray');
+            //배열형태로 0번지부터 시작임.
+
+            var array = [{
+                    name: '네이버',
+                    url: 'http://www.naver.com'
+                },
+                {
+                    name: '다음',
+                    url: 'http://www.daum.net'
+                },
+                {
+                    name: '페이스북',
+                    url: 'http://www.facebook.com'
+                },
+                {
+                    name: '유튜브',
+                    url: 'http://www.youtube.com'
+                },
+            ];
+
+            //.each(원본, 함수) 메서드를 이용한 배열 처리
+
+            //index: 배열의 인덱스(순서번호), item: 배열의 요소
+            $.each(array, function(index, item) {
+                var output = '';
+
+                output += '<a href="' + item.url + '">' + item.name + '</a>\n';
+                document.body.innerHTML += output;
+
+            });
+
+
+            //xml -> html 변환
+            $('h1').each(function(index, item) {
+
+                //innerHtml과 같다.
+                $(item).html('+' + index); //get처리  
+
+                if (index % 2 == 0) {
+                    $(item).addClass('light'); //클래스 추가 
+                }
+            });
+
+
+            var xml = '';
+            xml += '<sites>';
+            xml += '<site>';
+            xml += '<name>naver</name>';
+            xml += '<url>http://www.naver.com</url>';
+            xml += '</site>';
+
+            xml += '<site>';
+            xml += '<name>daum</name>';
+            xml += '<url>http://www.daum.net</url>';
+            xml += '</site>';
+
+            xml += '<site>';
+            xml += '<name>facebook</name>';
+            xml += '<url>http://www.facebook.com</url>';
+            xml += '</site>';
+
+            xml += '</sites>';
+
+            //String -> XML 객체로 변환
+            var xmlDoc = $.parseXML(xml);
+            $(xmlDoc).find('site').each(function(index) {
+
+                var html = '';
+                //this: 현재것
+                html += '<h1><a href="' +
+                    $(this).find('url').text() + '">' +
+                    $(this).find('name').text() + '</a></h1>';
+
+                document.body.innerHTML += html;
+
+
+            });
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <h1>header-0</h1>
+    <h1 id="two">header-1</h1>
+    <h1 class="title">header-2</h1>
+    <h1>header-3</h1>
+    <h1>header-4</h1>
+
+</body>
+
+</html>

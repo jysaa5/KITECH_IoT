@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Event</title>
+
+    <style>
+        textarea {
+            font-size: 1.5em;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+
+    <textarea rows="20" cols="60"></textarea>
+    <h1><span>0</span>/150</h1>
+    <h2></h2>
+
+    <script>
+        //jQuery 코딩 
+        //ready = onload
+        $(document).ready(function() {
+            $('textarea').keyup(function() {
+
+                var inLength = $(this).val().length;
+                var remain = 150 - inLength;
+
+                $('span').text(inLength);
+                $('h2').html(remain);
+
+                if (remain < 0) {
+                    alert('150자까지만 쓸수 있습니다.');
+                    var str = $(this).val().substr(0, 150);
+                    $(this).val(str);
+
+                    $('span').text(150);
+                    $('h2').html(0);
+
+                }
+
+            });
+
+
+
+
+        }); //jquery 끝
+    </script>
+</body>
+
+</html>

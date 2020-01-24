@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>네비게이션</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        ul.nav>li {
+            border: 1px solid black;
+            < !--리스트 칸 줄 두께,
+            색상-->width: 50px;
+            float: left;
+            < !--옆으로 붙임-->text-align: center;
+            < !--글자 정렬-->margin-left: -1px;
+            < !--간격 조절-->
+        }
+
+        ul.nav>li:first-child {
+            border-radius: 10px 0 0 10px;
+            < !--모서리 조정-->
+        }
+
+        ul.nav>li:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        ul.nav>li:nth-child(2n) {
+            background-color: aquamarine;
+        }
+
+        ul.nav>li:nth-child(2n+1) {
+            background-color: blueviolet;
+        }
+
+        ul.nav>li:first-child>a:hover {
+            font-size: 1.5em;
+            < !--24px이 됨>font-weight: bold;
+        }
+
+        ul.nav>li:first-child>a:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        ul.nav>li:first-child:visited {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="nav">
+        <li><a href="http://www.naver.com">home</a></li>
+        <li> 01 </li>
+        <li> 02 </li>
+        <li> 03</li>
+        <li> 04 </li>
+        <li> 05 </li>
+        <li> 06 </li>
+        <li> 07 </li>
+    </ul>
+
+</body>
+
+</html>

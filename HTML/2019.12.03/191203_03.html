@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS 선택자</title>
+    <style>
+         input[type]{
+            color:blueviolet
+        }
+        
+        input[type=text]{
+            background-color:yellow;
+        }
+        input[type=password]{
+             background-color:aqua;
+        }
+        
+        /*전체선택*/
+        *{
+            /*color: blueviolet*/
+        }
+        
+        /*태그선택*/
+       /* h1{
+            color: red;
+        }
+        
+        p{
+            color: blue;
+        }
+        
+        h1,p{
+            background-color:lightgray;
+        }*/
+        
+        /*아이디 선택자*/
+        #header {
+            background-color: red;
+/*            color: white;*/
+        }
+        
+        #contents{
+            background-color: blue;
+/*            color: white;*/
+        }
+        
+        #footer{
+            background-color: green;
+/*            color: white;*/
+        }
+        
+        /*클래스 선택자*/
+        .text_color{
+            color : white;
+        }
+        
+        .select{
+            font-style: italic;
+            font-weight: 10;
+        }
+        
+        /*속성 선택자*/
+    
+        
+        h1.s1{
+            color:black;
+            font-weight: 1;
+            font-size: 16px;
+        }
+        
+/*
+        h1{
+            color: chocolate;
+        }
+*/
+        
+        /*자손 선택자*/
+        div.box>h1{
+            background-color: black;
+            color:yellow;  
+        }
+        
+        /*후손 선택자*/
+        div.box h1{
+            font-style: italic;
+            
+        }
+        
+        /*동의 선택자*/
+        h1.se + h2{
+            color: red;
+        }
+        
+        h1.se ~ h2.s2{
+           background-color: aquamarine;
+        }
+        
+        div.click{
+            background-color: aqua;
+            
+            height: 100px;
+            
+            width: 100px;
+        }
+        
+        /*반응 선택자*/
+        div.click:hover{
+            background-color: red;
+            
+        }
+        
+        div.click:active{
+            background-color: violet;
+        }
+        
+        input:enabled{
+            background-color: lightcoral;
+        }
+        
+        input:disabled{
+            background-color: black;
+        }
+        
+        input:focus{
+            background-color: aqua;
+        }
+        
+    </style>
+</head>
+    <body>
+        
+        <input><br>
+        <input disabled>
+        
+        <div class ="click"></div>
+        
+        <h1 class="se">header -1</h1>
+        <h2>header -2</h2>
+         <h2>header -2</h2>
+         <h2>header -2</h2>
+         <h2 class="s2">header -2</h2>
+         <h2 class="s2">header -2</h2>
+        
+        
+        
+        
+        <div class="box">
+        
+        <h1>h1-1</h1>
+            <h2></h2>
+            <ul>
+                <li><h1>li-h1-1</h1></li>
+                    <li><h1>li-h1-2</h1></li>
+                    <li><h1>li-h1-3</h1></li>
+                    <li><h1>li-h1-4</h1></li>
+                
+            
+            </ul>
+        </div>
+        
+        
+<hr>
+        
+<form>
+        <input type = "text">
+        <input type = "password">
+  </form>
+<hr>
+    <div id = "header">
+    <h3 class="text_color select">header</h3>
+    </div>
+    
+    <div id = "contents" >
+        <h3 class="text_color select">contents</h3></div>
+    
+    <div id = "footer">
+        <h3 class="text_color select">footer</h3></div>
+    <hr>
+
+<h1>네이버 앱으로 국민연금 신청·납부한다</h1>
+    <p>네이버가 국민연금공단과 모바일 전자 고지 서비스 활성화를 위한 업무협약(MOU)를 체결했다. 이제 네이버 앱으로 국민연금 신청부터 신고, 모바일 납부 등을 한번에 할 수 있게 된다.
+    이번 MOU를 통해 양사는 ▲네이버 플랫폼에서 다양한 국민연금 관련 정보를 제공하고 ▲네이버 앱을 통해 국민연금 신청부터 신고, 모바일 납부까지 원스톱으로 가능하게 하는 등 사용자 편의성을 증진시키고 다양한 사회적 가치를 창출하기 위해 상호협력하기로 했다. 내년 3월 중으로는 모바일 네이버 기반의 연금 서비스를 선보일 계획이다.
+    </p>
+</body>
+</html>

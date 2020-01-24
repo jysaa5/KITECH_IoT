@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Basic</title>
+
+    <style>
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+
+    <div id="memo">
+        <h1>
+            <span>안녕하세요.</span>
+        </h1>
+    </div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+         //jQuery 코딩 
+        //ready = onload
+        $(document).ready(function() {
+
+            //테그 내용: html(), text()
+            //html(): html 문법, 문장 전체를 다 가져옴. text(): 문장요소만 가져옴.
+            var strHtml = $('#memo').html();
+            var strText = $('#memo').text();
+
+            //alert(strHtml);
+            //alert(strText);
+
+            //setter-1
+            //객체를 메모에 넣음.
+            var memo = $('#memo');
+
+            //memo.html('<h3>다음에 만나요.</h3>');
+            memo.text('<h3>다음에 만나요.</h3>');
+
+            //setter-2
+            $('div').html(function(index) {
+                return '<h2>new header 2-' + index + '</h2>'
+                  });
+
+                //empty(): 내용 삭제 -> 화면에서만 사라짐
+                //$('div:even').empty();
+                
+                //remove(): 해당 객체 삭제, 테그 삭제, 요소 삭제 -> 아예 태그 자체가 삭제됨.
+                $('div:even').remove();
+            
+            //동적 요소(태그+컨텐트) 생성
+            //$('<h1></h1>').html('<span>hi~</span>'); //hi~
+            //$('<h1></h1>').text('<span>hi~</span>'); //<span>hi~</span>
+            
+            //스크립트 뒤로 들어감. -> 바디 맨 마지막 
+            //$('<h1></h1>').html('안녕하세요~!!!').appendTo('body');
+            
+            //마지막 div에 들어감.
+            $('<h1></h1>').html('안녕하세요~!!!').appendTo('div:last');
+
+            $('<img>').attr({
+            src: 'pang02.jpg',
+                width: 200
+            }).appendTo('body');
+            
+            
+//            $('<img>',{
+//                src: 'pang03.jpg',
+//                width: 200
+//            }).appendTo('body');
+            
+//            $('<img>',{
+//                src: 'pang03.jpg',
+//                width: 200
+//            }).appendTo('div');
+            
+                $('<img>',{
+                src: 'pang03.jpg',
+                width: 200
+            }).prependTo('div');
+            
+            
+            $('<img>',{
+                src: 'pang03.jpg',
+                width: 200
+            }).insertAfter('div:first');
+           
+
+        }); //jquery 끝
+    </script>
+</body>
+
+</html>

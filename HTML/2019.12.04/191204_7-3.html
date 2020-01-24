@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> One True Layout </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        #header {
+            width: 900px;
+            height: 100px;
+            background-color: green;
+            line-height: 100px;
+
+        }
+
+        #aside {
+            width: 200px;
+            height: 400px;
+            background-color: #FF0000;
+            line-height: 400px;
+            float: left;
+
+
+        }
+
+        #content {
+            width: 700px;
+            height: 400px;
+            background-color: #0000FF;
+            line-height: 400px;
+            border: 10px solid;
+            float: left;
+        }
+
+        #footer {
+            width: 900px;
+            height: 100px;
+            background-color: #FF00FF;
+            line-height: 100px;
+
+        }
+
+
+      #wrap {
+            overflow: hidden;
+        }
+
+
+        .font_style {
+            /*중복되는 속성을 클래스로 만듦*/
+            text-align: center;
+            color: #FFFFFF;
+            /*흰색*/
+            font-weight: bold;
+            /*<h1>태그와 같은 속성*/
+            font-size: 2em;
+            /*<h1>태그와 같은 속성*/
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="header" class="font_style">HEADER</div>
+    
+    
+    <div id="wrap">
+        <div id="aside" class="font_style">ASIDE</div>
+
+        <div id="content" class="font_style">CONTENT</div>
+    </div>
+    
+    
+    <div id="footer" class="font_style">FOOTER</div>
+
+</body>
+
+</html>

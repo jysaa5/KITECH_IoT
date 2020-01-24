@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Event</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 200px;
+            margin: 10px;
+            border: 3px solid #000;
+            background-color: aquamarine;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+
+    <input type="checkbox" id="all">
+    <lable for="all">all</lable>
+
+    <div id="check-item">
+        <input type="checkbox">A<br>
+        <input type="checkbox">B<br>
+        <input type="checkbox">C<br>
+        <input type="checkbox">D<br>
+
+    </div>
+
+    <script>
+        //jQuery 코딩 
+        //ready = onload
+        $(document).ready(function() {
+
+            $('#all').change(function() {
+
+                if (this.checked) {
+
+                    $('#check-item').children().prop('checked', true);
+
+                } else {
+
+                    $('#check-item').children().prop('checked', false);
+                }
+
+
+            });
+
+
+
+        }); //jquery 끝
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JSON 다루기</title>
+    
+    <script>
+    
+        window.onload = function(){
+            
+            var h1 = document.getElementById('json');
+            
+            var book = {
+                name: "축구의 정석",
+                price: 1000,
+                publisher: "축구도서"
+            }
+            
+            //타입을 출력함. object임.
+            //alert(typeof(book));
+           //alert(book);
+            
+            //자바 스크립트 -> JSON 형식의 문자열로 변환 
+            var obj_Json = JSON.stringify(book);
+           //alert(typeof(obj_Json));
+            //alert(obj_Json);
+            
+            //브라우저에 데이터를 저장한다.물리적인 저장. 
+            //localStorage.setItem('book', obj_Json);
+          
+            //저장된 데이터를 가져온다. 
+            var savedData = localStorage.getItem('book');
+            alert(savedData);
+            
+            //JSON 문자열 -> 자바스크립트의 객체로 변환
+            var new_Obj = JSON.parse(savedData);
+            alert(typeof(new_Obj));
+            alert(new_Obj);
+            alert(new_Obj.name);
+            
+            
+        
+        
+        };
+    
+    
+    </script>
+    
+    
+    </head>
+<body>
+    
+    <h1 id="json">안녕하세요.</h1>
+    
+    
+    </body>
+
+
+
+
+</html>

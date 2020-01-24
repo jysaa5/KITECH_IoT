@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>자바스크립트 이벤트 처리</title>
+    <style>
+        h1 {
+
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="btn">클릭</h1>
+
+</body>
+
+<script>
+    //onload 이벤트 속성에 핸들러 등록 
+
+    window.onload = function() {
+
+      //  var btn = document.getElementById('btn');
+
+        btn.onclick = function(e) {
+            //alert(btn.innerHTML);
+            
+            //btn.innerHTML += '# ';
+            
+            //this.innerHTML += '+';
+            //this.style.backgroundColor = 'red';
+           //this.style.color = 'yellow';
+            //this.style.fontWeight = 'light';
+            
+            //이벤트 제거
+           //btn.onclick = null; //딱 한 번만 실행해야 하는 경우
+            
+            //이벤트 객체 받기
+            var event = e || window.event; //e -> null이면 false가 됨. 
+            document.body.innerHTML = '';
+            
+            for(var key in event){
+                document.body.innerHTML += '<p>'+key+':'+event[key]+'</p'; 
+            }
+
+        };
+
+
+    };
+</script>
+
+</html>

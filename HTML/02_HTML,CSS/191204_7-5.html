@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    
+    
+    <title>레이아웃</title>
+    <style>
+        
+        /*브라우저마다 요소마다 가지는 값이 조금 다름*/
+        /*초기화*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*body 초기화*/
+        body {
+            background-color: beige;
+        }
+
+        /*메인 블럭*/
+        #main_wrap {
+            width: 858px;
+            /*height: 500px;*/
+            background-color: #FFF;
+            border: 1px solid #AAA;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px #DDD;
+            padding: 20px;
+        }
+
+        /*헤더*/
+        #header {
+
+            height: 80px;
+            font-family: 'Nanum Pen Script', cursive;
+            /*background-color: aqua;*/
+        }
+
+        #header>h1.title {
+            margin-top: 20px;
+            margin-left: 30px;
+            font-family: 'Nanum Pen Script', cursive;
+            /*background-color: red;*/
+        }
+
+        #header>h1.title+span {
+            /*동위선택자*/
+            margin-left: 30px;
+        }
+
+        /*네비게이션*/
+        #nav {
+            
+            height: 35px;
+/*            background-color: brown;*/
+            overflow: hidden;
+            border-top: 1px solid #DDD;
+            border-bottom: 1px solid #DDD;
+        }
+
+        #nav>ul.menu {
+
+            width: 400px;
+            float: left;
+            overflow: hidden;
+            list-style: none;
+        }
+
+        #nav>ul.menu>li {
+            float: left;
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        #nav>ul.menu>li:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #nav>div.searchbox {
+            float: right;
+            height: 35px;
+
+        }
+
+        #nav>div.searchbox>input[type=text] {
+            border-radius: 24px 0 0 24px;
+            border: 1px solid #DDD;
+            height: 24px;
+            padding-left: 15px;
+            font-size: 15px;
+            vertical-align: middle;
+            margin-top: 4px;
+            width: 120px;
+        }
+
+        #nav>div.searchbox>input[type=button] {
+            padding: 3px 10px;
+            border: 1px solid #DDD;
+            border-radius: 0 20px 20px 0;
+            background-color: #EEE;
+            vertical-align: middle;
+            margin-top: 4px;
+
+        }
+
+        /*컨텐트 랩*/
+        #content_wrap {
+            overflow: hidden;
+        }
+
+        /*content*/
+        #content {
+            width: 629px;
+/*            height: 300px;*/
+/*            background-color: blueviolet;*/
+            float: left;
+        }
+        
+        #content>article{
+          padding:10px;
+        border-bottom: 1px solid #DDD;
+            margin-bottom: 10px;
+        }
+        
+        #content>article>h1{
+          
+/*
+            margin-top: 20px;
+            margin-bottom: 10px;
+*/
+            margin: 5px 0;
+        }
+        
+        #content>article>h4{
+           
+        }
+        
+        #content>article>img{
+            margin: 5px 0;
+        }
+        
+
+        /*aside*/
+        #aside {
+            width: 229px;
+            height: 600px;
+/*            background-color: chartreuse;*/
+            float: left;
+            
+        }
+        
+        #aside>h3{
+            margin-top: 20px;
+            
+        }
+        
+        #aside>ul{
+            list-style: none;
+            margin-top: 5px;
+            margin-left: 15px;
+            margin-bottom: 25px;
+            
+        } 
+        
+        #aside>ul>li{
+            height: 25px;
+        }
+        
+    
+        /*footer*/
+        #footer {
+            height: 100px;
+/*            background-color: yellow;*/
+            text-align: center;
+            line-height: 100px;
+            
+            border-top: 1px solid #DDD;
+        }
+    </style>
+</head>
+
+<body>
+    <!--main wrap-->
+
+    <div id="main_wrap">
+
+        <!--페이지 헤더: 로고, BI, CI, text-->
+        <div id="header">
+            <h1 class="title">TITLE Blog</h1>
+            <span>블로그 페이지입니다.</span>
+
+        </div>
+
+        <!--페이지 헤더 종료-->
+
+
+        <!--페이지 네비게이션: 메뉴, 검색박스-->
+        <div id="nav">
+            <!--메뉴-->
+            <ul class="menu">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <div class="searchbox">
+                <input type="text"><input type="button" value="검색">
+            </div>
+
+        </div>
+
+        <!--페이지 네비게이션 종료-->
+
+
+        <!--컨텐츠와 사이드 메뉴 감싸는 렙-->
+        <div id="content_wrap">
+
+            <!--컨텐츠: article(제목, 날짜, 이미지, 본문)-->
+            <div id="content">
+            <article>
+                <h1>OLAF</h1>
+                <h4>2019.12.04</h4>
+                <img src ="olaf.jpg" width="50%">
+                <p>원작인 눈의 여왕의 요소가 구석구석 들어가 있기도 하다. 외출복을 입은 안나는 외양과 역할 면에서 원작의 겔다를 연상시키며, 엘사는 안나와의 관계가 단절되지만 진정한 사랑으로 다시 회복된다는 것, 집을 떠나 눈의 성으로 들어가는 점 등의 요소에서 눈의 여왕뿐 아니라 카이의 캐릭터성 역시 가지고 있다. 그 외에도 엘사의 마법이 안나의 머리와 심장을 맞추는 것은 원작에서 트롤의 거울 조각이 카이의 눈과 심장에 꽂히는 것을 연상시키기도 한다.</p></article>
+                
+                <article>
+                <img src ="olaf.jpg" width="50%">
+                <p>원작인 눈의 여왕의 요소가 구석구석 들어가 있기도 하다. 외출복을 입은 안나는 외양과 역할 면에서 원작의 겔다를 연상시키며, 엘사는 안나와의 관계가 단절되지만 진정한 사랑으로 다시 회복된다는 것, 집을 떠나 눈의 성으로 들어가는 점 등의 요소에서 눈의 여왕뿐 아니라 카이의 캐릭터성 역시 가지고 있다. 그 외에도 엘사의 마법이 안나의 머리와 심장을 맞추는 것은 원작에서 트롤의 거울 조각이 카이의 눈과 심장에 꽂히는 것을 연상시키기도 한다.</p>
+                </article>
+                 <article>
+               <img src ="olaf.jpg" width="50%">
+                <p>원작인 눈의 여왕의 요소가 구석구석 들어가 있기도 하다. 외출복을 입은 안나는 외양과 역할 면에서 원작의 겔다를 연상시키며, 엘사는 안나와의 관계가 단절되지만 진정한 사랑으로 다시 회복된다는 것, 집을 떠나 눈의 성으로 들어가는 점 등의 요소에서 눈의 여왕뿐 아니라 카이의 캐릭터성 역시 가지고 있다. 그 외에도 엘사의 마법이 안나의 머리와 심장을 맞추는 것은 원작에서 트롤의 거울 조각이 카이의 눈과 심장에 꽂히는 것을 연상시키기도 한다.</p>
+                
+                </article>
+            
+            </div>
+            <!--    컨텐츠 종료        -->
+            <!--사이드 메뉴: 카데고리 메뉴-->
+            <div id="aside">
+            
+            
+                <h3>카테고리 1</h3>
+                <ul>
+                <li>데이터</li>
+                     <li>데이터</li>
+                     <li>데이터</li>
+                     <li>데이터</li>
+                     <li>데이터</li>
+                    
+                </ul>
+                
+                 <h3>카테고리 2</h3>
+                <ul>
+                <li>데이터</li>
+                     <li>데이터</li>
+                     <li>데이터</li>
+                     <li>데이터</li>
+                     <li>데이터</li>
+                    
+                </ul>
+                
+                
+                
+            </div>
+
+            <!--사이드 메뉴 종료-->
+        </div>
+        <!--컨텐츠 랩 종료-->
+
+
+        <!--푸터 시작: 카피라이트, 회사정보, 글로벌 메뉴-->
+        <div id="footer">Copyright2019</div>
+
+        <!--푸터 종료-->
+    </div>
+
+
+
+</body>
+
+</html>

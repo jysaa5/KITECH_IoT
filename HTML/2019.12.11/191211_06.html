@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Event</title>
+
+    <style>
+        div {
+            width: 50%;
+            margin: 20px;
+            border: 3px solid #000;
+            background-color: aquamarine;
+            cursor: pointer;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+
+    <div id="wrap">
+        <h1> header </h1>
+    </div>
+    <script>
+        //jQuery 코딩 
+        //ready = onload
+        $(document).ready(function() {
+
+            //h1만 눌러야지 추가됨.
+            //            $('h1').on('click', function() {
+            //
+            //                var length = $('h1').length;
+            //                var newHtml = '<h1>' + $(this).html() + '-' + length + '</h1>';
+            //                $('#wrap').append(newHtml);
+            //
+            //            });
+
+
+            //다른것을 눌러도 추가됨.
+            $('#wrap').on('click', 'h1', function() {
+                var length = $('h1').length;
+                var newHtml = '<h1>' + $(this).html() + '-' + length + '</h1>';
+                $('#wrap').append(newHtml);
+
+
+            });
+
+
+        }); //jquery 끝
+    </script>
+</body>
+
+</html>
