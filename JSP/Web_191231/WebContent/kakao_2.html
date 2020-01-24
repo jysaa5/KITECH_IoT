@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<title>Login Demo - Kakao JavaScript SDK</title>
+
+<style>
+#btn_logout, #status, #info {
+	display: none;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+</head>
+<body>
+	<a id="btn_login" href="javascript:logInWithKakao();"> 
+	<img src="images/login_btn.png">
+	</a>
+	<!-- <a id="btn_logout" href="http://developers.kakao.com/logout"></a>-->
+	<br>
+	<a id="status" href="javascript:statusWithKakao();">로그인 상태정보</a>
+	<br>
+	<a id="info" href="javascript:infoWithKako();">사용자 정보</a>
+	<br>
+	<a id="btn_logout" href="javascript:logoutWithKako();">로그아웃</a>
+	<br>
+	<!-- <a id="btn_logout1" href="http://developers.kakao.com/logout">logout</a> -->
+
+	<script type='text/javascript'>
+		Kakao.init('3b150aba63158d11bc6d99366b133c55');
+		
+		//로그인 상태 표시.
+		function statusWithKakao() {
+			Kakao.Auth.getStatusInfo(function(statusObj) {
+				alert(JSON.stringify(statusObj));
+
+				if (statusObj.status=='connected') {
+					alert('로그인 상태입니다.');
+
+				} else if (statusObj.status=='not_connected') {
+					alert('로그인이 필요합니다.');
+					logInWithKakao();
+				}
+
+			});
+		}
+		
+		
+		//로그아웃
+		function logoutWithKako(){
+			
+			Kakao.Auth.logout(function(){
+
+				$('#btn_login').css('display', 'block');
+				$('#btn_logout').css('display', 'none');
+				//$('#status').css('display', 'none');
+				$('#info').css('display', 'none');
+				alert('로그아웃 되었습니다.');
+			});
+		}
+		
+		
+		
+		//로그인유저 정보 가져오기.
+		function infoWithKako() {
+
+			Kakao.API.request({
+				url : '/v2/user/me',
+				success : function(user) {
+
+					alert(user.kakao_account.profile.nickname);
+					alert(user.kakao_account.profile.thumbnail_image_url);
+					alert(user.kakao_account.profile.profile_image_url);
+					alert(user.kakao_account.birthday);
+					alert(user.kakao_account.gender);
+					alert(user.kakao_account.age_range);
+
+				},
+				fail : function(error) {
+					alert(JSON.stringify(error));
+
+				}
+
+			});
+
+		}
+
+	
+
+		//로그인 함수
+		function logInWithKakao() {
+			Kakao.Auth.login({
+				success : function(Obj) {//매개변수 규칙을 따로 없다.
+					alert(JSON.stringify(Obj));
+				
+					alert('로그인되었습니다.');
+					
+					$('#btn_login').css('display', 'none');
+					$('#btn_logout').css('display', 'block');
+					$('#status').css('display', 'block');
+					$('#info').css('display', 'block');
+
+				},
+
+				fail : function(error) {
+					alert(JSON, stringify(error));
+					alert('error');
+				}
+
+			});
+
+		}
+	</script>
+
+
+</body>
+</html>

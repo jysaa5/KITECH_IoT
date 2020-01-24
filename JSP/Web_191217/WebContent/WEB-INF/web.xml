@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>Web_191217</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+<!--서블릿 등록, 필터 등록, 리스너, 파라미터-->
+<!-- 순서 지켜야됨. -->
+<context-param>
+<param-name>driver</param-name>
+<param-value>Oracle</param-value>
+</context-param>
+
+<context-param>
+<description>설명</description>
+<param-name>debugMode</param-name>
+<!--<param-value>code</param-value>-->
+<param-value>line</param-value>
+</context-param>
+
+
+</web-app>

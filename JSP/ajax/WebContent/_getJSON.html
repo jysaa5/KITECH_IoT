@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Ajax Basic</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$(document).ready( function() {
+		$.getJSON('data.json', function(data) {
+			$.each(data, function(key, value) { //json이 배열이므로 .each를 사용함. data: 원본 
+				$('body').append('<h1>' + value.name + ' : ' + value.price + '</h1>');
+			});
+		});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
