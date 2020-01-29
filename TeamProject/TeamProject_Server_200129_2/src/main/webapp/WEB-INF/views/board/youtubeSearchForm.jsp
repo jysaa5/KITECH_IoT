@@ -123,7 +123,10 @@ width: 200%;
 							url: 'http://localhost:8080/gz/board/youtubeSearch/',
 							type: 'POST',
 							data:{
-								title:
+								title:item.snippet.title
+							},
+							success: function(){
+								console.log("success");
 							}
 							
 						});
