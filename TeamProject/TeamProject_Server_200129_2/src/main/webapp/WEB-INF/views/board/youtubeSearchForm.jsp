@@ -18,6 +18,9 @@ color: red;
 #formst{ 
 width: 200%;
 }
+#youtubeicon{
+text-align: center;
+}
 
 </style>
 
@@ -43,7 +46,8 @@ width: 200%;
 		</div>
 
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h4 class="border-bottom border-gray pb-2 mb-0" id="youtube">Youtube</h4>
+		<div id="youtubeicon"><img src= "<c:url value="/images/youtube02.gif"/>" width="30%" height="30%" /></div>
+			<!-- <h4 class="border-bottom border-gray pb-2 mb-0" id="youtube">YouTube</h4> -->
 			<div class="media text-muted pt-3">
 				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">  </p>
 			</div>
