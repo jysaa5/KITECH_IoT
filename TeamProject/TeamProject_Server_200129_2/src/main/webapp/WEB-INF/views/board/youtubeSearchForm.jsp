@@ -85,7 +85,7 @@ width: 200%;
 				}
 			)}
 		return res}
-	
+
 	
 	
 	
@@ -117,13 +117,13 @@ width: 200%;
 					/* $("#results").append(item.id.videoId+""+item.snippet.title+"<br>"); */
 					$.get("<c:url value="/resources/item.html"/>",function(data){
 						$("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
-						
+		
 						$.ajax({
 							
 							url: 'http://localhost:8080/gz/board/youtubeSearch/',
 							type: 'POST',
 							data:{
-								title:item.snippet.title
+								title: item.snippet.title
 							},
 							success: function(){
 								console.log("success");
