@@ -48,9 +48,9 @@ width: 1000px;
 
 		<div class="my-3 p-3 bg-white rounded box-shadow">
 			<h6 class="border-bottom border-gray pb-2 mb-0">게임 추천 글 작성</h6>
-			<div class="media text-muted pt-3" enctype="multipart/form-data">
+			<div class="media text-muted pt-3">
 				
-				<form method ="post">
+				<form method ="post"  enctype="multipart/form-data">
 				<div class="form-group" >
 				 <label for="writer">작성자</label>
 				 <input type="text" class="form-control" id="writer" name ="writer" required>
@@ -69,6 +69,11 @@ width: 1000px;
 				<div class="form-group" >
 				 <label for="photo">사진</label>
 				 <input type="file" id="gphoto" name ="gphoto" class="form-control">
+				</div>
+				
+				<div class="form-group" >
+				 <label for="password">비밀번호</label>
+				 <input type="password" class="form-control" id="gpw" name ="gpw" required>
 				</div>
 	
 				<input type="submit" value="작성" class="btn btn-primary">

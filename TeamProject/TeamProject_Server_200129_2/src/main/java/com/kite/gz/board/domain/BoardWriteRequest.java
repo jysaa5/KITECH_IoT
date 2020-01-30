@@ -9,23 +9,33 @@ public class BoardWriteRequest {
 	private String writer;
 	private String title;
 	private String content;
+	private String gpw;
 	private String gphoto;
 	private MultipartFile photo;
 	
-	public BoardWriteRequest(int idx, String writer, String title, String content, String gphoto, MultipartFile photo) {
+	
+	
+	public BoardWriteRequest(int idx, String writer, String title, String content, String gpw, String gphoto,
+			MultipartFile photo) {
 		super();
 		this.idx = idx;
 		this.writer = writer;
 		this.title = title;
 		this.content = content;
+		this.gpw = gpw;
 		this.gphoto = gphoto;
 		this.photo = photo;
 	}
 	
 	
+	
+	
 	public BoardWriteRequest() {
 		super();
 	}
+
+
+
 
 	public int getIdx() {
 		return idx;
@@ -51,6 +61,12 @@ public class BoardWriteRequest {
 	public void setContent(String content) {
 		this.content = content;
 	}
+	public String getGpw() {
+		return gpw;
+	}
+	public void setGpw(String gpw) {
+		this.gpw = gpw;
+	}
 	public String getGphoto() {
 		return gphoto;
 	}
@@ -64,11 +80,15 @@ public class BoardWriteRequest {
 		this.photo = photo;
 	}
 
+
+
+
 	@Override
 	public String toString() {
 		return "BoardWriteRequest [idx=" + idx + ", writer=" + writer + ", title=" + title + ", content=" + content
-				+ ", gphoto=" + gphoto + ", photo=" + photo + "]";
+				+ ", gpw=" + gpw + ", gphoto=" + gphoto + ", photo=" + photo + "]";
 	}
+	
 	
 	
 

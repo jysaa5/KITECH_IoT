@@ -7,7 +7,7 @@
 	<!-- //////////////삽입/////////////// -->
 	<insert id="insertBoard" parameterType="com.kite.gz.board.domain.BoardWriteRequest" useGeneratedKeys="true" keyProperty="idx">
 
-		insert into gamebook (writer, title, content, gphoto) values(#{writer}, #{title}, #{content}, #{gphoto})
+		insert into gamebook (writer, title, content, gphoto, gpw) values(#{writer}, #{title}, #{content}, #{gphoto}, #{gpw})
 	</insert>
 
 
@@ -17,6 +17,8 @@
 		<result property="writer" column="writer" />
 		<result property="title" column="title" />
 		<result property="content" column="content" />
+		<result property="gpw" column="gpw" />
+		<result property="gphoto" column="gphoto" />
 		<result property="regdate" column="regdate" />
 	</resultMap>
 
@@ -60,7 +62,7 @@
 		delete from gamebook where idx=#{idx}
 	</delete>
 	
-		<!-- //////////////삽입/////////////// -->
+		<!-- //////////////유튜브 타이틀 삽입/////////////// -->
 	<insert id="searchTitleSave" parameterType="com.kite.gz.board.domain.BoardYoutubeTitle" useGeneratedKeys="true" keyProperty="idx">
 
 		insert into youtubebook (title) values (#{title})
