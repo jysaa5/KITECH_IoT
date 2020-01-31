@@ -1,7 +1,10 @@
 package com.kite.gz.board.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -27,16 +30,16 @@ public class BoardWriteController {
 	//boardWrite 메서드: 작성한 게임 추천 글을 DB에 저장하도록 서비스 클래스에게 전달하는 메서드
 	//커맨드형식 
 	@RequestMapping(method = RequestMethod.POST)
-	public String boardWrite(BoardWriteRequest request) {
+	public String boardWritePost(BoardWriteRequest write, HttpServletRequest request, Model model) {
 		
-		System.out.println(request);
-		System.out.println("요청 idx: " + request.getIdx() );
+		System.out.println(write);
+		//System.out.println("요청 idx: " + write.getIdx() );
 		
-		int result = writeService.boardWrite(request);
+		int result = writeService.boardWrite(request, write);
 		
 		System.out.println("결과: " + result );
-		System.out.println("결과 idx: " + request.getIdx());
-		
+		//System.out.println("결과 idx: " + write.getIdx());
+		model.addAttribute("rCnt", result);
 		
 		return "board/write";
 	}

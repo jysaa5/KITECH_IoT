@@ -16,6 +16,13 @@
 <!-- 기본 CSS 처리 끝 -->
 <script>
 </script>
+
+<style>
+img.photo {
+	width: 60px;
+}
+</style>
+
 </head>
 <body>
 
@@ -50,11 +57,13 @@
 						<td>${boardArticle.idx}</td>
 						<td>${boardArticle.title}</td>
 						<td>${boardArticle.writer}</td>
-						<td><img src="<c:url value="/uploadfile/userphoto/${boardArticle.gphoto}"/>" class="photo"></td>
+						<td><img src="<c:url value="/uploadfile/userphoto/${boardArticle.gphoto}"/>" class="photo" alt="사진"></td>
 						<td><fmt:formatDate value="${boardArticle.regdate}" pattern="yyyy. MM. dd" /></td>
 						<td>
-						<a href="<c:url value ="/board/edit?idx=${boardArticle.idx}"/>" class="btn btn-primary">수정</a>
-						<a href="<c:url value ="/board/delete?idx=${boardArticle.idx}"/>" class="btn btn-danger">삭제</a>
+						<%-- <a href="<c:url value ="/board/edit?idx=${boardArticle.idx}"/>" class="btn btn-primary">수정</a> --%>
+						<a href="<c:url value ="/board/passwordCheck?idx=${boardArticle.idx}"/>" class="btn btn-primary">수정/삭제</a>
+						<%-- <a href="<c:url value ="/board/passwordCheck?idx=${boardArticle.idx}"/>" class="btn btn-danger">삭제</a> --%>
+						<%-- <a href="<c:url value ="/board/delete?idx=${boardArticle.idx}"/>" class="btn btn-danger">삭제</a> --%>
 						</td>
 					</tr>
 				</c:forEach>

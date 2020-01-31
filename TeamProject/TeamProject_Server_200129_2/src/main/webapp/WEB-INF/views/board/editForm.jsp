@@ -1,6 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%><!-- 코어태그 -->
 <%@page trimDirectiveWhitespaces="true"%>
+<%-- <c:if test="${pwCheck ne 2}">
+	<script>
+	alert('게시글 비밀번호를 입력해주세요.');
+	location.href='<c:url value="/board/passwordCheck?idx=${boardEdit.idx}"/>';
+</script> 
+
+</c:if> --%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,7 +77,7 @@ width: 1000px;
 				
 			<div class="form-group" >
 				 <label for="photo">사진</label>
-				 <input type="file" id="gphoto" name ="gphoto" class="form-control"  required value="${boardEdit.gphoto}">
+				 <input type="file" id="gphoto" name ="gphoto" class="form-control">
 				</div>
 				
 				<div class="form-group" >

@@ -5,14 +5,26 @@
 <mapper namespace="com.kite.gz.board.dao.BoardDao">
 
 	<!-- //////////////삽입/////////////// -->
-	<insert id="insertBoard" parameterType="com.kite.gz.board.domain.BoardWriteRequest" useGeneratedKeys="true" keyProperty="idx">
+	<insert id="insertBoard" parameterType="com.kite.gz.board.domain.Board" useGeneratedKeys="true" keyProperty="idx">
 
-		insert into gamebook (writer, title, content, gphoto, gpw) values(#{writer}, #{title}, #{content}, #{gphoto}, #{gpw})
+		insert into gamebook (writer, title, content, gphoto, gpw, regdate) values(#{writer}, #{title}, #{content}, #{gphoto}, #{gpw}, now())
 	</insert>
 
 
 	<!-- 컬럼값과 domain의 필드명이 다를때 설정해줘야 됨. -->
 	<resultMap type="com.kite.gz.board.domain.BoardEditVo" id="BoardPost">
+		<id property="idx" column="idx" />
+		<result property="writer" column="writer" />
+		<result property="title" column="title" />
+		<result property="content" column="content" />
+		<result property="gpw" column="gpw" />
+		<result property="gphoto" column="gphoto" />
+		<result property="regdate" column="regdate" />
+	</resultMap>
+	
+	
+		<!-- 컬럼값과 domain의 필드명이 다를때 설정해줘야 됨. -->
+	<resultMap type="com.kite.gz.board.domain.BoardPasswordVo" id="BoardPwSelect">
 		<id property="idx" column="idx" />
 		<result property="writer" column="writer" />
 		<result property="title" column="title" />
@@ -47,10 +59,26 @@
 		select * from gamebook where idx=#{idx}
 
 	</select>
+	
+	
+	<select id="selectBoardByIdx2" resultMap="BoardPwSelect">
+
+		select * from gamebook where idx=#{idx}
+
+	</select>
+	
+	
+		<!--조회: idx값을 전달해서 패스워드와 맞는지 조회 -->
+	<select id="pwcheck" resultMap="BoardPwSelect">
+
+		select * from gamebook where idx=#{idx} and gpw=#{gpw}
+
+	</select>
+	
 
 	<!-- //////////////수정/////////////// -->
 	<!--수정: idx값을 전달해서 수정 -->
-	<update id="editBoard" parameterType="com.kite.gz.board.domain.BoardWriteRequest">
+	<update id="editBoard" parameterType="com.kite.gz.board.domain.Board">
 
 		update gamebook set title = #{title},
 		content=#{content}, editdate = now() where idx=#{idx}
@@ -58,7 +86,7 @@
 	</update>
 
 <!-- //////////////삭제/////////////// -->
-	<delete id="deleteBoard">
+	<delete id="deleteBoard" parameterType="com.kite.gz.board.domain.Board">
 		delete from gamebook where idx=#{idx}
 	</delete>
 	
