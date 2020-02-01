@@ -125,14 +125,14 @@
         <h2>5G 쇼핑  <img src= "<c:url value="/images/homeImg03.png"/>" width="20%" height="20%"/></h2>
         <p class="ptitle">가치있는 소비하려면? '5G 쇼핑'으로</p>
         <p>다양한 상품을 편리하고 합리적으로 구입할 수 있고 맞춤형 상품을 추천받을 수 있는 온라인 전자제품 전문 쇼핑몰. AI기술로 새롭게 달라진 IoT세계을 경험하세요.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="<c:url value="/part/listclient"/>" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-4" style="background-color: #BFFFD1">
       <br>
         <h2>5G 게임  <img src= "<c:url value="/images/homeImg04.png"/>" width="20%" height="20%"/></h2>
         <p class="ptitle">새해 기대작! 2020년 신작 게임 경쟁 후끈</p>
         <p>2020년 새해에도 다양한 신작이 쏟아질 전망이다. 블리자드, 넥슨, 넷마블, 컴투스 등이 잇따라 기대작을 예고하면서 연초부터 치열한 각축전이 예상된다.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="<c:url value="/board/list"/>" role="button">View details &raquo;</a></p>
       </div>
     </div>
 

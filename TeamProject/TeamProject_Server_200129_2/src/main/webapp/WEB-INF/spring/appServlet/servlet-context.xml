@@ -59,13 +59,11 @@
 	<beans:bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource" />
-		<beans:property name="mapperLocations"
-			value="/WEB-INF/mappers/*.xml" />
+		<beans:property name="mapperLocations" value="/WEB-INF/mappers/*.xml" />
 	</beans:bean>
 
 	<!-- SqlSessionTemplate 빈 등록 -->
-	<beans:bean id="sqlSession"
-		class="org.mybatis.spring.SqlSessionTemplate">
+	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<beans:constructor-arg ref="sqlSessionFactory" />
 	</beans:bean>
 

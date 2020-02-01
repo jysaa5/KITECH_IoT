@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.kite.gz.member.dao.MemberDaoInterface;
 
-@Service("deleteService")
+@Service("mDeleteService")
 public class MemberDeleteService implements MemberService {
 
 	// 자동 메퍼를 이용해서 생성할 dao 

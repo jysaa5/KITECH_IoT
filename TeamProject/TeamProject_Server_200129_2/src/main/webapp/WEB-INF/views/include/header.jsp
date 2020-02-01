@@ -33,11 +33,17 @@
       </li>
       
         <li class="nav-item">
-        <a class="nav-link" href="#">경제</a>
+        <a class="nav-link" href="#">금융</a>
       </li>
       
-         <li class="nav-item">
-        <a class="nav-link" href="#">쇼핑</a>
+          <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">쇼핑</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="<c:url value="/part/listclient"/>">부품 목록</a>
+          <a class="dropdown-item" href="<c:url value="/part/selectlist"/>">내 장바구니</a>
+          <a class="dropdown-item" href="<c:url value="/part/write"/>">관리자메뉴: 부품 입력</a>
+          <a class="dropdown-item" href="<c:url value="/part/list"/>">관리자메뉴: 부품 목록</a>
+        </div>
       </li>
       
      <!--  <li class="nav-item">

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.kite.gz.member.dao.MemberDaoInterface;
 import com.kite.gz.member.domain.OpMember;
 
-@Service("loginService")
+@Service("mLoginService")
 public class MemberLoginService implements MemberService {
 
 	// @Autowired

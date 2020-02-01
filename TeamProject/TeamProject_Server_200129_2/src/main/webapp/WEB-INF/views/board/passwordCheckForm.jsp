@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>writeForm</title>
+<title>PasswordCheckForm</title>
 <style>
 
 /* 여기 폼만의 스타일 */
@@ -41,13 +41,13 @@ width: 1000px;
 		<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
 			<!-- <img class="mr-3" src="https://getbootstrap.com/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48"> -->
 			<div class="lh-100">
-				<h6 class="mb-0 text-white lh-100">게임 추천하기</h6>
+				<h6 class="mb-0 text-white lh-100">게시글을 수정하거나 삭제하려면 비밀번호를 입력해주세요.</h6>
 				<small>Since 2020</small>
 			</div>
 		</div>
 
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">게임 추천 글 작성</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">게시글을 수정하거나 삭제하려면 비밀번호를 입력해주세요.</h6>
 			<div class="media text-muted pt-3">
 				
 				<form method ="post">
@@ -63,6 +63,19 @@ width: 1000px;
 				</div>
 			</div>
 	</main>
+	
+	<script>
+	
+	$(function(){
+		$("form").on("submit", function(e){
+			e.preventDefault();
+			pwCheck != 2;
+			alert('비밀번호를 다시 입려해주세요.');
+			
+		});
+	
+	
+	</script>
 
 	<!-- 메인 컨텐트 끝 -->
 

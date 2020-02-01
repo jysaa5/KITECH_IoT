@@ -5,22 +5,26 @@ import java.sql.Date;
 import org.springframework.web.multipart.MultipartFile;
 
 
-//방명록을 처음 작성시 데이터를 보관하여 전달하는 도메인 클래스
+//Board: 게시글을 처음 작성시 데이터를 보관하여 전달하는 도메인 클래스
 public class Board {
 	
-	private int idx;
-	private String writer;
-	private String title;
-	private String content;
-	private String gpw;
-	private String gphoto;
-	private MultipartFile photo;
-	private Date regdate;
+	private int idx;  //게시글 번호
+	private String writer;  //게시글 작성자
+	private String title;  //게시글 제목
+	private String content;  //게시글 내용
+	private String gpw;  //게시글 비밀번호
+	private String gphoto;  //게시글 사진제목 데이터
+	private MultipartFile photo;  //게시글 사진 데이터
+	private Date regdate;  //게시글 작성 날짜
 	
+	//<생성자>//
+	//기본 생성자
+	public Board() {
+		super();
+	}
 	
-	
-	public Board(int idx, String writer, String title, String content, String gpw, String gphoto,
-			MultipartFile photo, Date regdate) {
+	//전체 필드를 다 받는 생성자
+	public Board(int idx, String writer, String title, String content, String gpw, String gphoto, MultipartFile photo, Date regdate) {
 		super();
 		this.idx = idx;
 		this.writer = writer;
@@ -32,13 +36,8 @@ public class Board {
 		this.regdate = regdate;
 	}
 	
-	
-	public Board() {
-		super();
-	}
 
-	
-
+	//get와 set 메서드
 	public int getIdx() {
 		return idx;
 	}
@@ -119,22 +118,24 @@ public class Board {
 	}
 
 	
-
+	
+    //toString 메서드
 	@Override
 	public String toString() {
-		return "BoardWriteRequest [idx=" + idx + ", writer=" + writer + ", title=" + title + ", content=" + content
-				+ ", gpw=" + gpw + ", gphoto=" + gphoto + ", photo=" + photo + ", regdate=" + regdate + "]";
-	}
-	
-	
-	
-	public Board toBoardWriteRequest() {
-		return new Board(0, writer, title, content, gpw, null, photo, null);
-	}
-	
+		
+		return "BoardWriteRequest [idx=" + idx + ", writer=" + writer + ", title=" + title + ", content=" + content + ", gpw=" + gpw + ", gphoto=" + gphoto + ", photo=" + photo + ", regdate=" + regdate + "]";
 
+	}//toString 메서드 끝
 	
 	
+	//toBoardWriteRequest 메서드: Board 객체를 반환하는 메서드
+	/*
+	 * public Board toBoardWriteRequest() {
+	 * 
+	 * return new Board(0, writer, title, content, gpw, null, photo, null);
+	 * 
+	 * }
+	 *///toBoardWriteRequest 메서드 끝
 	
-
-}
+	
+}//Board 클래스 끝

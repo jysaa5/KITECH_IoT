@@ -13,7 +13,7 @@ import com.kite.gz.member.dao.MemberDaoInterface;
 import com.kite.gz.member.domain.OpMember;
 import com.kite.gz.member.domain.RequestMemberEdit;
 
-@Service("editService")
+@Service("mEditService")
 public class MemberEditService implements MemberService {
 
 	// 자동 메퍼를 이용해서 생성할 dao

@@ -15,17 +15,19 @@ import com.kite.gz.board.domain.Board;
 import com.kite.gz.board.domain.BoardWriteRequest;
 
 //서비스 bean으로 등록하기 
+//BoardWriteService: 게시글을 작성하는 sql을 실행하는 서비스 클래스
 @Service("writeService")
 public class BoardWriteService {
 
+	//객체 주입
 	@Inject
 	private SqlSessionTemplate template;
 	
 	//인터페이스
 	private BoardDao dao;
 	
-	//write 메서드: 게시글을 작성하고 게시글 번호를 반환하는 메서드
-	public int boardWrite(HttpServletRequest request, BoardWriteRequest write) {
+	//Writeposting 메서드: 게시글을 작성하고 게시글 번호를 반환하는 메서드
+	public int writePosting(HttpServletRequest request, BoardWriteRequest write) {
 	
 		dao = template.getMapper(BoardDao.class);
 		
@@ -53,28 +55,33 @@ public class BoardWriteService {
 				file.transferTo(new File(dir, newFileName));
 				// 데이터베이스 저장을 하기위한 파일 이름 set
 				board.setGphoto(newFileName);
+				
 			} else {
+				
 				board.setGphoto("default.png");
 			}
 		
 		resultCnt = dao.insertBoard(board);
 		
 		} catch (IllegalStateException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		} catch (Exception e) {
+			
 			e.printStackTrace();
 			System.out.println("오류");
 			if (file != null) {
+				
 				new File(dir, newFileName).delete();
+				
 			}
 		}
 
 		return resultCnt;
 		
-	}//boardWrite메서드 끝
+	}//writePosting메서드 끝
 	
 }//BoardWriteService 클래스 끝

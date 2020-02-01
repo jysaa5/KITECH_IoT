@@ -13,24 +13,36 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.kite.gz.board.service.BoardDeleteService;
+import com.kite.gz.board.service.BoardEditSerivce;
+import com.kite.gz.board.service.BoardListService;
+import com.kite.gz.board.service.BoardPwCheckService;
+import com.kite.gz.board.service.BoardViewService;
 import com.kite.gz.board.service.BoardWriteService;
-import com.kite.gz.member.domain.OpMember;
-import com.kite.gz.member.domain.RequestMemberEdit;
-import com.kite.gz.member.domain.RequestMemberRegist;
-import com.kite.gz.member.service.MemberDeleteService;
-import com.kite.gz.member.service.MemberEditService;
-import com.kite.gz.member.service.MemberListService;
-import com.kite.gz.member.service.MemberRegService;
-import com.kite.gz.member.service.MemberViewService;
+import com.kite.gz.board.service.BoardYoutubeSearchService;
+
 
 // /gz/rest/v1/members : 우리가 만든 경로
 // 외부에서는: http://localhost:8080/gz/restapi/v1/gamezone
 @RestController
-@RequestMapping("/restapi/v1/gamezone") //gz: context 경로
+@RequestMapping("/restapi/v1/fiveg") //gz: context 경로
 public class BoardRestController {
 
-	
-	  @Autowired BoardWriteService viewService;
+	//객체 주입
+	  @Autowired BoardWriteService writeService;
+	  
+	  @Autowired BoardYoutubeSearchService youtubeSearchService;
+	  
+	  @Autowired BoardViewService viewService;
+	  
+	  @Autowired BoardPwCheckService pwCheckService;
+	  
+	  @Autowired BoardListService listService;
+	  
+	  @Autowired BoardEditSerivce editService;
+	  
+	  @Autowired BoardDeleteService deleteService;
+	  
 	  
 	 /* @Autowired MemberListService listService;
 	 * 

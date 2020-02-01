@@ -4,21 +4,27 @@ import java.sql.Date;
 
 import org.springframework.web.multipart.MultipartFile;
 
-//BoardEditVo: 회원의 방명록을 수정했을 때의 각각의 정보를 담는 도메인 클래스 
+//BoardEditVo: 게시글을 수정했을 때의 각각의 정보를 담는 도메인 클래스 
 public class BoardEditVo {
 	
-	private int idx;
-	private String writer;
-	private String title;
-	private String content;
-	private String gpw;
-	private String gphoto;
-	private MultipartFile photo;
-	private Date regdate;
+	private int idx;  //게시글 번호
+	private String writer;  //게시글 작성자
+	private String title;  //게시글 제목
+	private String content;  //게시글 내용
+	private String gpw;  //게시글 비밀번호
+	private String gphoto;  //게시글 사진 제목 데이터
+	private MultipartFile photo;  //게시글 사진 데이터
+	private Date regdate;  //게시글 작성 날짜
 	
 	
-	public BoardEditVo(int idx, String writer, String title, String content, String gpw, String gphoto,
-			MultipartFile photo, Date regdate) {
+	//<생성자>//
+	//기본 생성자
+	public BoardEditVo() {
+		super();
+	}
+	
+	//전체 필드를 다 받는 생성자
+	public BoardEditVo(int idx, String writer, String title, String content, String gpw, String gphoto, MultipartFile photo, Date regdate) {
 		super();
 		this.idx = idx;
 		this.writer = writer;
@@ -30,11 +36,8 @@ public class BoardEditVo {
 		this.regdate = regdate;
 	}
 
-
-	public BoardEditVo() {
-		super();
-	}
-
+	
+	//get와 set 메서드
 	public int getIdx() {
 		return idx;
 	}
@@ -99,23 +102,24 @@ public class BoardEditVo {
 		this.regdate = regdate;
 	}
 
+	//toString 메서드
 	@Override
 	public String toString() {
-		return "BoardEditVo [idx=" + idx + ", writer=" + writer + ", title=" + title + ", content=" + content + ", gpw="
-				+ gpw + ", gphoto=" + gphoto + ", photo=" + photo + ", regdate=" + regdate + "]";
-	}
+		
+		return "BoardEditVo [idx=" + idx + ", writer=" + writer + ", title=" + title + ", content=" + content + ", gpw=" + gpw + ", gphoto=" + gphoto + ", photo=" + photo + ", regdate=" + regdate + "]";
+	
+	}//toString 메서드 끝
 
 
-	//작성된 날짜를 숫자를 객체에 담아 반환하는 메서드
+	//getWriteDate: 작성된 날짜를 숫자를 객체에 담아 반환하는 메서드
 	//${writeDate} --> getWriteDate()
 	//수정한 날짜를 가져오기 위해서 만듦.
-	public java.util.Date getWriteDate(){
+	public java.util.Date getWriteDate() {
 		
 		//getTime() 메서드: 1970년 1월 1일 0시 0분 0초부터 현재까지의 시간을 밀리초 단위로 환산한 값을 숫자로 반환한다.
 		return new java.util.Date(regdate.getTime());
-	}
+		
+	}//getWriteDate 메서드 끝
 	
-
 	
-	
-}
+}//BoardEditVo 클래스 끝

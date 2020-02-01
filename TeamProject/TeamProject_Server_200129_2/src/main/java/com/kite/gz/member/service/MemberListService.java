@@ -14,7 +14,7 @@ import com.kite.gz.member.domain.ListViewData;
 import com.kite.gz.member.domain.OpMember;
 import com.kite.gz.member.domain.SearchParam;
 
-@Service("listServcie")
+@Service("mListServcie")
 public class MemberListService implements MemberService {
 
 

@@ -10,43 +10,47 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.kite.gz.board.domain.BoardPasswordVo;
 import com.kite.gz.board.service.BoardPwCheckService;
 
-
-//BoardPasswordCheckController
+//BoardPasswordCheckController: 게시글의 비밀번호를 체크하는 컨트롤러
 @Controller
 @RequestMapping("/board/passwordCheck")
 public class BoardPasswordCheckController {
 	
+	//객체 주입
 	@Autowired
 	BoardPwCheckService pwCheckService;
 	
 
-	//pwCheckForm 메서드
+	//pwCheckForm 메서드: 비밀번호 체크를 하는 폼을 불러오는 메서드
 	//get방식으로 들어왔을 때 처리
 	@RequestMapping(method = RequestMethod.GET)
 	public String pwCheckForm(@RequestParam(value = "idx", defaultValue = "-1") int idx, Model model) {
 	
-		model.addAttribute("Checkidx", pwCheckService.getBoardPost(idx));
+		model.addAttribute("Checkidx", pwCheckService.getPostingidx(idx));
 		
 		return "board/passwordCheckForm";
-	}
+		
+	}//pwCheckForm 메서드 끝
 	
-	//pwCheck 메서드: 
+	
+	//pwCheck 메서드: 비밀번호를 체크하는 메서드
 	//커맨드형식 
 	@RequestMapping(method = RequestMethod.POST)
 	public String pwCheck(BoardPasswordVo request, Model model) {
 		
 		int result = pwCheckService.passwordCheck(request);
 
-		if(result !=2 ) {
+		if(result !=2 ) 
+		{
 			
 			System.out.println("비밀번호가 정확하지 않습니다.");
-			
+			model.addAttribute("pwCheck", request);
 			return "board/passwordCheckForm";
 		}
 		
 		model.addAttribute("pwCheck", request);
 		
 		return "board/passwordCheck";
-	}
+		
+	}//pwCheck 메서드 끝
 	
-}//BoardWriteController 컨트롤러 클래스 끝
+}//BoardPasswordCheckController 클래스 끝
