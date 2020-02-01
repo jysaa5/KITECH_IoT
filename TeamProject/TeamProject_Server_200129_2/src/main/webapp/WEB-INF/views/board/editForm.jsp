@@ -58,7 +58,7 @@ width: 1000px;
 			<h6 class="border-bottom border-gray pb-2 mb-0">게임 추천 게시글 수정</h6>
 			<div class="media text-muted pt-3">
 				
-				<form method ="post">
+				<form method ="post" enctype="multipart/form-data">
 				<input type="hidden" name ="idx" value="${boardEdit.idx}">
  				<div class="form-group" >
 				 <label for="writer"> 작성자</label>
@@ -77,12 +77,12 @@ width: 1000px;
 				
 			<div class="form-group" >
 				 <label for="photo">사진</label>
-				 <input type="file" id="gphoto" name ="gphoto" class="form-control">
+				 <input type="file" id="photo" name ="photo" class="form-control" disabled>
 				</div>
 				
 				<div class="form-group" >
 				 <label for="password">비밀번호</label>
-				 <input type="password" class="form-control" id="gpw" name ="gpw" required>
+				 <input type="password" class="form-control" id="gpw" name ="gpw" readonly>
 				</div>
 				
 				

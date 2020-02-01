@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.kite.gz.board.dao.BoardDao;
-import com.kite.gz.board.domain.Board;
-import com.kite.gz.board.domain.BoardWriteRequest;
+import com.kite.gz.board.domain.BoardVo;
+import com.kite.gz.board.domain.BoardWriteRequestVo;
 
 //서비스 bean으로 등록하기 
 //BoardWriteService: 게시글을 작성하는 sql을 실행하는 서비스 클래스
@@ -27,7 +27,7 @@ public class BoardWriteService {
 	private BoardDao dao;
 	
 	//Writeposting 메서드: 게시글을 작성하고 게시글 번호를 반환하는 메서드
-	public int writePosting(HttpServletRequest request, BoardWriteRequest write) {
+	public int writePosting(HttpServletRequest request, BoardWriteRequestVo write) {
 	
 		dao = template.getMapper(BoardDao.class);
 		
@@ -37,7 +37,7 @@ public class BoardWriteService {
 		// 절대 경로
 		String dir = request.getSession().getServletContext().getRealPath(path);
 
-		Board board = write.toBoard();
+		BoardVo board = write.toBoard();
 		
 		
 		int resultCnt = 0;

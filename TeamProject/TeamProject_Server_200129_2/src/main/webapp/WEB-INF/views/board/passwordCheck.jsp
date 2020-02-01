@@ -8,6 +8,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+	<c:if test="${pwChk eq true}">
+	<script>
+	alert('올바른 비밀번호 입력입니다.');
+	//location.href='<c:url value="/member/login"/>';
+</script>
+</c:if>
+
 <title>writeForm</title>
 <style>
 

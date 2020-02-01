@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+
 <title>PasswordCheckForm</title>
 <style>
 
@@ -52,7 +53,7 @@ width: 1000px;
 				
 				<form method ="post">
 				<div class="form-group" >
-				<input type="hidden" name ="idx" value="${Checkidx.idx}">
+				<input type="hidden" name ="idx" value="${Checkidx.idx}" id= "idx">
 				 <label for="password">비밀번호</label>
 				 <input type="password" class="form-control" id="gpw" name ="gpw" required>
 				</div>
@@ -64,15 +65,63 @@ width: 1000px;
 			</div>
 	</main>
 	
-	<script>
+	<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+
 	
+	<c:if test="${pwChk ne true}">
+	<script>
+	alert('수정 또는 삭제를 하시려면 비밀번호를 올바르게 입력해 주세요.');
+	//location.href='<c:url value="/member/login"/>';
+</script>
+</c:if>
+<script>
+	
+/* 	
 	$(function(){
+	
+	$("form").on("submit", function(e){
+		e.preventDefault();
+		
+		var gpw = $("#gpw").val(); 
+		var idx = $("#idx").val();
+		
+	$.ajax({
+		
+		url: 'pwChk',
+		type: 'post',
+		data:{
+			gpw: gpw
+		},
+		success: function(data){
+			//console.log("success");
+			
+			if(data){
+				alert('비밀번호가 맞습니다.');
+				
+			}else {
+				alert('비밀번호가 맞지 않습니다.111');
+				//location.href = '/board/passwordCheck?idx='idx;
+			}
+			
+		}
+		
+	});
+	
+	return false;
+	
+	});
+	
+	}); */
+	
+	/* $(function(){
 		$("form").on("submit", function(e){
 			e.preventDefault();
-			pwCheck != 2;
+			${pwCheck} != 2;
 			alert('비밀번호를 다시 입려해주세요.');
 			
 		});
+		
+	}); */
 	
 	
 	</script>

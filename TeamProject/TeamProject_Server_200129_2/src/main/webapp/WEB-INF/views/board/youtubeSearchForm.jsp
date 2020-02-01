@@ -55,10 +55,10 @@ text-align: center;
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					
-					<form action="#" id="formst">
+					<form action="#" id="formst" method="post">
 					
 						<p>
-							<input type="text" id="search" placeholder="게임 트레일러를 검색해보세요." autocomplete="off" class="form-control" />
+							<input type="text" id="search" name="search" placeholder="게임 트레일러를 검색해보세요." autocomplete="off" class="form-control" value="${searchAgain}" required/>
 						</p>
 						<p>
 							<input type="submit" value="Search" class="btn btn-danger form-control">
@@ -124,10 +124,12 @@ text-align: center;
 		
 						$.ajax({
 							
-							url: 'http://localhost:8080/gz/board/youtubeSearch/',
+							url: 'youtubeSearch',
 							type: 'POST',
 							data:{
-								title: item.snippet.title
+								title: item.snippet.title,
+								channelTitle: item.snippet.channelTitle,
+								search: q1
 							},
 							success: function(){
 								console.log("success");

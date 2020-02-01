@@ -20,12 +20,12 @@ public class BoardPwCheckService {
 	private BoardDao dao;
 
 	//passwordCheck: 게시글의 비밀번호가 맞는지 틀린지 체크하는 기능
-	public int passwordCheck(BoardPasswordVo request) {
+	public boolean passwordCheck(BoardPasswordVo request) {
 		
 		dao = template.getMapper(BoardDao.class);
 		
 		//비밀번호 체크 여부를 판단하는 변수선언
-		int pwCheck = 0;
+		boolean pwCheck = false;
 
 		BoardPasswordVo getgpwchek = null;
 
@@ -33,7 +33,7 @@ public class BoardPwCheckService {
 		
 		if (getgpwchek != null) {
 
-			pwCheck = 2;
+			pwCheck = true;
 		}
 		
 		return pwCheck;

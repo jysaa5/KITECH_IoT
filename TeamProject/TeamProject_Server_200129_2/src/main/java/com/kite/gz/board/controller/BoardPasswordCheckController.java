@@ -37,19 +37,24 @@ public class BoardPasswordCheckController {
 	@RequestMapping(method = RequestMethod.POST)
 	public String pwCheck(BoardPasswordVo request, Model model) {
 		
-		int result = pwCheckService.passwordCheck(request);
-
-		if(result !=2 ) 
+		boolean result = pwCheckService.passwordCheck(request);
+		String pwCheckView = null;
+		
+		model.addAttribute("pwChk", result);
+		if(result) 
 		{
+			System.out.println("비밀번호가 맞습니다.");
+			model.addAttribute("pwCheck", request);
+			pwCheckView = "board/passwordCheck";
+			
+		}else {
 			
 			System.out.println("비밀번호가 정확하지 않습니다.");
-			model.addAttribute("pwCheck", request);
-			return "board/passwordCheckForm";
+			pwCheckView = "board/passwordCheckForm";
+			
 		}
-		
-		model.addAttribute("pwCheck", request);
-		
-		return "board/passwordCheck";
+	
+		return pwCheckView;
 		
 	}//pwCheck 메서드 끝
 	

@@ -56,6 +56,7 @@
           <a class="dropdown-item" href="<c:url value="/board/write"/>">게임 추천 글 작성하기</a>
           <a class="dropdown-item" href="<c:url value="/board/list"/>">게임 추천 글 리스트</a>
           <a class="dropdown-item" href="<c:url value="/board/youtubeSearch"/>">게임 트레일러</a>
+          <a class="dropdown-item" href="<c:url value="/board/youtubeList"/>">유튜브 최근 기록</a>
         </div>
       </li>
     </ul>
