@@ -32,8 +32,16 @@
         <a class="nav-link" href="#">가계부</a>
       </li>
       
-        <li class="nav-item">
-        <a class="nav-link" href="#">금융</a>
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">금융</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="<c:url value="/finance/savingProductsSearch"/>">적금상품</a>
+          <a class="dropdown-item" href="<c:url value="/finance/depositProductsSearch"/>">예금상품</a>
+          <a class="dropdown-item" href="<c:url value="/finance/annuitySavingProductsSearch"/>">연금저축상품</a>
+          <a class="dropdown-item" href="<c:url value="/finance/rentHouseLoanProductsSearch"/>">주택담보대출</a>
+          <a class="dropdown-item" href="<c:url value="/finance/mortgageLoanProductsSearch"/>">전세자금대출</a>
+          <a class="dropdown-item" href="<c:url value="/finance/creditLoanProductsSearch"/>">개인신용대출</a>
+        </div>
       </li>
       
           <li class="nav-item dropdown">
