@@ -1,18 +1,14 @@
 package com.kite.gz.board.service;
 
 
-import java.io.File;
-import java.io.IOException;
 
-import javax.servlet.http.HttpServletRequest;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
+
 
 import com.kite.gz.board.dao.BoardDao;
-import com.kite.gz.board.domain.BoardVo;
 import com.kite.gz.board.domain.BoardWriteRequestVo;
 
 

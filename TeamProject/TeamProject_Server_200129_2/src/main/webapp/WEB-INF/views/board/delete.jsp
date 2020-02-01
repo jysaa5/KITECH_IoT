@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Index</title>
+<title>delete</title>
 
 
 <!-- 기본 CSS 처리 시작 -->
