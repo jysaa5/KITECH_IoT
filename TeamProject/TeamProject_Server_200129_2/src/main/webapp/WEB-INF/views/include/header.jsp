@@ -1,6 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<script>
+function btn(){
+	alert('준비중입니다.');
+}
+</script>
     <style>
     .nav-link{
     margin: 0 30px
@@ -33,7 +37,7 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="#">가계부</a>
+        <a class="nav-link" href="#" onclick="javascript:btn()">가계부</a>
       </li>
       
        <li class="nav-item dropdown">

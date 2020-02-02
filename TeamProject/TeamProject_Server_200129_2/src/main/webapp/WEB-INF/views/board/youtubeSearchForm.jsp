@@ -22,6 +22,11 @@ width: 200%;
 text-align: center;
 }
 
+#results{
+text-align: center;
+width: 1000px;
+}
+
 </style>
 
 <!-- 기본 CSS 처리 시작 -->

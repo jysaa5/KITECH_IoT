@@ -8,7 +8,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>edit</title>
+<c:if test="${result eq 1}">
+<script>
+alert('게시글 수정이 정상적으로 완료되었습니다.');
+//location.href='<c:url value="/member/login"/>';
+</script>
+</c:if>
+
+<title>Edit</title>
 
 <!-- 기본 CSS 처리 시작 -->
 <%@ include file="/WEB-INF/views/include/basic.jsp"%>
@@ -18,7 +25,6 @@
 </script>
 </head>
 <body>
-
 	<!-- 해더 시작 -->
 	<%@ include file="/WEB-INF/views/include/header.jsp"%>
 	<!-- 해더 끝 -->
@@ -28,15 +34,16 @@
 		<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
 			<img class="mr-3" src="https://getbootstrap.com/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48">
 			<div class="lh-100">
-				<h6 class="mb-0 text-white lh-100">게임 추천 게시글</h6>
+				<h6 class="mb-0 text-white lh-100">게임 추천 게시글 수정 완료</h6>
 				<small>Since 2020</small>
 			</div>
 		</div>
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">게임 추천 게시글 작성 완료</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">게임 추천 게시글 수정 완료</h6>
 			<div class="media text-muted pt-3">
 				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-				${boardWriteRequestVo}
+				<a href="<c:url value ="/board/list"/>" class="btn btn-primary">게임추천리스트로 돌아가기</a>
+				<%-- ${boardWriteRequestVo} --%>
 				</p>
 			</div>
 		</div>

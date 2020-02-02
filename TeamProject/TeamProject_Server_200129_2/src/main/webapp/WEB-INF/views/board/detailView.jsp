@@ -16,10 +16,15 @@
 <!-- 기본 CSS 처리 끝 -->
 <script>
 </script>
-
 <style>
+
+
 img.photo {
-	width: 60px;
+	width:500px;
+}
+
+#tableimg{
+text-align: center;
 }
 </style>
 
@@ -48,6 +53,10 @@ img.photo {
 					<td>${detailView.idx}</td>
 					</tr>
 					<tr>
+					<th>작성 날짜</th>
+					<td><fmt:formatDate value="${detailView.regdate}" pattern="yyyy. MM. dd" /></td>
+					</tr>
+					<tr>
 					<th>작성자</th>
 					<td>${detailView.writer}</td>
 					<tr>
@@ -57,22 +66,16 @@ img.photo {
 					<td>${detailView.title}</td>
 					</tr>
 					<tr>
-					<th colspan="2">내용</th>
-					</tr>
-					<tr>
-					<td>${detailView.content}</td>
-					</tr>
-					<tr>
 					<th colspan="2">게임 스틸컷</th>
 					</tr>
 					<tr>
-					<td><img src="<c:url value="/uploadfile/userphoto/${detailView.gphoto}"/>" class="photo" alt="사진"></td>
+					<td id="tableimg" colspan="2"><img src="<c:url value="/uploadfile/userphoto/${detailView.gphoto}"/>" class="photo" alt="사진"></td>
 					</tr>
 					<tr>
-					<th colspan="2">작성 날짜</th>
+					<th colspan="2">내용</th>
 					</tr>
 					<tr>
-					<td><fmt:formatDate value="${detailView.regdate}" pattern="yyyy. MM. dd" /></td>
+					<td colspan="2">${detailView.content}</td>
 					</tr>
 				</table>
 

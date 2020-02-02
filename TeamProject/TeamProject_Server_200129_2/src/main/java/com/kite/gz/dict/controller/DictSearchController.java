@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 public class DictSearchController {
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String searchFormWord(Model model) {
+	public String searchFormWord() {
 		
 		return "dictionary/dictSearchForm";	
 		

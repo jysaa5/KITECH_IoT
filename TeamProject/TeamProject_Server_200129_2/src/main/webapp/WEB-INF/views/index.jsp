@@ -105,8 +105,8 @@
     <div class="container">
       <h1 class="display-3">안녕하세요, 환영합니다!</h1><br>
      <div><img src= "<c:url value="/images/homeImg01.png"/>" width="10%" height="10%"/></div><br>
-      <p>2020년 재테크 투자 전략, 전문가들이 추천하는 '절대 안 망하는 제1원칙'으로 5G 경제와 가계부를 알아보자!</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      <p>2020년 재테크 투자 전략, 전문가들이 추천하는 '절대 안 망하는 제1원칙'으로 5G 금융과 가계부를 알아보자!</p>
+      <p><a class="btn btn-primary btn-lg" href="<c:url value="/finance/annuitySavingProductsSearch"/>" role="button">Learn more &raquo;</a></p>
     </div>
   </div>
 
@@ -118,7 +118,7 @@
         <h2>5G 사전  <img src= "<c:url value="/images/homeImg02.png"/>" width="20%" height="20%"/></h2>
         <p class="ptitle">“NO 인터넷, OK” 5G 지지고, ‘오프라인 번역’ 출시</p>
         <p>5G가 통번역 서비스 지지고(Geegeego) ‘오프라인 번역’ 기능을 출시한다. 네트워크 환경이 원활하지 않은 해외에서도 지지고를 활용할 수 있도록 지원하는 기능이다.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="<c:url value="/dictionary/dictSearch"/>" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-4" style="background-color: #AEE1E8">
       <br>
