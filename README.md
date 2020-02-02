@@ -10,6 +10,7 @@
 프레임워크: Spring, Spring boot, Mybatis <br>
 
 <a href="https://github.com/jysaa5/kiet/tree/master/TeamProject/TeamProject_Server_200129_2"><h4> <팀프로젝트> </h4></a>
+<a href="http://ec2-13-209-26-197.ap-northeast-2.compute.amazonaws.com:8080/gz/">배포된 사이트</a><br>
 프로젝트명: TeamProject/TeamProject_Server_200129_2 <br>
 프로젝트 기간: 2020.01.28~2020.02.02  <br>
 팀 이름: 5G  <br>
