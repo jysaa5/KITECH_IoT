@@ -10,7 +10,7 @@
 프레임워크: Spring, Spring boot, Mybatis <br>
 
 <h4> <팀프로젝트> </h4>
-프로젝트명: TeamProject/TeamProject_Server_200129_2
+프로젝트명: TeamProject/TeamProject_Server_200129_2 <br>
 프로젝트 기간: 2020.01.28~2020.02.02  <br>
 팀 이름: 5G  <br>
 팀원: 조지윤, 박지은, 김주연, 정용기, 조성빈  <br>
