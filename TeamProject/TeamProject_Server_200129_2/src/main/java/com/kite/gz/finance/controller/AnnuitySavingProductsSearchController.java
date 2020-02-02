@@ -11,8 +11,6 @@ import org.springframework.web.client.RestTemplate;
 
 @Controller
 public class AnnuitySavingProductsSearchController {
-
-
 	
 	@CrossOrigin
 	@RequestMapping("/finance/annuitySavingProductsSearch")

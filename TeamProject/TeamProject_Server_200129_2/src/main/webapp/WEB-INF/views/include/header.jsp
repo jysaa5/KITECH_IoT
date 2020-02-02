@@ -24,8 +24,12 @@
       <li class="nav-item active">
         <a class="nav-link" href="<c:url value="/"/>">홈<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">사전</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">사전</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+        <a class="dropdown-item" href="<c:url value="/dictionary/dictSearch"/>">우리말 사전 검색</a>
+          <a class="dropdown-item" href="<c:url value="/dictionary/dictContent"/>">사전 내용 보기</a>
+        </div>
       </li>
       
       <li class="nav-item">

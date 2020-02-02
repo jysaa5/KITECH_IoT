@@ -12,8 +12,6 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class CreditLoanProductsSearchController {
 
-
-	
 	@CrossOrigin
 	@RequestMapping("/finance/creditLoanProductsSearch")
 	public String getInfo(Model model) throws UnsupportedEncodingException {
