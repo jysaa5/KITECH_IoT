@@ -9,7 +9,7 @@
 언어: HTML, CSS, JavaScript, ajax - 툴: Brackets <br>
 프레임워크: Spring, Spring boot, Mybatis <br>
 
-<h4> <팀프로젝트> </h4>
+<a href="https://github.com/jysaa5/kiet/tree/master/TeamProject/TeamProject_Server_200129_2"><h4> <팀프로젝트> </h4></a>
 프로젝트명: TeamProject/TeamProject_Server_200129_2 <br>
 프로젝트 기간: 2020.01.28~2020.02.02  <br>
 팀 이름: 5G  <br>
