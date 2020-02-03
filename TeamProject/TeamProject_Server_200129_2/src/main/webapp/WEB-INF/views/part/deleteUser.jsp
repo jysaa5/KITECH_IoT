@@ -8,11 +8,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Write</title>
-
+<title>Delete</title>
+	
 <!-- 기본 CSS 처리 시작 -->
-	<%@ include file="/WEB-INF/views/include/basic.jsp" %>	
-<!-- 기본 CSS 처리 끝 -->	
+<%@ include file="/WEB-INF/views/include/basic.jsp" %>	
+<!-- 기본 CSS 처리 끝 -->
 <script>
 </script>
 </head>
@@ -27,22 +27,22 @@
       <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
         <img class="mr-3" src="https://getbootstrap.com/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48">
         <div class="lh-100">
-          <h6 class="mb-0 text-white lh-100">부품 입력</h6>
+          <h6 class="mb-0 text-white lh-100">삭제</h6>
           <small>Since 2020</small>
         </div>
       </div>
       <div class="my-3 p-3 bg-white rounded box-shadow">
-        <h6 class="border-bottom border-gray pb-2 mb-0">입력되었습니다.</h6>
-        <div class="media text-muted pt-3">       
+        <h6 class="border-bottom border-gray pb-2 mb-0">삭제완료</h6>
+        <div class="media text-muted pt-3">
+          
           <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-          	${PartwriteRequest}
-          	<a href="<c:url value ="/part/list"/>" class="btn btn-primary">부품 목록으로 돌아가기</a>
+          	<%-- ${result2} --%>
+          <a href="<c:url value ="/part/selectlist"/>" class="btn btn-primary">내 장바구니로 가기</a>
           </p>
         </div>
-      </div>   
+      </div>
     </main>
 <!-- 메인 컨텐트 끝 -->
-
 <!-- 푸터 시작 -->
 	<%@ include file="/WEB-INF/views/include/footer.jsp" %>
 <!-- 푸터 끝 -->

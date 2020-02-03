@@ -18,7 +18,7 @@ public class PartDeleteSelectService {
 		
 		dao = template.getMapper(PartDao.class);
 
-		return dao.deleteselect(idx);
+		return dao.deleteSelectUserPick(idx);
 	}
 
 }

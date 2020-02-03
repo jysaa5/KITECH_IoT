@@ -11,7 +11,6 @@ import com.kite.gz.parts.domain.PartWriteRequest;
 import com.kite.gz.parts.service.PartEditService;
 import com.kite.gz.parts.service.PartViewService;
 
-
 @Controller
 @RequestMapping("/part/edit")
 public class PartEditController {
@@ -23,10 +22,7 @@ public class PartEditController {
 	PartEditService editService;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String editForm(
-			@RequestParam(value="idx", defaultValue = "-1") int idx,
-			Model model
-			) {
+	public String editForm( @RequestParam(value="idx", defaultValue = "-1") int idx, Model model) {
 		
 		model.addAttribute("article", viewService.getArticle(idx));
 		

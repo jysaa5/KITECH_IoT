@@ -13,6 +13,7 @@
 		<result property="regdate" column="regdate"/>
 </resultMap>
 	
+<!--관리자 메뉴 SQL-->
 	
 	<select id="selectCount" resultType="int">
 	
@@ -26,7 +27,6 @@
 		
 	</select>
 	
-
 	<select id="selectArticleList" resultMap="partArticle">
 	
 		select * from pcinfo  limit #{param1}, #{param2}
@@ -46,9 +46,18 @@
 	
 	</update>
 	
-	<delete id="deleteArticle">
+		<delete id="deleteAdminPick" parameterType="com.kite.gz.parts.domain.PartVo">
 	
 		delete from pcinfo where idx=#{idx}
+		
+	</delete>
+	
+	
+<!--사용자 메뉴 SQL-->
+	
+	<delete id="deleteSelectUserPick"  parameterType="com.kite.gz.parts.domain.PartVo">
+	
+		delete from pcselect where idx=#{idx}
 		
 	</delete>
 	
@@ -66,13 +75,8 @@
 	
 	</select>
 	
-	<delete id="deleteselect">
 	
-		delete from pcselect where idx=#{idx}
-		
-	</delete>
-	
-	<delete id="deleteAll">
+	<delete id="deleteAllUserPick" parameterType="com.kite.gz.parts.domain.PartVo">
 	
 			TRUNCATE TABLE pcselect
 			

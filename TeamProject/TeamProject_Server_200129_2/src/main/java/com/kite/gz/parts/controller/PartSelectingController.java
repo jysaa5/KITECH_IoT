@@ -22,10 +22,7 @@ public class PartSelectingController {
 	PartSelectService selectingService;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String editForm(
-			@RequestParam(value="idx", defaultValue = "-1") int idx,
-			Model model
-			) {
+	public String editForm( @RequestParam(value="idx", defaultValue = "-1") int idx, Model model) {
 		
 		model.addAttribute("article", viewService.getArticle(idx));
 		

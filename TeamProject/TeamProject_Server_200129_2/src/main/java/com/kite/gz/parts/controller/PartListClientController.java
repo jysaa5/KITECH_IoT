@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.kite.gz.parts.domain.PartListView;
 import com.kite.gz.parts.service.PartListService;
 
-
-
 @Controller
 public class PartListClientController {
 	
@@ -18,10 +16,7 @@ public class PartListClientController {
 	PartListService service;
 	
 	@RequestMapping("/part/listclient")
-	public String list(
-			@RequestParam(value="page", defaultValue = "1") int page,
-			Model model
-			) {
+	public String listclientView( @RequestParam(value="page", defaultValue = "1") int page, Model model) {
 		
 		PartListView view = service.getListView(page);
 		

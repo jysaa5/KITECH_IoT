@@ -16,19 +16,21 @@ public interface PartDao {
 	// idx 값으로 한개의 게시물 받기
 	public PartVo selectpartByIdx(int idx);
 	
+	//사용자
 	/* 실험적 */
 	// type값으로 한개의 게시물 받기
 	public PartVo selectpartBytype(String type);
 	public int selectingArticle(PartSelectRequest request);
 	public List<PartSelectRequest> selectingList(int startRow, int count);
 	// idx로 게시물 삭제select
-	public int deleteselect(int idx);
-	public int deleteAll();
+	public int deleteSelectUserPick(int idx);
+	public int deleteAllUserPick();
 	
+	//관리자
 	// idx 값으로 한개의 게시물의 데이터 수정
 	public int editArticle(PartWriteRequest request);
 	// idx로 게시물 삭제
-	public int deleteArticle(int idx);
+	public int deleteAdminPick(int idx);
 	
 	
 }

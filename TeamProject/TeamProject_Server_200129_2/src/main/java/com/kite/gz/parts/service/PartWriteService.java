@@ -22,9 +22,4 @@ public class PartWriteService {
 		return dao.insertArticle(request);
 	}
 	
-	
-	
-	
-	
-
 }

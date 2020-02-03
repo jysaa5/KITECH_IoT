@@ -6,23 +6,23 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.kite.gz.parts.service.PartDeleteService;
+import com.kite.gz.parts.service.PartDeleteAllService;
 
 @Controller
-public class PartDeleteController {
+public class PartDeleteAllUserController {
 	
 	@Autowired
-	PartDeleteService service;
+	PartDeleteAllService service;
 	
-	@RequestMapping("/part/deleteAdmin")
-	public String deleteAdmin( @RequestParam(value="idx", defaultValue = "1") int idx, Model model) {
+	@RequestMapping("/part/deleteAllUser")
+	public String deleteAllUserPick(@RequestParam(value="idx", defaultValue = "1") int idx, Model model) {
 		
 		System.out.println("삭제 컨트롤러 : idx =>" + idx);
-		
-		int result = service.deleteAdminPick(idx);
+				
+		int result = service.deleteAllUserPick(idx);
 						
-		model.addAttribute("result", result); 
+		model.addAttribute("result3", result); 
 		
-		return "part/deleteAdmin";
+		return "part/deleteAllUser";
 	}
 }

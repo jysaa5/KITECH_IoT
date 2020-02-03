@@ -16,10 +16,7 @@ public class PartSelectListController {
 	PartSelectListService service;
 	
 	@RequestMapping("/part/selectlist")
-	public String list(
-			@RequestParam(value="page", defaultValue = "1") int page,
-			Model model
-			) {
+	public String list( @RequestParam(value="page", defaultValue = "1") int page, Model model) {
 		
 		PartSelectListView view = service.getListView(page);
 		

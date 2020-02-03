@@ -14,11 +14,11 @@ public class PartDeleteAllService {
 
 	private PartDao dao;
 
-	public int deleteAll(int idx) {
+	public int deleteAllUserPick(int idx) {
 		
 		dao = template.getMapper(PartDao.class);
 
-		return dao.deleteAll();
+		return dao.deleteAllUserPick();
 	}
 
 }

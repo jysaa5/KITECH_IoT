@@ -22,13 +22,5 @@ public class PartEditService {
 		return 	dao.editArticle(request);
 			
 	}
-
-	
-	
-	
-	
-	
-	
-	
 	
 }
