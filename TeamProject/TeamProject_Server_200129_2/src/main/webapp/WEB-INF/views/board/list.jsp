@@ -9,13 +9,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>방명록 List</title>
+<title>Posting List</title>
 
 <!-- 기본 CSS 처리 시작 -->
 <%@ include file="/WEB-INF/views/include/basic.jsp"%>
 <!-- 기본 CSS 처리 끝 -->
 <script>
 </script>
+
+<style>
+img.photo {
+	width: 60px;
+}
+</style>
+
 </head>
 <body>
 
@@ -48,13 +55,15 @@
 				<c:forEach items="${listView.list}" var="boardArticle">
 					<tr>
 						<td>${boardArticle.idx}</td>
-						<td>${boardArticle.title}</td>
+						<td><a href="<c:url value="/board/detailView?idx=${boardArticle.idx}"/>">${boardArticle.title}</a></td>
 						<td>${boardArticle.writer}</td>
-						<td><img src="<c:url value="/uploadfile/userphoto/${boardArticle.gphoto}"/>" class="photo"></td>
+						<td><img src="<c:url value="/uploadfile/userphoto/${boardArticle.gphoto}"/>" class="photo" alt="사진"></td>
 						<td><fmt:formatDate value="${boardArticle.regdate}" pattern="yyyy. MM. dd" /></td>
 						<td>
-						<a href="<c:url value ="/board/edit?idx=${boardArticle.idx}"/>" class="btn btn-primary">수정</a>
-						<a href="<c:url value ="/board/delete?idx=${boardArticle.idx}"/>" class="btn btn-danger">삭제</a>
+						<%-- <a href="<c:url value ="/board/edit?idx=${boardArticle.idx}"/>" class="btn btn-primary">수정</a> --%>
+						<a href="<c:url value ="/board/passwordCheck?idx=${boardArticle.idx}"/>" class="btn btn-primary">수정/삭제</a>
+						<%-- <a href="<c:url value ="/board/passwordCheck?idx=${boardArticle.idx}"/>" class="btn btn-danger">삭제</a> --%>
+						<%-- <a href="<c:url value ="/board/delete?idx=${boardArticle.idx}"/>" class="btn btn-danger">삭제</a> --%>
 						</td>
 					</tr>
 				</c:forEach>
@@ -67,7 +76,7 @@
 				</c:forEach>	
 			</div>
 		</div>
-		<div class="my-3 p-3 bg-white rounded box-shadow">
+		<%-- <div class="my-3 p-3 bg-white rounded box-shadow">
 			<h6 class="border-bottom border-gray pb-2 mb-0">게임 추천 게시글</h6>
 
 			<c:forEach items="${listView.list}" var="boardArticle">
@@ -85,7 +94,7 @@
 					</div>
 				</div>
 			</c:forEach>
-		</div>
+		</div> --%>
 	</main>
 
 	<!-- 메인 컨텐트 끝 -->

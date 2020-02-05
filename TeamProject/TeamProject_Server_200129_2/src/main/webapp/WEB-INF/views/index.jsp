@@ -9,8 +9,13 @@
 <meta name="description" content="">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Jekyll v3.8.5">
+    <style>
+    .ptitle{
+     font-style: italic;
+    }
     
-    <title>Game Zone Index</title>
+    </style>
+    <title>5G</title>
     
     <!-- 기본 CSS 처리 시작 -->
     <%@ include file="/WEB-INF/views/include/basic.jsp" %>
@@ -98,29 +103,36 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">Hello, Game Zone!</h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      <h1 class="display-3">안녕하세요, 환영합니다!</h1><br>
+     <div><img src= "<c:url value="/images/homeImg01.png"/>" width="10%" height="10%"/></div><br>
+      <p>2020년 재테크 투자 전략, 전문가들이 추천하는 '절대 안 망하는 제1원칙'으로 5G 금융과 가계부를 알아보자!</p>
+      <p><a class="btn btn-primary btn-lg" href="<c:url value="/finance/annuitySavingProductsSearch"/>" role="button">Learn more &raquo;</a></p>
     </div>
   </div>
 
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      <div class="col-md-4"  style="background-color: #BFE6FF">
+       <br>
+        <h2>5G 사전  <img src= "<c:url value="/images/homeImg02.png"/>" width="20%" height="20%"/></h2>
+        <p class="ptitle">“NO 인터넷, OK” 5G 지지고, ‘오프라인 번역’ 출시</p>
+        <p>5G가 통번역 서비스 지지고(Geegeego) ‘오프라인 번역’ 기능을 출시한다. 네트워크 환경이 원활하지 않은 해외에서도 지지고를 활용할 수 있도록 지원하는 기능이다.</p>
+        <p><a class="btn btn-secondary" href="<c:url value="/dictionary/dictSearch"/>" role="button">View details &raquo;</a></p>
       </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      <div class="col-md-4" style="background-color: #AEE1E8">
+      <br>
+        <h2>5G 쇼핑  <img src= "<c:url value="/images/homeImg03.png"/>" width="20%" height="20%"/></h2>
+        <p class="ptitle">가치있는 소비하려면? '5G 쇼핑'으로</p>
+        <p>다양한 상품을 편리하고 합리적으로 구입할 수 있고 맞춤형 상품을 추천받을 수 있는 온라인 전자제품 전문 쇼핑몰. AI기술로 새롭게 달라진 IoT세계을 경험하세요.</p>
+        <p><a class="btn btn-secondary" href="<c:url value="/part/listclient"/>" role="button">View details &raquo;</a></p>
       </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      <div class="col-md-4" style="background-color: #BFFFD1">
+      <br>
+        <h2>5G 게임  <img src= "<c:url value="/images/homeImg04.png"/>" width="20%" height="20%"/></h2>
+        <p class="ptitle">새해 기대작! 2020년 신작 게임 경쟁 후끈</p>
+        <p>2020년 새해에도 다양한 신작이 쏟아질 전망이다. 블리자드, 넥슨, 넷마블, 컴투스 등이 잇따라 기대작을 예고하면서 연초부터 치열한 각축전이 예상된다.</p>
+        <p><a class="btn btn-secondary" href="<c:url value="/board/list"/>" role="button">View details &raquo;</a></p>
       </div>
     </div>
 

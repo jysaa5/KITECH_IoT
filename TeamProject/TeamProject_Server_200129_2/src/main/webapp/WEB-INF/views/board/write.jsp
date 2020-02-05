@@ -8,6 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+	<c:if test="${rCnt eq 1}">
+	<script>
+	alert('게시글 작성이 정상적으로 완료되었습니다.');
+	//location.href='<c:url value="/member/login"/>';
+</script>
+</c:if>
 <title>Write</title>
 
 <!-- 기본 CSS 처리 시작 -->
@@ -38,7 +44,8 @@
 			<h6 class="border-bottom border-gray pb-2 mb-0">게임 추천 글 작성 완료</h6>
 			<div class="media text-muted pt-3">
 				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-				${boardWriteRequest}
+				게시글 작성이 정상적으로 완료되었습니다.
+				<%-- ${rCnt} --%>
 				 </p>
 			</div>
 		</div>

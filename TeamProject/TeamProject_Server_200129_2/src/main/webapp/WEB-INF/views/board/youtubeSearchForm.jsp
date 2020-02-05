@@ -18,6 +18,14 @@ color: red;
 #formst{ 
 width: 200%;
 }
+#youtubeicon{
+text-align: center;
+}
+
+#results{
+text-align: center;
+width: 1000px;
+}
 
 </style>
 
@@ -43,7 +51,8 @@ width: 200%;
 		</div>
 
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h4 class="border-bottom border-gray pb-2 mb-0" id="youtube">Youtube</h4>
+		<div id="youtubeicon"><img src= "<c:url value="/images/youtube02.gif"/>" width="30%" height="30%" /></div>
+			<!-- <h4 class="border-bottom border-gray pb-2 mb-0" id="youtube">YouTube</h4> -->
 			<div class="media text-muted pt-3">
 				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">  </p>
 			</div>
@@ -51,10 +60,10 @@ width: 200%;
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					
-					<form action="#" id="formst">
+					<form action="#" id="formst" method="post">
 					
 						<p>
-							<input type="text" id="search" placeholder="게임 트레일러를 검색해보세요." autocomplete="off" class="form-control" />
+							<input type="text" id="search" name="search" placeholder="게임 트레일러를 검색해보세요." autocomplete="off" class="form-control" value="${searchAgain}" required/>
 						</p>
 						<p>
 							<input type="submit" value="Search" class="btn btn-danger form-control">
@@ -85,7 +94,7 @@ width: 200%;
 				}
 			)}
 		return res}
-	
+
 	
 	
 	
@@ -117,13 +126,18 @@ width: 200%;
 					/* $("#results").append(item.id.videoId+""+item.snippet.title+"<br>"); */
 					$.get("<c:url value="/resources/item.html"/>",function(data){
 						$("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
-						
+		
 						$.ajax({
 							
-							url: 'http://localhost:8080/gz/board/youtubeSearch/',
+							url: 'youtubeSearch',
 							type: 'POST',
 							data:{
-								title:
+								title: item.snippet.title,
+								channelTitle: item.snippet.channelTitle,
+								search: q1
+							},
+							success: function(){
+								console.log("success");
 							}
 							
 						});
