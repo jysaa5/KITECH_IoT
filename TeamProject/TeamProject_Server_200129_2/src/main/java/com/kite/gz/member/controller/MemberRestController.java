@@ -29,31 +29,31 @@ import com.kite.gz.member.service.MemberViewService;
 public class MemberRestController {
 
 	@Autowired
-	MemberViewService viewService;
+	MemberViewService mViewService;
 
 	@Autowired
-	MemberListService listService;
+	MemberListService mListService;
 
 	@Autowired
-	MemberRegService regService;
+	MemberRegService mRegService;
 	
 	@Autowired
-	MemberEditService editService;
+	MemberEditService mEditService;
 	
 	@Autowired
-	MemberDeleteService deleteService;
+	MemberDeleteService mDeleteService;
 
 	//전체 리스트 출력해줌.
 	@GetMapping
 	public List<OpMember> getMembers() {
-		return listService.getAllList();
+		return mListService.getAllList();
 	}
 
 	// /restapi/v1/1 -> id = 1
 	///restapi/v1/{id} 
 	@GetMapping("/{id}")
 	public OpMember getMember(@PathVariable("id") int idx) {
-		return viewService.getMember(idx);
+		return mViewService.getMember(idx);
 	}
 
 	//RequestMapping을 한 것과 같다.
@@ -62,7 +62,7 @@ public class MemberRestController {
 		String result = "fail";
 		
 		//insert되면 sql문에서 1로 들어온다.
-		if (regService.memberInsert(request, regist) > 0) {
+		if (mRegService.memberInsert(request, regist) > 0) {
 			result = "success";
 		}
 		return result;
@@ -80,7 +80,7 @@ public class MemberRestController {
 		
 		edit.setIdx(idx);
 		
-		if (editService.edit(edit, edit.getOldFile(), request) > 0) {
+		if (mEditService.edit(edit, edit.getOldFile(), request) > 0) {
 			result = "success";
 		}
 		return result;
@@ -91,25 +91,10 @@ public class MemberRestController {
 	@DeleteMapping("/{idx}")
 	public String deleteMember(@PathVariable("idx") int idx) {
 		String result = "fail";
-		if (deleteService.memberDelete(idx) > 0) {
+		if (mDeleteService.memberDelete(idx) > 0) {
 			result = "success";
 		}
 		return result;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

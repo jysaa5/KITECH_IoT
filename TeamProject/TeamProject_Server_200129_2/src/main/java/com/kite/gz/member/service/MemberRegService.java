@@ -14,7 +14,7 @@ import com.kite.gz.member.dao.MemberDaoInterface;
 import com.kite.gz.member.domain.OpMember;
 import com.kite.gz.member.domain.RequestMemberRegist;
 
-@Service("registService")
+@Service("mRegistService")
 public class MemberRegService implements MemberService {
 
 	// 자동 메퍼를 이용해서 생성할 dao

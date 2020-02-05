@@ -1,7 +1,6 @@
 package com.kite.gz.member.service;
 
 import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Service;
