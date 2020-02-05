@@ -6,7 +6,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Service;
 
 import com.kite.gz.board.dao.BoardDao;
-import com.kite.gz.board.domain.BoardYoutubeTitle;
+import com.kite.gz.board.domain.BoardYoutubeVo;
 
 //BoardYoutubeSearchService: 유튜브 검색 결과를 가져오는 서비스 클래스
 @Service("youtubeSearchService")
@@ -20,7 +20,7 @@ public class BoardYoutubeSearchService {
 	private BoardDao dao;
 	
 	//boardYoutubeSearchSave 메서드: 유튜브 검색 결과인 동영상의 제목을 저장하는 기능
-	public int boardYoutubeSearchSave(BoardYoutubeTitle request) {
+	public int boardYoutubeSearchSave(BoardYoutubeVo request) {
 	
 		dao = template.getMapper(BoardDao.class);
 		

@@ -9,7 +9,7 @@ import com.kite.gz.board.dao.BoardDao;
 import com.kite.gz.board.domain.BoardYoutubeVo;
 
 //BoardYoutubeSearchService: 유튜브 검색 결과를 가져오는 서비스 클래스
-@Service("youtubeSearchService")
+@Service("BoardYoutubeSearchResultSaveService")
 public class BoardYoutubeSearchResultSaveService {
 
 	//객체 주입

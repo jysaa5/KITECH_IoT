@@ -25,7 +25,7 @@ public class PartDeleteAllController {
 		
 		System.out.println("삭제 컨트롤러 : idx =>" + idx);
 				
-		int result = service.deleteAll(idx);
+		int result = service.deleteAllUserPick(idx);
 						
 		model.addAttribute("result3", result); 
 		
