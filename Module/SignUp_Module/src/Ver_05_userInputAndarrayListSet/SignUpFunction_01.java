@@ -113,7 +113,7 @@ public class SignUpFunction_01 {
 			if(index<0) {
 				System.out.println("찾으시는 이름의 정보가 없습니다.");
 			} else {
-				sBook1[index].showInfor();
+				sBook1[index].showInfo();
 			}
 		}//searchInfo 메서드 끝
 		

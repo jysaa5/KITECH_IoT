@@ -13,7 +13,7 @@ public class SignUpCompanyInfo extends SignUpDefaultInfo {
 	
 	//showInfor 메서드: 오버라이딩
 	@Override
-	void showInfor() {
+	void showInfo() {
 		super.showBasicInfor();
 		System.out.println("회사이름: " + this.company);
 	}//showInfor 메서드

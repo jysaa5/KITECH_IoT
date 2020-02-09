@@ -19,7 +19,7 @@ public class SignUpUnivInfo extends SignUpDefaultInfo {
 	
 	//showInfor메서드: 오버라이딩
 	@Override
-	void showInfor() {
+	void showInfo() {
 		
 		super.showBasicInfor();
 		System.out.println("주소 : " + this.address);

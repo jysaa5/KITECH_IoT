@@ -103,7 +103,7 @@ public class SignUpFunction_03 {
 			//다음 요소값을 가져온다.
 			SignUpDefaultInfo si = itr.next();
 			if(si.name.equals(name)) {
-				si.showInfor();
+				si.showInfo();
 				chk = true;
 				break;
 			}

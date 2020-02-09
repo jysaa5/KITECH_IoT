@@ -26,7 +26,7 @@ public abstract class SignUpDefaultInfo {
 	}
 	
 	//showInfor:추상메서드
-	abstract void showInfor();
+	abstract void showInfo();
 
 	//equals 메서드: 오버라이딩
 	@Override
