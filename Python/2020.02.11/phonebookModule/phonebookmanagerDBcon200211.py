@@ -32,6 +32,7 @@ class Sql:
         self.con = sqlite3.connect('phonebooksample')
         self.cur = self.con.cursor()
         
+        
     def allselect_sql(self):
         self.sql1 = 'select * from phonebook_table'
         self.cur.execute(self.sql1)
@@ -43,7 +44,7 @@ class Sql:
             print('{}\t\t{}\t\t{}'.format(row[0], row[1], row[2]))
 
     def insert_sql(self, name, pNum, bDay):
-        self.sql2 = 'insert into phonebook_table values (\'{}\',{} ,{})'.format(name,pNum,bDay)
+        self.sql2 = 'insert into phonebook_table values (\'{}\',\'{}\' ,\'{}\')'.format(name,pNum,bDay)
         self.cur.execute(self.sql2)
     
     def select_sql(self,name):
@@ -95,6 +96,8 @@ def showList():
     sql = Sql()
     sql.allselect_sql()
     sql.exit()
+    #for member in pBooks:
+    #print(member)
 
 def searchInfo():
     sql = Sql()
@@ -112,6 +115,11 @@ def deleteInfo():
     print('----삭제(이름)----')
     sql = Sql()
     keyword = input('이름을 입력해주세요>>')
+    delCnt = 0
+    for i, member in enumerate(pBooks):
+        if member.checkInfo(keyword):
+            del pBooks[i]
+            delCnt +=1
     if sql.select_sql1(keyword) != 0:
         sql.delete_sql(keyword)
         print()
