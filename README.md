@@ -14,7 +14,7 @@
 <a href="http://ec2-13-209-26-197.ap-northeast-2.compute.amazonaws.com:8080/gz/">배포된 사이트</a><br>
 프로젝트명: TeamProject/TeamProject_Server_200129_2 <br>
 프로젝트 기간: 2020.01.28~2020.02.02  <br>
-팀명: 5G  <br>
+팀명: 5G / 팀장: 김주연  <br>
 팀원: 조지윤, 박지은, 김주연, 정용기, 조성빈  <br>
 역할: 본인이 정한 주제로 각각 웹 페이지 구현 <br>
 주제: 포털사이트  <br>
