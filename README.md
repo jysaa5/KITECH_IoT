@@ -9,6 +9,7 @@
   <li> 데이터베이스: Oracle, MySQL - 툴: sqldeveloper, MySQL Workbench 8.0 CE <br></li>
   <li> 언어: HTML, CSS, JavaScript, ajax - 툴: Brackets <br></li>
   <li> 프레임워크: Spring, Spring boot, Mybatis <br></li>
+  <li> AWS : EC2, RDS</li>
   <li> 언어: Python - 툴: Visual Stuido Code <br></li>
   </ul>
 <hr>
