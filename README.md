@@ -2,7 +2,7 @@
 2019.10.01 ~ 2020.03.31 <br>
 한국생산기술연구연 2019년도 출연(연) 4차인재양성사업 하반기 직무 훈련생 김주연입니다.<br>
 <hr>
-## 직무 훈련 과정<br>
+<h3>직무 훈련 과정</h3><br>
 <ul>
   <li> 아두이노: Arduino <br></li>
   <li> 언어: JAVA - 툴: ecllipse <br></li>
@@ -12,8 +12,8 @@
   <li> 언어: Python - 툴: Visual Stuido Code <br></li>
   </ul>
 <hr>
+<h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject/TeamProject_Server_200216_update_1"> 팀프로젝트 </a></h3><br>
 <ul>
-<li><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject/TeamProject_Server_200216_update_1"> 팀프로젝트 </a><br></li>
 <li><a href="http://ec2-13-209-26-197.ap-northeast-2.compute.amazonaws.com:8080/gz/">배포된 사이트</a><br></li>
 <li>프로젝트명: TeamProject/TeamProject_Server_200216_update_1 <br></li>
 <li>프로젝트 기간: 2020.01.28~2020.02.02  <br></li>
@@ -35,5 +35,5 @@
   </tr>
   </table>
 <ul>
-<li>프로젝트 업데이트: 2020.02.16 <br></li>
+<li>프로젝트 업데이트: 2020.02.16 - 금융감독원 금융상품, 우리말샘 국어사전  Open API xml parsing to html (Use Ajax) <br></li>
   </ul>
