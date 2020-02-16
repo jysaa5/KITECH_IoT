@@ -10,13 +10,13 @@
 프레임워크: Spring, Spring boot, Mybatis <br>
 언어: Python - 툴: Visual Stuido Code <br>
 
-<a href="https://github.com/jysaa5/kiet/tree/master/TeamProject/TeamProject_Server_200129_2"><h4> <팀프로젝트> </h4></a>
+<a href="https://github.com/jysaa5/kiet/tree/master/TeamProject/TeamProject_Server_200216_update_1"><h4> <팀프로젝트> </h4></a>
 <a href="http://ec2-13-209-26-197.ap-northeast-2.compute.amazonaws.com:8080/gz/">배포된 사이트</a><br>
-프로젝트명: TeamProject/TeamProject_Server_200129_2 <br>
+프로젝트명: TeamProject/TeamProject_Server_200216_update_1 <br>
 프로젝트 기간: 2020.01.28~2020.02.02  <br>
 팀명: 5G / 팀장: 김주연  <br>
 팀원: 조지윤, 박지은, 김주연, 정용기, 조성빈  <br>
 역할: 본인이 정한 주제로 각각 웹 페이지 구현 <br>
 주제: 포털사이트  <br>
 소주제: 조지윤 - 국어사전 / 박지은 - 금융상품 / 김주연 - 게임 추천 게시판&유튜브 검색 / 정용기 - 가계부 / 조성빈 - 컴퓨터 부품  <br>  
-
+프로젝트 업데이트: 2020.02.16 <br>
