@@ -9,7 +9,7 @@ public class P_13 {
 		Connection conn = null;
 		try {
 		Class.forName("com.mysql.jdbc.Driver");
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?serverTimezone=UTC", "kite","test1111");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?serverTimezone=UTC", "kite","kite1111");
 		System.out.println("데이터베이스에 접속했습니다.");
 		conn.close();
 		}
