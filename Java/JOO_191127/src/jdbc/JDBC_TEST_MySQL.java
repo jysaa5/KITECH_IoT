@@ -17,7 +17,7 @@ public class JDBC_TEST_MySQL {
 			// 호스트, port, db name
 			String jdbcUrl = "jdbc:mysql://localhost:3306/project?serverTimezone=UTC";
 			String user = "kite"; // root
-			String password = "test1111"; // admin
+			String password = "kite1111"; // admin
 
 			conn = DriverManager.getConnection(jdbcUrl, user, password);
 			System.out.println("데이터베이스에 접속했습니다.");
