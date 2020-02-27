@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonOn"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@color/colorPrimary"
+        android:text="ON"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lable01"
+        app:layout_constraintVertical_bias="0.177" />
+
+    <Button
+        android:id="@+id/buttonOn2"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="OFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lable01"
+        app:layout_constraintVertical_bias="0.177" />
+
+    <Button
+        android:id="@+id/buttonOn3"
+        android:layout_width="115dp"
+        android:layout_height="98dp"
+        android:background="@color/colorAccent"
+        android:text="Center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lable01"
+        app:layout_constraintVertical_bias="0.723" />
+
+    <Button
+        android:id="@+id/buttonOn5"
+        android:layout_width="115dp"
+        android:layout_height="98dp"
+        android:background="@color/colorAccent"
+        android:text="LEFT"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lable01"
+        app:layout_constraintVertical_bias="0.723" />
+
+    <Button
+        android:id="@+id/buttonOn6"
+        android:layout_width="115dp"
+        android:layout_height="98dp"
+        android:background="@color/colorAccent"
+        android:text="RIGHT"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lable01"
+        app:layout_constraintVertical_bias="0.723" />
+
+    <Button
+        android:id="@+id/buttonOn7"
+        android:layout_width="115dp"
+        android:layout_height="98dp"
+        android:background="@color/colorAccent"
+        android:text="BOTTON"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lable01"
+        app:layout_constraintVertical_bias="0.972" />
+
+    <Button
+        android:id="@+id/buttonOn4"
+        android:layout_width="115dp"
+        android:layout_height="98dp"
+        android:background="@color/colorAccent"
+        android:text="TOP"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lable01"
+        app:layout_constraintVertical_bias="0.49" />
+
+    <TextView
+        android:id="@+id/Lable01"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#FFEB3B"
+        android:gravity="center"
+        android:text="Controller"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
