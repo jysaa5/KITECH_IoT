@@ -19,7 +19,7 @@
 <hr>
 <h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_Web/TeamProject_Server_200216_update_1"> 팀 프로젝트_Web </a></h3><br>
 <ul>
-<li><a href="http://ec2-13-209-26-197.ap-northeast-2.compute.amazonaws.com:8080/gz/">AWS에 배포된 사이트</a><br></li>
+<li><a href="http://ec2-13-209-26-197.ap-northeast-2.compute.amazonaws.com:8080/gz/">AWS로 배포된 사이트</a><br></li>
 <li>프로젝트명: TeamProject/TeamProject_Server_200216_update_1 <br></li>
 <li>프로젝트 기간: 2020.01.28~2020.02.02  <br></li>
 <li>팀명: 5G / 팀장: 김주연  <br></li>
