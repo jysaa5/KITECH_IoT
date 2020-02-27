@@ -40,7 +40,9 @@
   </tr>
   </table>
 <ul>
-<li>프로젝트 업데이트: 2020.02.16 - 금융감독원 금융상품, 우리말샘 국어사전  Open API xml parsing to html (Use Ajax) <br></li>
+  <li>프로젝트 업데이트 History<br></li>
+   2020.02.16 - 금융감독원 금융상품, 우리말샘 국어사전  Open API xml parsing to html (Use Ajax)<br>
+   2020.02.27 - Ajax CORB 문제 해결중 <br>
   </ul>
   <hr>
   <h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_IoT"> 팀 프로젝트_IoT </a></h3>
