@@ -4,28 +4,23 @@
 <hr>
 <h3>직무 훈련 과정</h3><br>
 <ul>
-  <li> H/W: 아두이노(Arduino) <br></li>
-  <li> 언어: Java - 툴: ecllipse <br></li>
-  <li> 데이터베이스: Oracle, MySQL - 툴: sqldeveloper, MySQL Workbench 8.0 CE <br></li>
-  <li> 언어: HTML, CSS, JavaScript, ajax - 툴: Brackets <br></li>
-  <li> 프레임워크: Spring, Spring boot, Mybatis <br></li>
-  <li> AWS : EC2, RDS</li>
-  <li> 언어: Python - 툴: Visual Stuido Code <br></li>
-  <li> 데이터베이스: sqlite <br></li>
-  <li> 프레임워크: Flask <br></li>
-  <li> H/W: 라즈베리파이(RaspberryPi) <br></li>
-  <li> 언어: Java, Kotlin - 툴: Android Studio<br></li>
-  </ul>
+ <li> H/W: 아두이노(Arduino), 라즈베리파이(RaspberryPi) <br></li>
+ <li> Language: Java | HTML, CSS, JavaScript, jQuery, ajax | Python | Kotlin  <br></li>
+ <li> Database: Oracle, MySQL, sqlite <br></li>
+ <li> Framework: Spring, Spring boot | Mybatis | Flask <br></li>
+ <li> AWS(Amazon Web Services): EC2, RDS</li>
+ <li> Tool: Ecllipse | sqldeveloper, MySQL Workbench 8.0 CE | Brackets | Visual Stuido Code | Flask | Android Studio </li>
+</ul>
 <hr>
 <h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_Web/TeamProject_Server_200216_update_1"> 팀 프로젝트_Web </a></h3>
 <ul>
-<li><a href="http://ec2-13-209-26-197.ap-northeast-2.compute.amazonaws.com:8080/gz/">AWS로 배포된 사이트</a><br></li>
-<li>프로젝트 주제: Spring Framework를 이용한 웹 구현 & Open API 사용 <br></li>
-<li>프로젝트 기간: 2020.01.28~2020.02.02  <br></li>
-<li>팀명: 5G / 팀장: 김주연  <br></li>
-  <li>팀원:  <a href="https://github.com/jysaa5">김주연</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/capashage2">정용기</a>,  <a href="https://github.com/sjm99198">조성빈</a>, <a href="https://github.com/db3124">조지윤</a><br></li>
-<li>역할: 각자 관심 있는 주제로 웹 페이지 구현 <br></li>
-  </ul>
+ <li><a href="http://ec2-13-209-26-197.ap-northeast-2.compute.amazonaws.com:8080/gz/">AWS로 배포된 사이트</a><br></li>
+ <li>프로젝트 주제: Spring Framework를 이용한 웹 구현 & Open API 사용 <br></li>
+ <li>프로젝트 기간: 2020.01.28~2020.02.02  <br></li>
+ <li>팀명: 5G / 팀장: 김주연  <br></li>
+ <li>팀원:  <a href="https://github.com/jysaa5">김주연</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/capashage2">정용기</a>,  <a href="https://github.com/sjm99198">조성빈</a>, <a href="https://github.com/db3124">조지윤</a><br></li>
+ <li>역할: 각자 관심 있는 주제로 웹 페이지 구현 <br></li>
+</ul>
 <table style="text-align:center; margin:auto;">
   <tr>
   <td colspan = "6">
@@ -43,11 +38,11 @@
   <li>프로젝트 업데이트 History<br></li>
    2020.02.16 - 금융감독원 금융상품, 우리말샘 국어사전  Open API xml parsing to html (Use Ajax)<br>
    2020.02.27 - Ajax CORB 문제 해결중 <br>
-  </ul>
-  <hr>
-  <h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_IoT"> 팀 프로젝트_IoT </a></h3>
+</ul>
+<hr>
+<h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_IoT"> 팀 프로젝트_IoT </a></h3>
 <ul>
-  <li>프로젝트 주제: 라즈베리파이(또는 아두이노)와 다양한 센서를 이용하여 IoT 서비스 <br></li>
+  <li>프로젝트 주제: 라즈베리파이(또는 아두이노)와 다양한 센서를 이용하여 IoT 서비스 구현<br></li>
   <li>프로젝트 기간: 2020.02.19~2020.03.30  <br></li>
   <li>팀명: 5G / 팀장: 박지은  <br></li>
   <li>팀원: <a href="https://github.com/jy950902">구자윤</a> <a href="https://github.com/jysaa5">김주연</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/capashage2">정용기</a>,  <a href="https://github.com/sjm99198">조성빈</a>, <a href="https://github.com/db3124">조지윤</a>   <br></li>
