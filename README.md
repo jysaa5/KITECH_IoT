@@ -10,6 +10,9 @@
  <li> Framework: Spring, Spring boot | Mybatis | Flask <br></li>
  <li> Tool: Ecllipse | sqldeveloper, MySQL Workbench 8.0 CE | Brackets | Visual Stuido Code | Flask | Android Studio </li>
  <li> Cloud Computing Services: Amazon Web Services(AWS) - EC2, RDS</li>
+ <li> Server: Apache HTTP Server </li>
+ <li> Web Application Server(WAS): Tomcat </li>
+ <li> Operating System(OS): Window | Linux</li>
 </ul>
 <hr>
 <h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_Web/TeamProject_Server_200216_update_1"> 팀 프로젝트_Web </a></h3>
