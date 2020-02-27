@@ -17,7 +17,7 @@
   <li> 언어: Java, Kotlin - 툴: Android Studio<br></li>
   </ul>
 <hr>
-<h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_Web/TeamProject_Server_200216_update_1"> 팀 프로젝트_Web </a></h3><br>
+<h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_Web/TeamProject_Server_200216_update_1"> 팀 프로젝트_Web </a></h3>
 <ul>
 <li><a href="http://ec2-13-209-26-197.ap-northeast-2.compute.amazonaws.com:8080/gz/">AWS로 배포된 사이트</a><br></li>
 <li>프로젝트명: TeamProject/TeamProject_Server_200216_update_1 <br></li>
