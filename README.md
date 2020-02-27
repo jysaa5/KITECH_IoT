@@ -5,12 +5,14 @@
 <h3>직무 훈련 과정</h3><br>
 <ul>
   <li> H/W: 아두이노(Arduino) <br></li>
-  <li> 언어: JAVA - 툴: ecllipse <br></li>
+  <li> 언어: Java - 툴: ecllipse <br></li>
   <li> 데이터베이스: Oracle, MySQL - 툴: sqldeveloper, MySQL Workbench 8.0 CE <br></li>
   <li> 언어: HTML, CSS, JavaScript, ajax - 툴: Brackets <br></li>
   <li> 프레임워크: Spring, Spring boot, Mybatis <br></li>
   <li> AWS : EC2, RDS</li>
   <li> 언어: Python - 툴: Visual Stuido Code <br></li>
+  <li> 데이터베이스: sqlite <br></li>
+  <li> 프레임워크: Flask <br></li>
   <li> H/W: 라즈베리파이(RaspberryPi) <br></li>
   <li> 언어: Java, Kotlin - 툴: Android Studio<br></li>
   </ul>
