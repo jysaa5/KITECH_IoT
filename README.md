@@ -44,3 +44,9 @@
   </ul>
   <hr>
   <h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_IoT"> 팀 프로젝트_IoT </a></h3>
+<ul>
+  <li>프로젝트 기간: 2020.02.19~2020.03.30  <br></li>
+  <li>팀명: 5G / 팀장: 박지은  <br></li>
+  <li>팀원: <a href="https://github.com/db3124">조지윤</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/jysaa5">김주연</a>, <a href="https://github.com/capashage2">정용기</a>, <a href="https://github.com/sjm99198">조성빈</a>  <br></li>
+  <li>역할: 각각 센서 연결, 코드 작성 중 <br></li>
+ </ul>
