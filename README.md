@@ -2,7 +2,7 @@
 2019.10.01 ~ 2020.03.31 <br>
 한국생산기술연구연 2019년도 출연(연) 4차인재양성사업 하반기 직무 훈련생 김주연(JooYeon Kim)입니다.<br>
 <hr>
-<h3>직무 훈련 과정</h3>
+<h3>[직무 훈련 과정]</h3>
 <ul>
  <li> Hardware: Arduino | RaspberryPi <br></li>
  <li> Language: Java | HTML, CSS, JavaScript, jQuery, ajax | Python | Kotlin  <br></li>
@@ -15,7 +15,7 @@
  <li> Operating System(OS): Window | Linux | Raspbian</li>
 </ul>
 <hr>
-<h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_Web/TeamProject_Server_200216_update_1"> 팀 프로젝트_Web </a></h3>
+<h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_Web/TeamProject_Server_200216_update_1"> [팀 프로젝트_Web] </a></h3>
 <ul>
  <li><a href="http://ec2-13-209-26-197.ap-northeast-2.compute.amazonaws.com:8080/gz/">AWS로 배포된 사이트</a><br></li>
  <li>프로젝트 주제: Spring Framework를 이용한 웹 구현 & Open API 사용 <br></li>
@@ -43,7 +43,7 @@
    2020.02.27 - Ajax CORB 문제 해결중 <br>
 </ul>
 <hr>
-<h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_IoT"> 팀 프로젝트_IoT </a></h3>
+<h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_IoT"> [팀 프로젝트_IoT] </a></h3>
 <ul>
   <li>프로젝트 주제: 라즈베리파이(또는 아두이노)와 다양한 센서를 이용하여 IoT 서비스 구현<br></li>
   <li>프로젝트 기간: 2020.02.19~2020.03.30  <br></li>
