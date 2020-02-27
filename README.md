@@ -23,7 +23,7 @@
 <li>프로젝트명: TeamProject/TeamProject_Server_200216_update_1 <br></li>
 <li>프로젝트 기간: 2020.01.28~2020.02.02  <br></li>
 <li>팀명: 5G / 팀장: 김주연  <br></li>
-  <li>팀원: <a href="https://github.com/db3124/KITECH_TEAM">조지윤</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/jysaa5/kiet">김주연</a>, <a href="https://github.com/capashage2">정용기</a>, <a href="https://github.com/sjm99198/kite-5g">조성빈</a>  <br></li>
+  <li>팀원: <a href="https://github.com/db3124">조지윤</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/jysaa5/kiet">김주연</a>, <a href="https://github.com/capashage2">정용기</a>, <a href="https://github.com/sjm99198">조성빈</a>  <br></li>
 <li>역할: 본인이 정한 주제로 각각 웹 페이지 구현 <br></li>
   </ul>
 <table style="text-align:center; margin:auto;">
