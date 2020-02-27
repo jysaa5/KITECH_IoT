@@ -14,7 +14,7 @@
   <li> H/W: 라즈베리파이(RaspberryPi) <br></li>
   </ul>
 <hr>
-<h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject/TeamProject_Server_200216_update_1"> 팀프로젝트 </a></h3><br>
+<h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_Web/TeamProject_Server_200216_update_1"> 팀프로젝트 </a></h3><br>
 <ul>
 <li><a href="http://ec2-13-209-26-197.ap-northeast-2.compute.amazonaws.com:8080/gz/">배포된 사이트</a><br></li>
 <li>프로젝트명: TeamProject/TeamProject_Server_200216_update_1 <br></li>
