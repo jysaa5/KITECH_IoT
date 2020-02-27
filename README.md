@@ -43,4 +43,4 @@
 <li>프로젝트 업데이트: 2020.02.16 - 금융감독원 금융상품, 우리말샘 국어사전  Open API xml parsing to html (Use Ajax) <br></li>
   </ul>
   <hr>
-  <h3><a href=""> 팀 프로젝트_IoT </a></h3>
+  <h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_IoT"> 팀 프로젝트_IoT </a></h3>
