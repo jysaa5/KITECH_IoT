@@ -8,7 +8,7 @@
  <li> Language: Java | HTML, CSS, JavaScript, jQuery, ajax | Python | Kotlin  <br></li>
  <li> Database: Oracle, MySQL, sqlite <br></li>
  <li> Framework: Spring, Spring boot | Mybatis | Flask <br></li>
- <li> AWS(Amazon Web Services): EC2, RDS</li>
+ <li> Amazon Web Services(AWS): EC2, RDS</li>
  <li> Tool: Ecllipse | sqldeveloper, MySQL Workbench 8.0 CE | Brackets | Visual Stuido Code | Flask | Android Studio </li>
 </ul>
 <hr>
