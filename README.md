@@ -2,7 +2,7 @@
 2019.10.01 ~ 2020.03.31 <br>
 한국생산기술연구연 2019년도 출연(연) 4차인재양성사업 하반기 직무 훈련생 김주연(JooYeon Kim)입니다.<br>
 <hr>
-<h3>직무 훈련 과정</h3><br>
+<h3>직무 훈련 과정</h3>
 <ul>
  <li> H/W: Arduino | RaspberryPi <br></li>
  <li> Language: Java | HTML, CSS, JavaScript, jQuery, ajax | Python | Kotlin  <br></li>
