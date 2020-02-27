@@ -12,6 +12,7 @@
   <li> AWS : EC2, RDS</li>
   <li> 언어: Python - 툴: Visual Stuido Code <br></li>
   <li> H/W: 라즈베리파이(RaspberryPi) <br></li>
+  <li> 언어: Java, Kotlin - 툴: Android Studio<br></li>
   </ul>
 <hr>
 <h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_Web/TeamProject_Server_200216_update_1"> 팀프로젝트 </a></h3><br>
