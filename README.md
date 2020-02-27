@@ -23,7 +23,7 @@
 <li>프로젝트 주제: Spring Framework를 이용한 웹 구현 & Open API 사용 <br></li>
 <li>프로젝트 기간: 2020.01.28~2020.02.02  <br></li>
 <li>팀명: 5G / 팀장: 김주연  <br></li>
-  <li>팀원: <a href="https://github.com/db3124">조지윤</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/jysaa5">김주연</a>, <a href="https://github.com/capashage2">정용기</a>, <a href="https://github.com/sjm99198">조성빈</a>  <br></li>
+  <li>팀원:  <a href="https://github.com/jysaa5">김주연</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/capashage2">정용기</a>,  <a href="https://github.com/sjm99198">조성빈</a>, <a href="https://github.com/db3124">조지윤</a><br></li>
 <li>역할: 각자 관심 있는 주제로 웹 페이지 구현 <br></li>
   </ul>
 <table style="text-align:center; margin:auto;">
@@ -50,6 +50,6 @@
   <li>프로젝트 주제: 라즈베리파이(또는 아두이노)와 다양한 센서를 이용하여 IoT 서비스 <br></li>
   <li>프로젝트 기간: 2020.02.19~2020.03.30  <br></li>
   <li>팀명: 5G / 팀장: 박지은  <br></li>
-  <li>팀원: <a href="https://github.com/jy950902">구자윤</a> <a href="https://github.com/db3124">조지윤</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/jysaa5">김주연</a>, <a href="https://github.com/capashage2">정용기</a>, <a href="https://github.com/sjm99198">조성빈</a>   <br></li>
+  <li>팀원: <a href="https://github.com/jy950902">구자윤</a> <a href="https://github.com/jysaa5">김주연</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/capashage2">정용기</a>,  <a href="https://github.com/sjm99198">조성빈</a>, <a href="https://github.com/db3124">조지윤</a>   <br></li>
   <li>역할: 각각 센서 연결, 코드 작성 중 <br></li>
  </ul>
