@@ -5,7 +5,7 @@
 <h3>[직무 훈련 과정]</h3>
 <ul>
  <li> Hardware: Arduino | RaspberryPi <br></li>
- <li> Language: Java | HTML, CSS, JavaScript, jQuery, ajax | Python | Kotlin  <br></li>
+ <li> Language: Java | HTML5, CSS3, JavaScript, jQuery, ajax | Python | Kotlin  <br></li>
  <li> Database: Oracle, MySQL, SQLite <br></li>
  <li> Framework: Spring, Spring boot | Mybatis | Flask <br></li>
  <li> Tool: Eclipse | sqldeveloper, MySQL Workbench 8.0 CE | Brackets | Visual Stuido Code | Flask | Android Studio </li>
