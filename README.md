@@ -16,7 +16,7 @@
 </ul>
 <hr>
 <h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_Web/TeamProject_Server_200216_update_1"> [팀 프로젝트_Web] </a></h3>
-<img src="https://github.com/jysaa5/kite_IoT/blob/master/TeamProject_Web/TeamProject_Web_Front.PNG?raw=true"><br>
+<img src="https://github.com/jysaa5/kite_IoT/blob/master/TeamProject_Web/TeamProject_Web_Front.PNG?raw=true" width="50%" height="50%"><br>
 <ul>
  <li><a href="http://ec2-13-209-26-197.ap-northeast-2.compute.amazonaws.com:8080/gz/">AWS로 배포된 사이트</a><br></li>
  <li>프로젝트 주제: Spring Framework를 이용한 웹 구현 & Open API 사용 <br></li>
