@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 //BoardWriteController: 게임 추천 게시글을 입력할 때 입력 폼을 보여주고 입력된 데이터를 보내는 컨트롤러
 @Controller
-@RequestMapping("/styler/user")
-public class UserStylerController {
+@RequestMapping("/cctv/user")
+public class UserCctvController {
 	
 	//객체 주입
 //	@Autowired
@@ -17,9 +17,9 @@ public class UserStylerController {
 	//writeForm 메서드: 게시글 작성 폼을 보여주는 메서드
 	//get방식으로 들어왔을 때 처리
 	@RequestMapping(method = RequestMethod.GET)
-	public String userForm() {
+	public String userCCTV() {
 	
-		return "styler/userStyler";
+		return "cctv/userCctv";
 		
 	}//wrtieForm 메서드 끝
 	

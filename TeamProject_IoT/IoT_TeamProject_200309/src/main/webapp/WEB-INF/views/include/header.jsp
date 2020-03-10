@@ -28,7 +28,9 @@ function btn(){
       <li class="nav-item active">
         <a class="nav-link" href="<c:url value="/"/>">홈<span class="sr-only">(current)</span></a>
        </li> 
-     <li><a class="navbar-brand" href="<c:url value="/styler/user"/>">옷 스타일 사진</a></li>
+     <li><h6><a class="navbar-brand" href="<c:url value="/cctv/user"/>">CCTV</a></h6></li>
+     <li><h6><a class="navbar-brand" href="<c:url value="/led/user"/>">LED</a></h6></li>
+     <li><h6><a class="navbar-brand" href="<c:url value="/styler/user"/>">Styler</a></h6></li>
     <%--   <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">사전</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">

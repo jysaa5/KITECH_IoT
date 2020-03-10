@@ -4,11 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
 //BoardWriteController: 게임 추천 게시글을 입력할 때 입력 폼을 보여주고 입력된 데이터를 보내는 컨트롤러
 @Controller
-@RequestMapping("/styler/user")
-public class UserStylerController {
+@RequestMapping("/led/user")
+public class UserLedController {
 	
 	//객체 주입
 //	@Autowired
@@ -19,7 +18,7 @@ public class UserStylerController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String userForm() {
 	
-		return "styler/userStyler";
+		return "led/userLed";
 		
 	}//wrtieForm 메서드 끝
 	

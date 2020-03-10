@@ -1,4 +1,4 @@
-package com.iot.smarthome.styler.service;
+package com.iot.smarthome.cctv.service;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,59 +10,68 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.iot.smarthome.styler.dao.StylerDao;
-import com.iot.smarthome.styler.domain.StylerVo;
-import com.iot.smarthome.styler.domain.StylerWriteRequestVo;
+import com.iot.smarthome.cctv.dao.CctvDao;
+import com.iot.smarthome.cctv.domain.CctvVo;
+import com.iot.smarthome.cctv.domain.CctvWriteRequestVo;
+
 
 
 //서비스 bean으로 등록하기 
 //StylerWriteService: 게시글을 작성하는 sql을 실행하는 서비스 클래스
-@Service("stylerWriteService")
-public class StylerWriteService {
+@Service("cctvWriteService")
+public class CctvWriteService {
 
 	//객체 주입
 	@Inject
 	private SqlSessionTemplate template;
 	
 	//인터페이스
-	private StylerDao dao;
+	private CctvDao dao;
 	
 	//Writeposting 메서드: 게시글을 작성하고 게시글 번호를 반환하는 메서드
-	public int writePhoto(HttpServletRequest request, StylerWriteRequestVo write) {
+	public int writePhoto(HttpServletRequest request, CctvWriteRequestVo write) {
 	
-		dao = template.getMapper(StylerDao.class);
+		dao = template.getMapper(CctvDao.class);
 		
 		// 서버 경로
-		String path = "/uploadfile/userphoto"; // 리소스 매핑 필요
+		String path = "/uploadfile/usercctv"; // 리소스 매핑 필요
 		
 		// 절대 경로
 		String dir = request.getSession().getServletContext().getRealPath(path);
 
-		StylerVo styler = write.toStyler();
+		CctvVo cctv = write.toCctv();
 		
 		
 		int resultCnt = 0;
 
 		String newFileName = "";
+		String type = write.getCctvType();
+		
 
-		MultipartFile file = write.getPhoto();
+		MultipartFile file = write.getCctv();
 		
 		try {
 			if (file != null && !file.isEmpty() && file.getSize() > 0) {
 				// 새로운 파일 이름 생성
 				// String newFileName = memberInfo.getuId()+System.nanoTime();
-				newFileName = styler.getStylerUser() + "_" + file.getOriginalFilename();
+				//newFileName = styler.getStylerUser() + "_" + file.getOriginalFilename();
+				newFileName = file.getOriginalFilename();
 				// 파일을 서버의 지정 경로에 저장
 				file.transferTo(new File(dir, newFileName));
 				// 데이터베이스 저장을 하기위한 파일 이름 set
-				styler.setStylerPhoto(newFileName);
+				cctv.setCctvFile(newFileName);
 				
 			} else {
 				
-				styler.setStylerPhoto("default.png");
+				if(type.equals("p"))
+					{
+					cctv.setCctvFile("default.png");
+					}else if(type.equals("v")) {
+					cctv.setCctvFile("default.h264");
+					}
 			}
 		
-		resultCnt = dao.insertStyler(styler);
+		resultCnt = dao.insertCctv(cctv);
 		
 		} catch (IllegalStateException e) {
 		
