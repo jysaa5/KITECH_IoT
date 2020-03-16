@@ -9,24 +9,36 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<script src="https://code.jquery.com/jquery-1.12.4.js"
-	integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
-	crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
 
 
 <style>
-input[type=button] {
-	background-color: #EEE;
-	border: 1px solid #AAA;
-	padding: 15px;
-	margin: 10px;
+#btn_webcam{
+
+	padding: auto 0px;
+	margin: auto 0px;
 	display: block;
 	font-size: 24px;
+	width: 200px; 
+	height: 60px;
+	text-align: center;
+	display: table; 
+	margin-left: auto; 
+	margin-right: auto; 
 }
 
-.select_g {
-	background-color: green;
-	color: #FFF
+#click-home{
+
+	padding: auto 0px;
+	margin: auto 0px;
+	display: block;
+	font-size: 24px;
+	width: 200px; 
+	height: 60px;
+	text-align: center;
+	display: table; 
+	margin-left: auto; 
+	margin-right: auto; 
 }
 
 </style>
@@ -50,7 +62,6 @@ input[type=button] {
 	<!-- 메인 컨텐트 시작 -->
 	<main role="main" class="container">
 	<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
-	<img class="mr-3" src="https://getbootstrap.com/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48">
 			<div class="lh-100">
 				<h6 class="mb-0 text-white lh-100">게임 추천 글 작성 하기</h6>
 				<small>Since 2020</small>
@@ -62,11 +73,20 @@ input[type=button] {
 			<div class="media text-muted pt-3">
 				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">	 </p>
 			</div>
+			<div><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="웹캠 촬영하기" id="btn_webcam"/></div>
+			<br>
+				<h2 id="h"></h2>
+				<br>
+				<br>
+				<br>
+				<div><a href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home"/></a></div>
 		</div>
 	</main>
+	
+	
 
-<input type="button" value="웹캠 촬영하기" id="btn_webcam" />
-<h2 id="h"></h2>
+<!-- <input type="button" value="웹캠 촬영하기" id="btn_webcam" />
+<h2 id="h"></h2> -->
 
 <br>
 	<!-- 메인 컨텐트 끝 -->

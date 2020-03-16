@@ -9,24 +9,36 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<script src="https://code.jquery.com/jquery-1.12.4.js"
-	integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
-	crossorigin="anonymous"></script>
-
+<script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
 
 <style>
-input[type=button] {
-	background-color: #EEE;
-	border: 1px solid #AAA;
-	padding: 15px;
-	margin: 10px;
+
+#btn_on, #btn_off{
+
+	padding: auto 0px;
+	margin: auto 0px;
 	display: block;
 	font-size: 24px;
+	width: 200px; 
+	height: 60px;
+	text-align: center;
+	display: table; 
+	margin-left: auto; 
+	margin-right: auto; 
 }
 
-.select_g {
-	background-color: green;
-	color: #FFF
+#click-home{
+
+	padding: auto 0px;
+	margin: auto 0px;
+	display: block;
+	font-size: 24px;
+	width: 200px; 
+	height: 60px;
+	text-align: center;
+	display: table; 
+	margin-left: auto; 
+	margin-right: auto; 
 }
 
 </style>
@@ -50,24 +62,24 @@ input[type=button] {
 	<!-- 메인 컨텐트 시작 -->
 	<main role="main" class="container">
 	<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
-	<img class="mr-3" src="https://getbootstrap.com/assets/brand/bootstrap-outline.svg" alt="" width="48" height="48">
 			<div class="lh-100">
-				<h6 class="mb-0 text-white lh-100">LED 조절하기</h6>
+				<h6 class="mb-0 text-white lh-100">CCTV 촬영본 보기</h6>
 				<small>Since 2020</small>
 			</div>
 		</div>
 		
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">LED 조절하기</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">CCTV 촬영본 보기</h6>
 			<div class="media text-muted pt-3">
 				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">	 </p>
 			</div>
+			
+			<input type="button" value="CCTV on" id="cbtn_on"><br>
+	        <input type="button" value="CCTV off" id="cbtn_off"><br>
+			
+			<div><a href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home"/></a></div>
 		</div>
 	</main>
-
-    <h1>CCTV 제어 페이지 입니다</h1>
-	<input type="button" value="CCTV on" id="cbtn_on"><br>
-	<input type="button" value="CCTV off" id="cbtn_off"><br>
 
 
 <br>

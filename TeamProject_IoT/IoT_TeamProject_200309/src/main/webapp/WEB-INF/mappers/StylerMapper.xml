@@ -5,7 +5,7 @@
 <mapper namespace="com.iot.smarthome.styler.dao.StylerDao">
 
 	<!-- //////////////삽입/////////////// -->
-	<insert id="insertStyler" parameterType="com.iot.smarthome.styler.domain.StylerVo" useGeneratedKeys="true" keyProperty="idx">
+	<insert id="insertStyler" parameterType="com.iot.smarthome.styler.domain.StylerVo" useGeneratedKeys="true" keyProperty="stylerIdx">
 
 		insert into stylerdb (stylerUser, stylerPhoto, stylerOn) values(#{stylerUser}, #{stylerPhoto}, now())
 		
@@ -13,15 +13,12 @@
 
 
 	<!-- 컬럼값과 domain의 필드명이 다를때 설정해줘야 됨. -->
-	<!-- <resultMap type="com.kite.gz.board.domain.BoardEditVo" id="BoardPost">
-		<id property="idx" column="idx" />
-		<result property="writer" column="writer" />
-		<result property="title" column="title" />
-		<result property="content" column="content" />
-		<result property="gpw" column="gpw" />
-		<result property="gphoto" column="gphoto" />
-		<result property="regdate" column="regdate" />
-	</resultMap> -->
+ <resultMap type="com.iot.smarthome.styler.domain.StylerEditVo" id="StylerPost">
+		<id property="stylerIdx" column="stylerIdx" />
+		<result property="stylerUser" column="stylerUser" />
+		<result property="stylerPhoto" column="stylerPhoto" />
+		<result property="stylerOn" column="stylerOn" />
+	</resultMap>
 	
 	
 		<!-- 컬럼값과 domain의 필드명이 다를때 설정해줘야 됨. -->
@@ -36,15 +33,12 @@
 	</resultMap> -->
 	
 			<!-- 컬럼값과 domain의 필드명이 다를때 설정해줘야 됨. -->
-<!-- 	<resultMap type="com.kite.gz.board.domain.BoardDetailViewVo" id="DetailView">
-		<id property="idx" column="idx" />
-		<result property="writer" column="writer" />
-		<result property="title" column="title" />
-		<result property="content" column="content" />
-		<result property="gpw" column="gpw" />
-		<result property="gphoto" column="gphoto" />
-		<result property="regdate" column="regdate" />
-	</resultMap> -->
+<resultMap type="com.iot.smarthome.styler.domain.StylerDetailViewVo" id="DetailView">
+		<id property="stylerIdx" column="stylerIdx" />
+		<result property="stylerUser" column="stylerUser" />
+		<result property="stylerPhoto" column="stylerPhoto" />
+		<result property="stylerOn" column="stylerOn" />
+	</resultMap>
 
 
 			<!-- 컬럼값과 domain의 필드명이 다를때 설정해줘야 됨. -->
@@ -61,26 +55,26 @@
 	<!-- 조회: 페이지의 게시글 리스트를 보여줄 때, 페이징 하는 조회 -->
 	<!-- startRow(시작하는 번호), count(보여질 개수)가 들어오는데, 이 데이터들의 값의 순서를 알 수 없기 때문에 
 		param1, param2라고 한 것이다. -->
-	<!-- <select id="selectBoardList" resultMap="BoardPost">
+    <select id="selectStylerList" resultMap="StylerPost">
 
-		select * from gamebook limit #{param1}, #{param2}
+		select * from stylerdb limit #{param1}, #{param2}
 
-	</select> -->
+	</select> 
 
 	<!-- 조회: 전체 행의 갯수를 가져오는 조회 -->
 	<!-- integer의 별칭: int -->
-	<!-- <select id="selectCount" resultType="int">
+	<select id="selectStylerCount" resultType="int">
 
-		select count(*) from gamebook
+		select count(*) from stylerdb
 
-	</select> -->
+	</select> 
 
 	<!--조회: idx값을 전달해서 조회 -->
-	<!-- <select id="selectBoardByIdx" resultMap="BoardPost">
+ <select id="selectStylerByIdx" resultMap="StylerPost">
 
-		select * from gamebook where idx=#{idx}
+		select * from stylerdb where stylerIdx=#{stylerIdx}
 
-	</select> -->
+	</select>
 	
 		<!--조회: idx값을 전달해서 조회 -->
 	<!-- <select id="selectBoardByIdx2" resultMap="BoardPwSelect">
@@ -90,11 +84,11 @@
 	</select> -->
 	
 		<!--조회: idx값을 전달해서 조회 -->
-	<!-- 	<select id="selectBoardByIdx3" resultMap="DetailView">
+	<select id="selectStylerByIdx3" resultMap="DetailView">
 
-		select * from gamebook where idx=#{idx}
+		select * from stylerdb where stylerIdx=#{stylerIdx}
 
-	</select> -->
+	</select>
 	
 	
 		<!--조회: idx값을 전달해서 패스워드와 맞는지 조회 -->
