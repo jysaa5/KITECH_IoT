@@ -138,7 +138,7 @@ Custom styles for this template
 				</div>
 				<div class="card-body">
 					<h2 class="card-title pricing-card-title">
-						나의 집 히스토리 <!-- <small class="text-muted">확인</small> -->
+						데이터 분석 <!-- <small class="text-muted">확인</small> -->
 					</h2>
 					<ul class="list-unstyled mt-3 mb-4">
 						<li>우리집</li>
@@ -146,7 +146,7 @@ Custom styles for this template
 						<li>분석</li>
 						<li></li><br>
 					</ul>
-					<a href="<c:url value="/fingerprint/userFingerprintLog"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
+					<a href="<c:url value="/history/userSelectLog"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
 				</div>
 			</div>
 			<div class="card mb-4 shadow-sm">

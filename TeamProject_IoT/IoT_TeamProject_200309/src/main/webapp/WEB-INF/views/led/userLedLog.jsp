@@ -11,7 +11,6 @@
 
 <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
 
-
 <style>
 #btn_on, #btn_off {
 	padding: auto 0px;
@@ -58,6 +57,8 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
+
 </style>
 
 <title>Log View</title>
@@ -81,32 +82,26 @@
 	<main role="main" class="container">
 		<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
 			<div class="lh-100">
-				<h6 class="mb-0 text-white lh-100">Fingerprint Log</h6>
+				<h6 class="mb-0 text-white lh-100">LED Log</h6>
 				<small>Since 2020</small>
 			</div>
 		</div>
-
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">Fingerprint Log</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">LED Log</h6>
 			<div class="media text-muted pt-3">
-				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-				</p>
+				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"> </p>
 			</div>
+			
 			<div><input type="date" name="date_fingerprint_log" id="date_on"></div><br>
 			<input type="button" class="btn btn-lg btn-block btn-outline-primary" value="확인" id="btn_on"><br>
 			<div id="dict_table"></div>
-			<div>
-				<a href="<c:url value="/"/>"><input type="button"
-					class="btn btn-lg btn-block btn-outline-primary" value="Home"
-					id="click-home" /></a>
+			
+			<div><a href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home" /></a>
 			</div>
 		</div>
 	</main>
-
-
-
-	<br>
-	<!-- 메인 컨텐트 끝 -->
+	
+<!-- 메인 컨텐트 끝 -->
 
 	<script>
 		$(document).ready(function() {
@@ -117,7 +112,7 @@
 
 				$.ajax({
 					/* url:'http://192.168.0.66:5000/'+date, */
-					url : 'http://192.168.0.24:5000/fingerDate/' + date,
+					url : 'http://192.168.0.24:5000/log/' + date,
 					/* 					type: "GET",
 					 data: {fDate: date}, */
 					/*res: 응답 데이터 -> 문자열로 들어옴.  */

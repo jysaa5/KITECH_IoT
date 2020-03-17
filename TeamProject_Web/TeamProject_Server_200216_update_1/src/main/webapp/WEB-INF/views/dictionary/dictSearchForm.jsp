@@ -1,22 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.io.*,java.net.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page trimDirectiveWhitespaces="true"%>
 <%response.addHeader("Access-Control-Allow-Origin", "*"); %>
 <%response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");%>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
-<html>
 <head>
-<meta charset='UTF-8'>
-<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=EmulateIE9'>
-<meta http-equiv='cache-control' content='no-cache'>
-<meta http-equiv='pragma' content='no-cache'>
+<!-- <meta charset="UTF-8"/> -->
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+<meta http-equiv='X-UA-Compatible' content='IE=EmulateIE9'/>
+<meta http-equiv='cache-control' content='no-cache'/>
+<meta http-equiv='pragma' content='no-cache'/>
 
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<meta name="description" content=""/>
+<meta name="author" content=""/>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.ajax-cross-origin.min.js" content="text/html; charset='UTF-8'"></script>
@@ -154,8 +152,12 @@ th, td {
 
         var part = $('#select1').val();
         var sort = $('#select2').val();
-        console.log(keyword)
+        console.log(keyword);
+        </script>
 
+        
+        
+        <script type="text/javascript" charset="UTF-8">
         $(document).ready(function() {
             $('#searchForm').on("submit", function(e) {
                 e.preventDefault();
@@ -253,8 +255,5 @@ th, td {
 
 </body>
 
-
-
-
-
 </html>
+

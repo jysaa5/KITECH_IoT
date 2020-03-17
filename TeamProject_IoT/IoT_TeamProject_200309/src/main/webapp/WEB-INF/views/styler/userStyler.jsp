@@ -41,6 +41,19 @@
 	margin-right: auto; 
 }
 
+#resultLine{
+
+    padding: auto 0px;
+	margin: auto 0px;
+	display: block;
+	font-size: 24px;
+	text-align: center;
+	display: table; 
+	margin-left: auto; 
+	margin-right: auto; 
+
+}
+
 </style>
 
 <title>Write</title>
@@ -75,7 +88,7 @@
 			</div>
 			<div><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="웹캠 촬영하기" id="btn_webcam"/></div>
 			<br>
-				<h2 id="h"></h2>
+			<div><h2 id="resultLine"></h2></div>
 				<br>
 				<br>
 				<br>
@@ -96,7 +109,7 @@
 
 			/*버튼 캐스팅 */
 			$('#btn_webcam').click(function() {
-
+				$('#resultLine').text('촬영중입니다. 잠시 기다려주세요.');
 				$.ajax({
 					//와이파이 변경해야 함
 					url : 'http://192.168.0.66:5000/webcam',
@@ -104,10 +117,11 @@
 					/*res: 응답 데이터 -> 문자열로 들어옴.  */
 					success : function(res) {
 						console.log(res)
+						
 						if (res == 'File uploaded!') {
-							$('#h').text('촬영이 완료되었습니다.');
+							$('#resultLine').text('촬영이 완료되었습니다.');
 						} else {
-							$('#h').text('촬영을 다시 시도해주세요.');
+							$('#resultLine').text('촬영을 다시 시도해주세요.');
 						}
 
 					}

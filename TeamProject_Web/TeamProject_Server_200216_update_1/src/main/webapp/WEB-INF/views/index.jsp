@@ -118,7 +118,7 @@
         <h2>5G 사전  <img src= "<c:url value="/images/homeImg02.png"/>" width="20%" height="20%"/></h2>
         <p class="ptitle">“NO 인터넷, OK” 5G 지지고, ‘오프라인 번역’ 출시</p>
         <p>5G가 통번역 서비스 지지고(Geegeego) ‘오프라인 번역’ 기능을 출시한다. 네트워크 환경이 원활하지 않은 해외에서도 지지고를 활용할 수 있도록 지원하는 기능이다.</p>
-        <p><a class="btn btn-secondary" href="<c:url value="/dictionary/dictSearch"/>" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="<c:url value="/dictionary/dictSearchForm"/>" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-md-4" style="background-color: #AEE1E8">
       <br>
