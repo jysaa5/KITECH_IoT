@@ -29,7 +29,7 @@
  <li>팀원:  <a href="https://github.com/jysaa5">김주연</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/capashage2">정용기</a>,  <a href="https://github.com/sjm99198">조성빈</a>, <a href="https://github.com/db3124">조지윤</a><br></li>
  <li>역할: 각자 관심 있는 주제로 웹 페이지 구현 <br></li>
  <li>구현한 기능: Client Program, Server <br></li>
- <li>사용한 기술: Open API, HTML5, CSS3, JavaScript, jQuery, ajax, Bootstrap, Mysql, Spring Framework, MyBatis, AWS: EC2, RDS <br></li> 
+ <li>사용한 기술: Open API, HTML5, CSS3, JavaScript, jQuery, ajax, Bootstrap, Mysql, Spring Framework(4.31 RELEASE), MyBatis, AWS: EC2, RDS <br></li> 
 </ul>
 <table style="text-align:center; margin:auto;">
   <tr>
