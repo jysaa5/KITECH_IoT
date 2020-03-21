@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Posting List</title>
+<title>User List</title>
 
 <!-- 기본 CSS 처리 시작 -->
 <%@ include file="/WEB-INF/views/include/basic.jsp"%>
@@ -56,7 +56,7 @@
 		</div>
 
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">CCTV 촬영본</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">웹캠 촬영본</h6>
 			<%-- ${listView} --%>
 			<table class="table">
 				<tr>
@@ -106,6 +106,7 @@
 				</c:forEach>	
 			</div>
 		</div>
+		<div><a href="<c:url value="/styler/recommendation"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="오늘의 스타일" id="click-home"/></a></div>
 		<div><a href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home"/></a></div>
 		<%-- <div class="my-3 p-3 bg-white rounded box-shadow">
 			<h6 class="border-bottom border-gray pb-2 mb-0">게임 추천 게시글</h6>

@@ -13,7 +13,7 @@
 
 
 <style>
-#btn_1, #btn_2, #btn_3 {
+#btn_0, #btn_1, #btn_2, #btn_3, #btn_4, #btn_5 {
 	padding: auto 0px;
 	margin: auto 0px;
 	display: block;
@@ -61,7 +61,7 @@
 	<main role="main" class="container">
 		<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
 			<div class="lh-100">
-				<h6 class="mb-0 text-white lh-100">Log 선택하기</h6>
+				<h6 class="mb-0 text-white lh-100">우리집 히스토리</h6>
 				<small>Since 2020</small>
 			</div>
 		</div>
@@ -71,9 +71,12 @@
 				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
 				</p>
 			</div>
-			<a href="<c:url value="/fingerprint/userFingerprintLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="지문인식 로그" id="btn_1"></a><br>
+			<a href="<c:url value="/cctv/userCctvLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="CCTV 로그" id="btn_0"></a><br>
+			<a href="<c:url value="/fingerprint/userFingerprintLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Fingerprint 로그" id="btn_1"></a><br>
 			<a href="<c:url value="/led/userLedLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="LED 로그" id="btn_2"></a><br>
-			<a href="<c:url value="/styler/userStylerLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="스타일러 로그" id="btn_3"></a><br>
+			<a href="<c:url value="/weather/userTempLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="온도 로그" id="btn_3"></a><br>
+			<a href="<c:url value="/weather/userHumLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="습도 로그" id="btn_4"></a><br>
+			<a href="<c:url value="/styler/userStylerLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Styler 로그" id="btn_5"></a><br>
 			<div>
 				<a href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home" /></a>
 			</div>

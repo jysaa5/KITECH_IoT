@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%><!-- 코어태그 -->
 <%@page trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
@@ -13,17 +14,11 @@
 
 
 <style>
-#btn_on, #btn_off {
-	padding: auto 0px;
-	margin: auto 0px;
-	display: block;
+#btn_on {
 	font-size: 24px;
 	width: 200px;
 	height: 60px;
 	text-align: center;
-	display: table;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 #click-home {
@@ -40,24 +35,39 @@
 }
 
 #dict_table {
-	padding: auto 0px;
-	margin: auto 0px;
+	width: auto;
+	height: auto;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto 0px;
 }
 
-#date_on{
-	padding: auto 0px;
-	margin: auto 0px;
-	display: block;
+#date_on {
 	font-size: 24px;
 	width: 200px;
 	height: 60px;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
 }
+
+.a_layer {
+	width: auto;
+	height: auto;
+	text-align: center;
+	margin: auto 0px;
+}
+
+.a_content {
+	width: auto;
+	height: auto;
+	display: inline-block;
+}
+
+.dataframe{
+	width: auto;
+	height: auto;
+	display: inline-block;
+}
+
+
 </style>
 
 <title>Log View</title>
@@ -73,28 +83,35 @@
 </head>
 <body>
 
-<!-- 해더 시작 -->
-<%@ include file="/WEB-INF/views/include/header.jsp"%>
-<!-- 해더 끝 -->
+	<!-- 해더 시작 -->
+	<%@ include file="/WEB-INF/views/include/header.jsp"%>
+	<!-- 해더 끝 -->
 
 	<!-- 메인 컨텐트 시작 -->
 	<main role="main" class="container">
-		<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
+		<div
+			class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
 			<div class="lh-100">
-				<h6 class="mb-0 text-white lh-100">Fingerprint Log</h6>
+				<h6 class="mb-0 text-white lh-100">Cctv Log</h6>
 				<small>Since 2020</small>
 			</div>
 		</div>
-
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">Fingerprint Log</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">Cctv Log</h6>
 			<div class="media text-muted pt-3">
-				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+				<p
+					class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
 				</p>
 			</div>
-			<div><input type="date" name="date_fingerprint_log" id="date_on"></div><br>
-			<input type="button" class="btn btn-lg btn-block btn-outline-primary" value="확인" id="btn_on"><br>
+			<br>
+			<div class="a_layer">
+					<div class="a_content ">
+						<input type="date" name="date_Cctv_log" id="date_on"> <input type="button" class="btn btn-primary" value="확인" id="btn_on">
+					</div>
+			</div>
+			<br>
 			<div id="dict_table"></div>
+			<br>
 			<div>
 				<a href="<c:url value="/"/>"><input type="button"
 					class="btn btn-lg btn-block btn-outline-primary" value="Home"
@@ -102,10 +119,6 @@
 			</div>
 		</div>
 	</main>
-
-
-
-	<br>
 	<!-- 메인 컨텐트 끝 -->
 
 	<script>
@@ -117,7 +130,7 @@
 
 				$.ajax({
 					url : 'http://192.168.0.24:5000/log/' + date,
-					//http://192.168.0.63:8033 ->이게 원래 라즈베리파이 주소
+					/* url : 'http://192.168.0.78:5050/log/' + date, ->이게 원래 주소 */
 					success : function(res) {
 						console.log(res)
 						if (res == 'Error') {
@@ -131,28 +144,12 @@
 
 			});
 
-			$('#btn_off').click(function() {
-
-				$.ajax({
-					url : 'http://192.168.0.66:5000/light_off',
-					success : function(res) {
-						console.log(res)
-						if (res == 'light off') {
-							$('#h').text('LED OFF');
-						} else {
-							$('#h').text('다시 시도해주세요.');
-						}
-
-					}
-				});
-
-			});
 		});
 	</script>
 
-<!-- 푸터 시작 -->
-<%@ include file="/WEB-INF/views/include/footer.jsp"%>
-<!-- 푸터 끝-->
+	<!-- 푸터 시작 -->
+	<%@ include file="/WEB-INF/views/include/footer.jsp"%>
+	<!-- 푸터 끝-->
 
 </body>
 </html>

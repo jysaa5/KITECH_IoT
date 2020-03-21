@@ -26,7 +26,7 @@ public class StylerDetailViewService {
 		//인터페이스 구현, SQL문 실행
 		dao = template.getMapper(StylerDao.class);
 		
-		return dao.selectStylerByIdx3(idx);
+		return dao.selectStylerByIdx2(idx);
 		
 	}//getDetailPostingidx 메서드 끝
 

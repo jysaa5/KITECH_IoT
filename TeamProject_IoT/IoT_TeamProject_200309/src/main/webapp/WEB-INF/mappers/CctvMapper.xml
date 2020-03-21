@@ -70,7 +70,7 @@
 	</select>
 
 	<!--조회: idx값을 전달해서 조회 -->
-	<select id="selectCctvByIdx" resultMap="CctvPost">
+	<select id="selectCctvByIdx1" resultMap="CctvPost">
 
 		select * from cctvdb where cctvIdx=#{cctvIdx}
 
@@ -84,11 +84,21 @@
 	</select> -->
 	
 		<!--조회: idx값을 전달해서 조회 -->
+    <select id="selectCctvByIdx2" resultMap="DetailView">
+
+		select * from cctvdb where cctvIdx=#{cctvIdx}
+
+	</select>
+	
+			<!--조회: idx값을 전달해서 조회 -->
     <select id="selectCctvByIdx3" resultMap="DetailView">
 
 		select * from cctvdb where cctvIdx=#{cctvIdx}
 
 	</select>
+	
+	
+	
 	
 	
 		<!--조회: idx값을 전달해서 패스워드와 맞는지 조회 -->

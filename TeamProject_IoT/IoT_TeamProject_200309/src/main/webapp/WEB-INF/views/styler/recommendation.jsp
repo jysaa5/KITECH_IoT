@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Detail View</title>
+<title>Recommendation View</title>
 
 <!-- 기본 CSS 처리 시작 -->
 <%@ include file="/WEB-INF/views/include/basic.jsp"%>
@@ -51,37 +51,37 @@ text-align: center;
 	<main role="main" class="container">
 		<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
 			<div class="lh-100">
-				<h6 class="mb-0 text-white lh-100">웹캠 촬영본</h6>
+				<h6 class="mb-0 text-white lh-100">스타일 추천</h6>
 				<small>Since 2020</small>
 			</div>
 		</div>
 
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">웹캠 촬영본</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">스타일 추천</h6>
 			<%-- ${listView} --%>
 			<table class="table">
-				    <tr>
+			<%-- 	    <tr>
 					<th>no</th>
-					<td>${stylerDetailView.stylerIdx}</td>
+					<td>${stylerRecommendationView.stylerIdx}</td>
 					</tr>
 					<tr>
-					<th>작성 날짜</th>
-					<td><fmt:formatDate value="${stylerDetailView.stylerOn}" pattern="yyyy. MM. dd" /></td>
+					<th>촬영 날짜</th>
+					<td><fmt:formatDate value="${stylerRecommendationView.stylerOn}" pattern="yyyy. MM. dd" /></td>
 					</tr>
 					<tr>
 					<th>사용자</th>
-					<td>${stylerDetailView.stylerUser}</td>
+					<td>${stylerRecommendationView.stylerUser}</td>
 					<tr>
-					<th colspan="2">제목</th>
+					<th colspan="2">사진 제목</th>
 					</tr>
 					<tr>
-					<td>${stylerDetailView.stylerPhoto}</td>
+					<td>${stylerRecommendationView.stylerPhoto}</td>
 					</tr>
 					<tr>
 					<th colspan="2">사진</th>
-					</tr>
+					</tr> --%>
 					<tr>
-					<td id="tableimg" colspan="2"><img src="<c:url value="/uploadfile/userphoto/${stylerDetailView.stylerPhoto}"/>" class="photo" alt="사진"></td>
+					<td id="tableimg" colspan="2"><img src="<c:url value="/uploadfile/userphoto/${stylerRecommendationView.stylerPhoto}"/>" class="photo" alt="사진"></td>
 					</tr>
 				</table>
 	    <div><a href="<c:url value="/styler/userList"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="뒤로가기" id="click-home"/></a></div>

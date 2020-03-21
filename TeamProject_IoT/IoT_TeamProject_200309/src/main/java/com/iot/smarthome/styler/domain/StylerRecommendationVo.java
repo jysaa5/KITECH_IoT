@@ -4,8 +4,8 @@ import java.sql.Date;
 
 import org.springframework.web.multipart.MultipartFile;
 
-//StylerDetailViewVo: 사진을 추천해주기 위해 저장되어 있던 데이터를 담는 도메인 클래스
-public class StylerDetailViewVo {
+//StylerRecommendationVo: 사진을 추천해주기 위해 저장되어 있던 데이터를 담는 도메인 클래스
+public class StylerRecommendationVo {
 
 	
 	private int stylerIdx;  //사진 인덱스
@@ -16,11 +16,11 @@ public class StylerDetailViewVo {
 	
 	//<생성자>//
 	//기본 생성자
-	public StylerDetailViewVo() {
+	public StylerRecommendationVo() {
 		super();
 	}
 
-	public StylerDetailViewVo(int stylerIdx, String stylerUser, String stylerPhoto, MultipartFile photo,
+	public StylerRecommendationVo(int stylerIdx, String stylerUser, String stylerPhoto, MultipartFile photo,
 			Date stylerOn) {
 		super();
 		this.stylerIdx = stylerIdx;
@@ -69,21 +69,12 @@ public class StylerDetailViewVo {
 
 	public void setStylerOn(Date stylerOn) {
 		this.stylerOn = stylerOn;
-	}
-
-	
+	}	
 	
 	@Override
 	public String toString() {
-		return "StylerDetailViewVo [stylerIdx=" + stylerIdx + ", stylerUser=" + stylerUser + ", stylerPhoto="
+		return "StylerRecommendationVo [stylerIdx=" + stylerIdx + ", stylerUser=" + stylerUser + ", stylerPhoto="
 				+ stylerPhoto + ", photo=" + photo + ", stylerOn=" + stylerOn + "]";
 	}
-	
-	
-	
 
-	
-	
-
-	
-}//BoardDetailViewVo 클래스 끝
+}//StylerRecommendationVo 클래스 끝

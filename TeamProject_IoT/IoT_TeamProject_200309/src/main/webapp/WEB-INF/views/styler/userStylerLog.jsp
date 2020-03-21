@@ -108,11 +108,8 @@
 				var date = $('#date_on').val();
 
 				$.ajax({
-					/* url:'http://192.168.0.66:5000/'+date, */
 					url : 'http://192.168.0.24:5000/log/' + date,
-					/* 					type: "GET",
-					 data: {fDate: date}, */
-					/*res: 응답 데이터 -> 문자열로 들어옴.  */
+					/* url:'http://192.168.0.66:5000/'+date, <- 이게 원래 주소*/
 					success : function(res) {
 						console.log(res)
 						if (res == 'Error') {
