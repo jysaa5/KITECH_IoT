@@ -29,7 +29,7 @@
  <li>팀원:  <a href="https://github.com/jysaa5">김주연</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/capashage2">정용기</a>,  <a href="https://github.com/sjm99198">조성빈</a>, <a href="https://github.com/db3124">조지윤</a><br></li>
  <li>역할: 각자 관심 있는 주제로 웹 페이지 구현 <br></li>
  <li>구현한 기능: Client Program, Server <br></li>
- <li>사용한 기술: Open API, HTML5, CSS3, JavaScript, jQuery, ajax, Bootstrap, Mysql, Spring Framework, MyBatis, AWS: EC2, RDS <br></li> 
+ <li>사용한 기술: Open API, HTML5, CSS3, JavaScript, jQuery, ajax, Bootstrap(4.4.1), Mysql, Java(8), Spring Framework(4.3.18), MyBatis(3.4.6), AWS: EC2, RDS <br></li> 
 </ul>
 <table style="text-align:center; margin:auto;">
   <tr>
@@ -48,6 +48,7 @@
   <li>프로젝트 업데이트 History<br></li>
    2020.02.16 - 금융감독원 금융상품, 우리말샘 국어사전  Open API xml parsing to html (Use Ajax)<br>
    2020.02.27 - Ajax CORB 문제 해결중 <br>
+   2020.03.19 - index 화면 버튼 url 수정 <br>
 </ul>
 <hr>
 <h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_IoT"> [팀 프로젝트_IoT] </a></h3>
