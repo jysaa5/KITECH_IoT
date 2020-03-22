@@ -1,23 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page trimDirectiveWhitespaces="true"%>
-<%response.addHeader("Access-Control-Allow-Origin", "*"); %>
-<%response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");%>
+<%
+response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+response.setHeader("Access-Control-Max-Age", "3600");
+response.setHeader("Access-Control-Allow-Headers", "x-requested-with");
+response.setHeader("Access-Control-Allow-Origin", "*");
+response.addHeader("Access-Control-Allow-Origin", "*"); 
+response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");
+%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"> 
 <head>
-<meta charset='euc-kr'>
-<meta http-equiv='Content-Type' content='text/html; charset=euc-kr'>
-<meta http-equiv='X-UA-Compatible' content='IE=EmulateIE9'>
-<meta http-equiv='cache-control' content='no-cache'>
-<meta http-equiv='pragma' content='no-cache'>
+<meta charset='euc-kr'/>
+<meta http-equiv='Content-Type' content='text/html; charset=euc-kr'/>
+<meta http-equiv='X-UA-Compatible' content='IE=EmulateIE9'/>
+<meta http-equiv='cache-control' content='no-cache'/>
+<meta http-equiv='pragma' content='no-cache'/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<meta name="description" content=""/>
+<meta name="author" content=""/>
 
 <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-<script type="text/javascript" src="../js/jquery.ajax-cross-origin.min.js" content="text/html; charset='euc-kr' "></script>
+<script type="text/javascript" src="../js/jquery.ajax-cross-origin.min.js" content="text/html; charset='euc-kr'"></script>
 
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
 
 <title>전세자금대출 조회 결과</title>
 <style>

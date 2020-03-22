@@ -1,9 +1,15 @@
 package com.kite.gz.dict.controller;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,8 +25,9 @@ public class DictContentController {
 
 	@CrossOrigin(origins = "*")
 	@RequestMapping("/dictionary/dictContentForm")
-	public String searchFormContent() {
-		
+	public String searchFormContent(){
+	
+
 		return "dictionary/dictContentForm";	
 		
 	}//searchFormContent 메서드 끝

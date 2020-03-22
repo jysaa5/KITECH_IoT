@@ -1,25 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page trimDirectiveWhitespaces="true"%>
-<%response.addHeader("Access-Control-Allow-Origin", "*"); %>
-<%response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");%>
+<%
+response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+response.setHeader("Access-Control-Max-Age", "3600");
+response.setHeader("Access-Control-Allow-Headers", "x-requested-with");
+response.setHeader("Access-Control-Allow-Origin", "*");
+response.addHeader("Access-Control-Allow-Origin", "*"); 
+response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
-<html>
-<head>
-<meta charset='UTF-8'>
-<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=EmulateIE9'>
-<meta http-equiv='cache-control' content='no-cache'>
-<meta http-equiv='pragma' content='no-cache'>
 
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+<meta http-equiv='X-UA-Compatible' content='IE=EmulateIE9'/>
+<meta http-equiv='cache-control' content='no-cache'/>
+<meta http-equiv='pragma' content='no-cache'/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<meta name="description" content=""/>
+<meta name="author" content=""/>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.ajax-cross-origin.min.js" content="text/html; charset='UTF-8'"></script>
+
 
 <title>우리말 사전 표제어 검색</title>
 
@@ -91,15 +98,15 @@ th, td {
 
 <!-- 메인 컨텐트 시작 -->
 <main role="main" class="container my-auto p-3">
-		<br><br>
+		<br/><br/>
 		<div class="p-3 my-3 text-white-50 text-center bg-secondary rounded box-shadow" id="nav">
 			<div class="lh-100">
 				<h3 class="mb-0 text-white lh-100">함께 만들고 모두 누리는 우리말 사전</h3>
 			</div>
 		</div>
 		<div>
-			<br><br>
-			<img src="<%=request.getContextPath()%>/images/logo.png" class="img-fluid" alt="logo"><br><br>
+			<br/><br/>
+			<img src="<%=request.getContextPath()%>/images/logo.png" class="img-fluid" alt="logo"/><br/><br/>
 			<div class="my-3 p-3 bg-white rounded box-shadow">
 			
 			<form id="searchContentForm" name="searchContentForm" method="post">
@@ -114,7 +121,7 @@ th, td {
 							</select>
 						</div>
 					<div class="input-group mb-3">
-					<input type="text" id = "q2" name="q" class="form-control text-center" placeholder="표제어 정보 예시: 나무001 / 대상코드 예시: 121212" aria-label="검색어 입력" aria-describedby="button-addon2" required>
+					<input type="text" id = "q2" name="q" class="form-control text-center" placeholder="표제어 정보 예시: 나무001 / 대상코드 예시: 121212" aria-label="검색어 입력" aria-describedby="button-addon2" required/>
 					<div class="input-group-append">
 					<button type="submit" id="submit" class="btn btn-outline-secondary bg-secondary text-white align-center" onclick="input()">검색</button>
 				    </div>
@@ -130,7 +137,7 @@ th, td {
     
 		</div>
 		<small class="d-block text-right mt-3 border-top border-gray">
-			<br> 출처 : <a href="https://opendict.korean.go.kr/main">국립국어원, 우리말샘</a>
+			<br/> 출처 : <a href="https://opendict.korean.go.kr/main">국립국어원, 우리말샘</a>
 		</small>
 	</main>
 	<!-- 메인 컨텐트 끝 -->

@@ -69,7 +69,18 @@ text-align: center;
 					<th colspan="2">게임 스틸컷</th>
 					</tr>
 					<tr>
-					<td id="tableimg" colspan="2"><img src="<c:url value="/uploadfile/userphoto/${detailView.gphoto}"/>" class="photo" alt="사진"></td>
+					<td id="tableimg" colspan="2">
+					<%-- <img src="<c:url value="/uploadfile/userphoto/${detailView.gphoto}"/>" class="photo" alt="사진"> --%>
+					<c:choose>
+					<c:when test = "${detailView.gphoto == 'default.png'}">
+					사진 없음
+					</c:when>
+					<c:when test = "${detailView.gphoto != 'default.png'}">
+						<img  src="<c:url value="/uploadfile/userphoto/${detailView.gphoto}"/>" class="photo" alt="사진">
+					</c:when>
+					</c:choose>
+					
+					</td>
 					</tr>
 					<tr>
 					<th colspan="2">내용</th>

@@ -1,8 +1,15 @@
 <%@ page language="java" import="java.io.*,java.net.*" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page trimDirectiveWhitespaces="true"%>
-<%response.addHeader("Access-Control-Allow-Origin", "*"); %>
-<%response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");%>
+<%
+response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+response.setHeader("Access-Control-Max-Age", "3600");
+response.setHeader("Access-Control-Allow-Headers", "x-requested-with");
+response.setHeader("Access-Control-Allow-Origin", "*");
+response.addHeader("Access-Control-Allow-Origin", "*"); 
+response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");
+%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>

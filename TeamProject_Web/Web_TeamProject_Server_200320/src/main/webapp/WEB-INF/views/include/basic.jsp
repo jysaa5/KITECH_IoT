@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<c:url value ="/css/default.css/"/>"> 
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="<c:url value ="/css/bootstrap/bootstrap.min.css/"/>">
+     <link rel="stylesheet" href="<c:url value ="/css/bootstrap/bootstrap.min.css/"/>"> 
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="<c:url value ="/css/bootstrap/jumbotron.css/"/>" rel="stylesheet">

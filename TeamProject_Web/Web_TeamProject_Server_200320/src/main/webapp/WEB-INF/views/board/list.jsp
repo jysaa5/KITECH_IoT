@@ -57,7 +57,26 @@ img.photo {
 						<td>${boardArticle.idx}</td>
 						<td><a href="<c:url value="/board/detailView?idx=${boardArticle.idx}"/>">${boardArticle.title}</a></td>
 						<td>${boardArticle.writer}</td>
-						<td><img src="<c:url value="/uploadfile/userphoto/${boardArticle.gphoto}"/>" class="photo" alt="사진"></td>
+						<td>
+						
+						
+						<%-- <img src="<c:url value="/uploadfile/userphoto/${boardArticle.gphoto}"/>" class="photo" alt="사진"> --%>
+						
+						
+						<c:choose>
+					<c:when test = "${boardArticle.gphoto == 'default.png'}">
+					사진 없음
+					</c:when>
+					
+					<c:when test = "${boardArticle.gphoto != 'default.png'}">
+						<img  src="<c:url value="/uploadfile/userphoto/${boardArticle.gphoto}"/>" class="photo" alt="사진">
+					</c:when>
+					
+					</c:choose>
+						
+						
+						
+						</td>
 						<td><fmt:formatDate value="${boardArticle.regdate}" pattern="yyyy. MM. dd" /></td>
 						<td>
 						<%-- <a href="<c:url value ="/board/edit?idx=${boardArticle.idx}"/>" class="btn btn-primary">수정</a> --%>

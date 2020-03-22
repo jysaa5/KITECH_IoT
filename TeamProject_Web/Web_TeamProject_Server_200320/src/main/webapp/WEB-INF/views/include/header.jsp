@@ -5,26 +5,29 @@ function btn(){
 	alert('준비중입니다.');
 }
 </script>
-    <style>
-    .nav-link{
+<style>
+.nav-link{
+    
     margin: 0 30px
+    
     }
     
-    .navbar-brand{
+.navbar-brand{
     font-size: 2em;
     font-style: italic;
     padding: 0 10px;
     }
     
-    #navColor{
+#navColor{
     background-color:#798F8C !important;
     }
-    </style>
-	 <nav id="navColor" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-	 <img src= "<c:url value="/images/homeIcon.png"/>" width="2%" height="2%"/>
+</style>
+
+  <nav id="navColor" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <img src= "<c:url value="/images/homeIcon.png"/>" width="2%" height="2%"/>
   <a class="navbar-brand" href="<c:url value="/"/>">5G</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">

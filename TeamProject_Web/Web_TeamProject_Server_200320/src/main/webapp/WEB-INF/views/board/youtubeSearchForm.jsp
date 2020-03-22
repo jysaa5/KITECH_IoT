@@ -1,6 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%><!-- 코어태그 -->
 <%@page trimDirectiveWhitespaces="true"%>
+<%
+response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+response.setHeader("Access-Control-Max-Age", "3600");
+response.setHeader("Access-Control-Allow-Headers", "x-requested-with");
+response.setHeader("Access-Control-Allow-Origin", "*");
+response.addHeader("Access-Control-Allow-Origin", "*"); 
+response.setHeader("Access-Control-Allow-Headers", "origin, x-requested-with, content-type, accept");
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
