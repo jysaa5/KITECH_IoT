@@ -166,7 +166,7 @@ width: 1000px;
 	
 	
 	function init(){
-		gapi.client.setApiKey("AIzaSyD18MC_Xd5-7JjfyufuEX-8SP63WQZzYco");
+		gapi.client.setApiKey("AIzaSyC6TF2_z-ZIqLITZLYsUXT39lMdWOCGwFQ");
 		gapi.client.load("youtube", "v3", function(){
 			//youtube api is ready
 		});

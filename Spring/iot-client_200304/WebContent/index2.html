@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"
+	integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+	crossorigin="anonymous"></script>
+
+<style>
+input[type=button] {
+	background-color: #EEE;
+	border: 1px solid #AAA;
+	padding: 15px;
+	margin: 10px;
+	display: block;
+	font-size: 24px;
+}
+
+.select_g {
+	background-color: green;
+	color: #FFF
+}
+</style>
+</head>
+
+<body>
+	<h1>웹캠 촬영하기</h1>
+	
+	<!-- <iframe src="http://192.168.123.100:5000/webcamView" height="640" width="480" scrolling="yes" frameborder="1">
+		<p>Your browser does not support iframes.</p>
+	</iframe> -->
+	
+	<input type="button" value="웹캠 촬영하기" id="btn">
+	<h2 id="h"></h2>
+	<br>
+
+	<script>
+		$(document).ready(function() {
+
+			/*버튼 캐스팅 */
+			$('#btn').click(function() {
+
+				$.ajax({
+
+					//와이파이 변경해야 함
+					url : 'http://192.168.123.100:5000/webcam',
+					type: 'POST',
+
+
+					/*res: 응답 데이터 -> 문자열로 들어옴.  */
+					success : function(res) {
+						console.log(res)
+						if (res == 'success') {
+							$('#h').text('촬영이 완료되었습니다.');
+						} else {
+							$('#h').text('촬영을 다시 시도해주세요.');
+						}
+
+					}
+				});
+
+			});
+
+		});
+	</script>
+
+
+</body>
+</html>

@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.kite</groupId>
 	<artifactId>mvc</artifactId>
-	<name>SpringMVC_200107</name>
+	<name>SpringMVC_200121_1</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>

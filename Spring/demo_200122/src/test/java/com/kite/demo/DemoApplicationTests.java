@@ -58,7 +58,7 @@ class DemoApplicationTests {
 
 	
 	@Test
-	public  void testSelectMemberByID() {
+	public void testSelectMemberByID() {
 		OpMember om = mapper.selectMemberById("11@11");
 		System.out.println("검색 결과: "+ om);
 	}
