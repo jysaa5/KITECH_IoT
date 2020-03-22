@@ -15,7 +15,7 @@
  <li> Operating System(OS): Window | Linux | Raspbian</li>
 </ul>
 <hr>
-<h3><a href="https://github.com/jysaa5/kiet/tree/master/TeamProject_Web/TeamProject_Server_200216_update_1"> [팀 프로젝트_Web] </a></h3>
+<h3><a href="https://github.com/jysaa5/kite_IoT/tree/master/TeamProject_Web/Web_TeamProject_Server_200216_update_1"> [팀 프로젝트_Web] </a></h3>
 <img src="https://github.com/jysaa5/kite_IoT/blob/master/TeamProject_Web/TeamProject_Web_Front.PNG?raw=true" width="50%" height="50%">
 <img src="https://github.com/jysaa5/kite_IoT/blob/master/TeamProject_Web/TeamProject_Web_01.PNG?raw=true" width="50%" height="50%">
 <img src="https://github.com/jysaa5/kite_IoT/blob/master/TeamProject_Web/TeamProject_Web_02.PNG?raw=true" width="50%" height="50%">
