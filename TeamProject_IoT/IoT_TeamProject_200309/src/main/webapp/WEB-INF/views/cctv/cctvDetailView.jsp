@@ -17,6 +17,11 @@
 <script>
 </script>
 <style>
+
+#home_a{
+   text-decoration: none;
+} 
+
 #click-home{
 
 	padding: auto 0px;
@@ -43,23 +48,23 @@ text-align: center;
 </head>
 <body>
 
-	<!-- 해더 시작 -->
-	<%@ include file="/WEB-INF/views/include/header.jsp"%>
-	<!-- 해더 끝 -->
+<!-- 해더 시작 -->
+<%@ include file="/WEB-INF/views/include/header.jsp"%>
+<!-- 해더 끝 -->
 
-	<!-- 메인 컨텐트 시작 -->
+<!-- 메인 컨텐트 시작 -->
 	<main role="main" class="container">
 		<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
 			<div class="lh-100">
-				<h6 class="mb-0 text-white lh-100">CCTV 촬영본</h6>
+				<h6 class="mb-0 text-white lh-100">CCTV Detail View</h6>
 				<small>Since 2020</small>
 			</div>
 		</div>
 
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">CCTV 촬영본</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">CCTV Detail View</h6>
 			<%-- ${listView} --%>
-			<table class="table">
+			<table class="table table-striped">
 				    <tr>
 					<th>no</th>
 					<td>${cctvDetailView.cctvIdx}</td>
@@ -68,13 +73,11 @@ text-align: center;
 					<th>작성 날짜</th>
 					<td><fmt:formatDate value="${cctvDetailView.cctvOn}" pattern="yyyy. MM. dd" /></td>
 					</tr>
-					<tr>
+<%-- 					<tr>
 					<th>타입</th>
 					<td>${cctvDetailView.cctvType}</td>
-					<tr>
-					<th colspan="2">제목</th>
-					</tr>
-					<tr>
+					<tr> --%>
+					<th>제목</th>
 					<td>${cctvDetailView.cctvFile}</td>
 					</tr>
 					<tr>
@@ -100,7 +103,7 @@ text-align: center;
 					<%-- <td><video src="<c:url value="/uploadfile/usercctv/${cctvPhotoVideo.cctvFile}"/>" class="photo" alt="동영상" width="500" height="350" autoplay controls></video></td> --%>
 					</tr>
 				</table>
-				<div><a href="<c:url value="/cctv/userList"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="뒤로가기" id="click-home"/></a></div>
+				<div><a id="home_a" href="<c:url value="/cctv/cctvList"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="뒤로가기" id="click-home"/></a></div>
 
 				<!-- 리스트 시작 -->
 				<%-- <c:forEach items="${listView.list}" var="boardArticle">
@@ -148,11 +151,11 @@ text-align: center;
 		</div>
 	</main>
 
-	<!-- 메인 컨텐트 끝 -->
+<!-- 메인 컨텐트 끝 -->
 
-	<!-- 푸터 시작 -->
-	<%@ include file="/WEB-INF/views/include/footer.jsp"%>
-	<!-- 푸터 끝-->
+<!-- 푸터 시작 -->
+<%@ include file="/WEB-INF/views/include/footer.jsp"%>
+<!-- 푸터 끝-->
 
 
 </body>

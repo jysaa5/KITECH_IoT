@@ -2,13 +2,13 @@ package com.iot.smarthome.styler.domain;
 
 import java.util.List;
 
-//BoardListViewVo: 게시물 리스트에 관련된 데이터를 표현하는 도메인 클래스
+//StylerListViewVo: 사진 리스트에 관련된 데이터를 표현하는 도메인 클래스
 public class StylerListViewVo {
 
-	//게시글의 리스트
+	//사진의 리스트
 	private List<StylerEditVo> list;
 
-	//전체 게시글의 개수
+	//전체 사진의 개수
 	private int totalArticleCount;
 
 	//전체 페이지의 개수
@@ -84,4 +84,4 @@ public class StylerListViewVo {
 
 	}//makeTotalpageCount 메서드 끝
 
-}//BoardListViewVo 클래스 끝
+}//StylerListViewVo 클래스 끝

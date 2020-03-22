@@ -14,10 +14,8 @@ import com.iot.smarthome.cctv.dao.CctvDao;
 import com.iot.smarthome.cctv.domain.CctvVo;
 import com.iot.smarthome.cctv.domain.CctvWriteRequestVo;
 
-
-
 //서비스 bean으로 등록하기 
-//StylerWriteService: 게시글을 작성하는 sql을 실행하는 서비스 클래스
+//CctvWriteService: 게시글을 작성하는 sql을 실행하는 서비스 클래스
 @Service("cctvWriteService")
 public class CctvWriteService {
 
@@ -28,8 +26,8 @@ public class CctvWriteService {
 	//인터페이스
 	private CctvDao dao;
 	
-	//Writeposting 메서드: 게시글을 작성하고 게시글 번호를 반환하는 메서드
-	public int writePhoto(HttpServletRequest request, CctvWriteRequestVo write) {
+	//writeCctv 메서드: 게시글을 작성하고 게시글 번호를 반환하는 메서드
+	public int writeCctv(HttpServletRequest request, CctvWriteRequestVo write) {
 	
 		dao = template.getMapper(CctvDao.class);
 		
@@ -56,8 +54,10 @@ public class CctvWriteService {
 				// String newFileName = memberInfo.getuId()+System.nanoTime();
 				//newFileName = styler.getStylerUser() + "_" + file.getOriginalFilename();
 				newFileName = file.getOriginalFilename();
+				
 				// 파일을 서버의 지정 경로에 저장
 				file.transferTo(new File(dir, newFileName));
+				
 				// 데이터베이스 저장을 하기위한 파일 이름 set
 				cctv.setCctvFile(newFileName);
 				
@@ -67,7 +67,7 @@ public class CctvWriteService {
 					{
 					cctv.setCctvFile("default.png");
 					}else if(type.equals("v")) {
-					cctv.setCctvFile("default.h264");
+					cctv.setCctvFile("default.mp4");
 					}
 			}
 		
@@ -92,6 +92,6 @@ public class CctvWriteService {
 
 		return resultCnt;
 		
-	}//writePhoto메서드 끝
+	}//writeCctv메서드 끝
 	
-}//BoardWriteService 클래스 끝
+}//CctvWriteService 클래스 끝

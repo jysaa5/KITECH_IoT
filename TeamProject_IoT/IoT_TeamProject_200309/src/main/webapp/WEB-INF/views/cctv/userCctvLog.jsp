@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%><!-- 코어태그 -->
 <%@page trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
@@ -12,8 +11,16 @@
 
 <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
 
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
 <style>
+
+#home_a{
+   text-decoration: none;
+} 
+
 #btn_on {
 	font-size: 24px;
 	width: 200px;
@@ -70,7 +77,7 @@
 
 </style>
 
-<title>Log View</title>
+<title>CCTV Log View</title>
 
 <!-- 기본 CSS 처리 시작 -->
 <%@ include file="/WEB-INF/views/include/basic.jsp"%>
@@ -92,36 +99,58 @@
 		<div
 			class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
 			<div class="lh-100">
-				<h6 class="mb-0 text-white lh-100">Cctv Log</h6>
+				<h6 class="mb-0 text-white lh-100">CCTV Log</h6>
 				<small>Since 2020</small>
 			</div>
 		</div>
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">Cctv Log</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">CCTV Log</h6>
 			<div class="media text-muted pt-3">
-				<p
-					class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-				</p>
+				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"> </p>
 			</div>
 			<br>
+			
 			<div class="a_layer">
-					<div class="a_content ">
-						<input type="date" name="date_Cctv_log" id="date_on"> <input type="button" class="btn btn-primary" value="확인" id="btn_on">
-					</div>
+				<div class="a_content ">
+					<input type="date" name="date_Cctv_log" id="date_on">
+					
+					<!-- <div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
+                    <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker4').datetimepicker({
+                    format: 'L'
+                });
+            }); -->
+        </script>
+    </div>
+</div>
+					<input type="button" class="btn btn-primary" value="확인" id="btn_on">
+				</div>
 			</div>
+			
 			<br>
 			<div id="dict_table"></div>
 			<br>
+			
 			<div>
-				<a href="<c:url value="/"/>"><input type="button"
-					class="btn btn-lg btn-block btn-outline-primary" value="Home"
-					id="click-home" /></a>
+				<a id="home_a" href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home" /></a>
 			</div>
 		</div>
 	</main>
-	<!-- 메인 컨텐트 끝 -->
+<!-- 메인 컨텐트 끝 -->
 
-	<script>
+<script>
 		$(document).ready(function() {
 
 			$('#btn_on').click(function() {
@@ -139,17 +168,20 @@
 							$('#dict_table').html(res);
 						}
 
-					}
+					},
+					error: function(res){
+						$('#dict_table').text('다시 시도해주세요.');
+						}
 				});
 
 			});
 
 		});
-	</script>
+</script>
 
-	<!-- 푸터 시작 -->
-	<%@ include file="/WEB-INF/views/include/footer.jsp"%>
-	<!-- 푸터 끝-->
+<!-- 푸터 시작 -->
+<%@ include file="/WEB-INF/views/include/footer.jsp"%>
+<!-- 푸터 끝-->
 
 </body>
 </html>

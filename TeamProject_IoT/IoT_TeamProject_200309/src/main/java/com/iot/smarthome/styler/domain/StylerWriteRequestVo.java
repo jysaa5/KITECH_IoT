@@ -7,10 +7,14 @@ import org.springframework.web.multipart.MultipartFile;
 //StylerWriteRequestVo: 사진 저장시 요청 데이터를 보관하여 전달하는 도메인 클래스
 public class StylerWriteRequestVo {
 	
-	private int stylerIdx;  //게시글 번호
+	//사진 인덱스 번호
+	private int stylerIdx;
+	//사용자 이름
 	private String stylerUser;
-	private MultipartFile photo;  //게시글 사진 데이터
-	private Date stylerOn;  //게시글 작성 날짜
+	//사진 데이터
+	private MultipartFile photo;
+	//사진 저장 날짜
+	private Date stylerOn;
 	
 	
 	//<생성자>//
@@ -61,8 +65,7 @@ public class StylerWriteRequestVo {
 		this.stylerOn = stylerOn;
 	}
 	
-	
-
+	//toString
 	@Override
 	public String toString() {
 		return "StylerWriteRequestVo [stylerIdx=" + stylerIdx + ", stylerUser=" + stylerUser + ", photo=" + photo + ", stylerOn=" + stylerOn + "]";
@@ -76,7 +79,6 @@ public class StylerWriteRequestVo {
 		return new StylerVo(0, stylerUser, null, photo, null);
 	
 	}//toStyler 메서드 끝
-	
 	
 	
 }//StylerWriteRequestVo 클래스 끝

@@ -14,10 +14,9 @@ import com.iot.smarthome.styler.dao.StylerDao;
 import com.iot.smarthome.styler.domain.StylerVo;
 import com.iot.smarthome.styler.domain.StylerWriteRequestVo;
 
-
 //서비스 bean으로 등록하기 
-//StylerWriteService: 게시글을 작성하는 sql을 실행하는 서비스 클래스
-@Service("stylerWriteService")
+//StylerWriteService: 사진을 저장하는 sql을 실행하는 서비스 클래스
+@Service("StylerWriteService")
 public class StylerWriteService {
 
 	//객체 주입
@@ -27,8 +26,8 @@ public class StylerWriteService {
 	//인터페이스
 	private StylerDao dao;
 	
-	//Writeposting 메서드: 게시글을 작성하고 게시글 번호를 반환하는 메서드
-	public int writePhoto(HttpServletRequest request, StylerWriteRequestVo write) {
+	//writeStyler 메서드: 사진을 저장하고 사진 인덱스 번호를 반환하는 메서드
+	public int writeStylerPhoto(HttpServletRequest request, StylerWriteRequestVo write) {
 	
 		dao = template.getMapper(StylerDao.class);
 		
@@ -83,6 +82,6 @@ public class StylerWriteService {
 
 		return resultCnt;
 		
-	}//writePhoto메서드 끝
+	}//writeStylerPhoto메서드 끝
 	
-}//BoardWriteService 클래스 끝
+}//StylerWriteService 클래스 끝

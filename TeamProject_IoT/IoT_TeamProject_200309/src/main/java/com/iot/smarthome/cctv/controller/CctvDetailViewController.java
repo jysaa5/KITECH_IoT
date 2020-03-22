@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.iot.smarthome.cctv.service.CctvDetailViewService;
 
-
-
-//BoardDetailViewController: 게시글 리스트를 페이지 번호에 따라서 보여지게 하는 컨트롤러
+//CctvDetailViewController: CCTV 화면 자세히 보여주는 페이지로 이동해주는 컨트롤러
 @Controller
 public class CctvDetailViewController {
 
@@ -18,14 +16,15 @@ public class CctvDetailViewController {
 	@Autowired
 	CctvDetailViewService detailViewService;
 	
-	//list 메서드: 사용자가 페이지 번호를 눌렀을 때, 해당 페이지의 데이터가 보이게 하는 메서드
-	@RequestMapping("/cctv/detailView")
-	public String detailPostingView(@RequestParam(value = "cctvIdx", defaultValue = "-1") int cctvIdx, Model model) {
+	//cctvDetailView 메서드: 사용자가 CCTV를 자세히 보기 위해 제목을 클릭할때 실행되는 메서드
+	//Model에 저장
+	@RequestMapping("/cctv/cctvDetailView")
+	public String cctvDetailView(@RequestParam(value = "cctvIdx", defaultValue = "-1") int cctvIdx, Model model) {
 		
-		model.addAttribute("cctvDetailView", detailViewService.getDetailPostingidx(cctvIdx));
+		model.addAttribute("cctvDetailView", detailViewService.getCctvDetailViewIdx(cctvIdx));
 		
-		return "cctv/detailView";
+		return "cctv/cctvDetailView";
 		
-	}//detailPostingView 메서드 끝
+	}//cctvDetailView 메서드 끝
 	
-}//BoardDetailViewController 클래스 끝
+}//CctvDetailViewController 클래스 끝

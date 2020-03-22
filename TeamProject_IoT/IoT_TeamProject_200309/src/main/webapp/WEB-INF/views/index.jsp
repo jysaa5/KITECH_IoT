@@ -57,6 +57,13 @@ Favicons
 </style>
 Custom styles for this template
 <link href="pricing.css" rel="stylesheet"> -->
+<style>
+#home_a1, #home_a2, #home_a3, #home_a4, #home_a5, #home_a6{
+   text-decoration: none;
+} 
+
+</style>
+
 </head>
 <body>
  <!-- 해더 시작 -->
@@ -95,8 +102,7 @@ Custom styles for this template
 						<li>나의 생활 패턴 확인</li>
 						<li></li><br>
 					</ul>
-					<a href="<c:url value="/cctv/userList"/>"><button type="button"
-						class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
+					<a id="home_a1" href="<c:url value="/cctv/cctvList"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
 				</div>
 				<div class="card-header">
 					<h4 class="my-0 font-weight-normal">CCTV</h4>
@@ -111,8 +117,7 @@ Custom styles for this template
 						<li>더 안전하게 설정하기</li>
 						<li></li><br>
 					</ul>
-					<button type="button"
-						class="btn btn-lg btn-block btn-outline-primary">Click</button>
+					<a id="home_a2" href="<c:url value="/cctv/userCctv"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
 				</div>
 				
 			</div>
@@ -131,7 +136,7 @@ Custom styles for this template
 						<li>원격 조정 가능</li>
 						<li></li><br>
 					</ul>
-					<a href="<c:url value="/led/user"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
+					<a id="home_a3" href="<c:url value="/led/userLed"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
 				</div>
 				<div class="card-header">
 					<h4 class="my-0 font-weight-normal">My Home History</h4>
@@ -146,7 +151,7 @@ Custom styles for this template
 						<li>분석</li>
 						<li></li><br>
 					</ul>
-					<a href="<c:url value="/history/userSelectLog"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
+					<a id="home_a4" href="<c:url value="/history/userSelectLog"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
 				</div>
 			</div>
 			<div class="card mb-4 shadow-sm">
@@ -163,7 +168,7 @@ Custom styles for this template
 						<li>스타일 자랑 하기</li>
 						<li></li><br>
 					</ul>
-					<a href="<c:url value="/styler/user"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
+					<a id="home_a5" href="<c:url value="/styler/userStyler"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
 				</div>
 				<div class="card-header">
 					<h4 class="my-0 font-weight-normal">Styler</h4>
@@ -178,7 +183,7 @@ Custom styles for this template
 						<li>고민하지 말고 추천받자</li>
 						<li></li><br>
 					</ul>
-					<a href="<c:url value="/styler/userList"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
+					<a id="home_a6" href="<c:url value="/styler/stylerList"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
 				</div>
 			</div>
 		</div>

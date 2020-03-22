@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.iot.smarthome.styler.service.StylerRecommendationService;
 
-
-
-//BoardDetailViewController: 게시글 리스트를 페이지 번호에 따라서 보여지게 하는 컨트롤러
+//StylerRecommendationController: 사진 추천 페이지를 보여주는 컨트롤러
 @Controller
 public class StylerRecommendationController {
 
@@ -18,14 +16,14 @@ public class StylerRecommendationController {
 	@Autowired
 	StylerRecommendationService recommendationService;
 	
-	//list 메서드: 사용자가 페이지 번호를 눌렀을 때, 해당 페이지의 데이터가 보이게 하는 메서드
+	//recommendationStyler 메서드: 사용자가 추천 버튼을 눌렀을 때, 실행되는 메서드
 	@RequestMapping("/styler/recommendation")
-	public String detailPostingView(@RequestParam(value = "stylerIdx", defaultValue = "-1") int stylerIdx, Model model) {
+	public String recommendationStyler(@RequestParam(value = "stylerIdx", defaultValue = "-1") int stylerIdx, Model model) {
 		
-		model.addAttribute("stylerRecommendationView", recommendationService.getRecommendationPhoto(stylerIdx));
+		model.addAttribute("stylerRecommendationView", recommendationService.getRecommendationStyler(stylerIdx));
 		
 		return "styler/recommendation";
 		
-	}//detailPostingView 메서드 끝
+	}//recommendationStyler 메서드 끝
 	
-}//BoardDetailViewController 클래스 끝
+}//StylerRecommendationController 클래스 끝

@@ -7,11 +7,16 @@ import org.springframework.web.multipart.MultipartFile;
 //StylerVo: 사진 저장시 처음 데이터를 보관하여 전달하는 도메인 클래스
 public class StylerVo {
 	
-	private int stylerIdx;  //게시글 번호
-	private String stylerUser;  //게시글 사진제목 데이터
-	private String stylerPhoto;  //게시글 사진제목 데이터
-	private MultipartFile photo;  //게시글 사진 데이터
-	private Date stylerOn;  //게시글 작성 날짜
+	//사진 인덱스 번호
+	private int stylerIdx;
+	//사용자 이름
+	private String stylerUser;
+	//사진 제목
+	private String stylerPhoto;
+	//사진 데이터
+	private MultipartFile photo;
+	//사진 저장 날짜
+	private Date stylerOn;
 	
 	//<생성자>//
 	//기본 생성자
@@ -80,6 +85,4 @@ public class StylerVo {
 	}
 	
 
-	
-	
 }//StylerVo 클래스 끝

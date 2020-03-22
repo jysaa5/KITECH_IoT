@@ -7,12 +7,16 @@ import org.springframework.web.multipart.MultipartFile;
 //StylerRecommendationVo: 사진을 추천해주기 위해 저장되어 있던 데이터를 담는 도메인 클래스
 public class StylerRecommendationVo {
 
-	
-	private int stylerIdx;  //사진 인덱스
-	private String stylerUser;  //사용자 데이터
-	private String stylerPhoto;  //게시글 사진제목 데이터
-	private MultipartFile photo;  //게시글 사진 데이터
-	private Date stylerOn;  //게시글 작성 날짜
+	//사진 인덱스 번호
+	private int stylerIdx;
+	//사용자 이름
+	private String stylerUser;
+	//사진 제목
+	private String stylerPhoto;
+	//사진 데이터
+	private MultipartFile photo;
+	//사진 저장 날짜
+	private Date stylerOn;
 	
 	//<생성자>//
 	//기본 생성자
@@ -20,6 +24,7 @@ public class StylerRecommendationVo {
 		super();
 	}
 
+	//생성자
 	public StylerRecommendationVo(int stylerIdx, String stylerUser, String stylerPhoto, MultipartFile photo,
 			Date stylerOn) {
 		super();
@@ -30,7 +35,7 @@ public class StylerRecommendationVo {
 		this.stylerOn = stylerOn;
 	}
 	
-
+	//getter, setter
 	public int getStylerIdx() {
 		return stylerIdx;
 	}
@@ -71,6 +76,7 @@ public class StylerRecommendationVo {
 		this.stylerOn = stylerOn;
 	}	
 	
+	//toString
 	@Override
 	public String toString() {
 		return "StylerRecommendationVo [stylerIdx=" + stylerIdx + ", stylerUser=" + stylerUser + ", stylerPhoto="

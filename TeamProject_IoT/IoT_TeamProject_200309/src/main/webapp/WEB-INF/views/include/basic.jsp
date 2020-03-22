@@ -16,7 +16,6 @@
 <!-- Custom styles for this template -->
 <link href="<c:url value ="/css/bootstrap/pricing.css/"/>" rel="stylesheet">
 
-
 <!-- Favicons -->
 <%-- <link rel="apple-touch-icon" href="<c:url value ="/docs/4.4/assets/img/favicons/apple-touch-icon.png"/>" sizes="180x180">
 <link rel="icon" href="<c:url value ="/docs/4.4/assets/img/favicons/favicon-32x32.png"/>" sizes="32x32" type="image/png">

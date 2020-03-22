@@ -2,13 +2,15 @@ package com.iot.smarthome.led.domain;
 
 import java.sql.Date;
 
-
-//StylerVo: 사진 저장시 처음 데이터를 보관하여 전달하는 도메인 클래스
+//LedVo: LED On/Off 데이터를 보관하여 전달하는 도메인 클래스
 public class LedVo {
 	
-	private int ledIdx;  //게시글 번호
-	private String ledState;  //게시글 사진제목 데이터
-	private Date ledDate;  //게시글 작성 날짜
+	//LED 인덱스 번호
+	private int ledIdx;
+	//LED 상태
+	private String ledState;
+	//LED 데이터 생성 날짜, 시간
+	private Date ledDate;
 
 	
 	//<생성자>//
@@ -16,16 +18,16 @@ public class LedVo {
 	public LedVo() {
 		super();
 	}
-
-
+	
+	//생성자
 	public LedVo(int ledIdx, String ledState, Date ledDate) {
 		super();
 		this.ledIdx = ledIdx;
 		this.ledState = ledState;
 		this.ledDate = ledDate;
 	}
-
-
+	
+	//getter, setter
 	public int getLedIdx() {
 		return ledIdx;
 	}
@@ -54,12 +56,12 @@ public class LedVo {
 	public void setLedDate(Date ledDate) {
 		this.ledDate = ledDate;
 	}
-
-
+	
+	//toString
 	@Override
 	public String toString() {
 		return "LedVo [ledIdx=" + ledIdx + ", ledState=" + ledState + ", ledDate=" + ledDate + "]";
 	}
 
 	
-}//CctvVo 클래스 끝
+}//LedVo 클래스 끝

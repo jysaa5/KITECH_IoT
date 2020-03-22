@@ -11,7 +11,6 @@
 
 <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
 
-
 <style>
 #btn_webcam{
 
@@ -56,7 +55,7 @@
 
 </style>
 
-<title>Write</title>
+<title>User Styler</title>
 
 <!-- 기본 CSS 처리 시작 -->
 <%@ include file="/WEB-INF/views/include/basic.jsp"%>
@@ -68,48 +67,54 @@
 </head>
 <body>
 
-	<!-- 해더 시작 -->
-	<%@ include file="/WEB-INF/views/include/header.jsp"%>
-	<!-- 해더 끝 -->
+<!-- 해더 시작 -->
+<%@ include file="/WEB-INF/views/include/header.jsp"%>
+<!-- 해더 끝 -->
 
-	<!-- 메인 컨텐트 시작 -->
+<!-- 메인 컨텐트 시작 -->
 	<main role="main" class="container">
 	<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
 			<div class="lh-100">
-				<h6 class="mb-0 text-white lh-100">게임 추천 글 작성 하기</h6>
+				<h6 class="mb-0 text-white lh-100">Styler 촬영</h6>
 				<small>Since 2020</small>
 			</div>
 		</div>
 		
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">웹캠 촬영하기</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">Styler 촬영</h6>
 			<div class="media text-muted pt-3">
 				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">	 </p>
 			</div>
-			<div><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="웹캠 촬영하기" id="btn_webcam"/></div>
+			
 			<br>
-			<div><h2 id="resultLine"></h2></div>
-				<br>
-				<br>
-				<br>
-				<div><a href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home"/></a></div>
+			<div>
+			<input type="button" class="btn btn-lg btn-block btn-outline-primary" value="촬영" id="btn_webcam"/>
+			</div>
+			
+			<br>
+			<div>
+			<h2 id="resultLine">촬영 버튼을 눌러주세요.</h2>
+			
+			</div>
+			<br>
+			<br>
+			<br>
+				
+			<div>
+			<a href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home"/></a>
+			</div>
+			
 		</div>
 	</main>
-	
-	
 
-<!-- <input type="button" value="웹캠 촬영하기" id="btn_webcam" />
-<h2 id="h"></h2> -->
+<!-- 메인 컨텐트 끝 -->
 
-<br>
-	<!-- 메인 컨텐트 끝 -->
-
-	<script>
+<script>
 		$(document).ready(function() {
 
 			/*버튼 캐스팅 */
 			$('#btn_webcam').click(function() {
-				$('#resultLine').text('촬영중입니다. 잠시 기다려주세요.');
+				$('#resultLine').text('촬영중입니다. 웹캠과 10cm이상 간격을 유지해주세요.');
 				$.ajax({
 					//와이파이 변경해야 함
 					url : 'http://192.168.0.66:5000/webcam',
@@ -124,17 +129,20 @@
 							$('#resultLine').text('촬영을 다시 시도해주세요.');
 						}
 
+					},
+					error: function(res){
+						$('#resultLine').text('다시 시도해주세요.');
 					}
 				});
 
 			});
 		});
 		
-	</script>
+</script>
 
-	<!-- 푸터 시작 -->
-	<%@ include file="/WEB-INF/views/include/footer.jsp"%>
-	<!-- 푸터 끝-->
+<!-- 푸터 시작 -->
+<%@ include file="/WEB-INF/views/include/footer.jsp"%>
+<!-- 푸터 끝-->
 
 </body>
 </html>

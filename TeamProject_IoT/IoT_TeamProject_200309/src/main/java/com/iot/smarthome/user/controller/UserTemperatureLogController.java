@@ -4,17 +4,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-//UserWeatherLogController: 사용자가 날씨 로그 버튼을 눌렀을 때, 사용되는 컨트롤러
+//UserTemperatureLogController: 사용자 집안의 온도 로그 컨트롤러
 @Controller
 @RequestMapping("/weather/userTempLog")
-public class UserTempLogController {
+public class UserTemperatureLogController {
 	
+	//userTemperatureLogView: 사용자 집안의 온도 로그 페이지로 이동하는 메서드
 	//get방식으로 들어왔을 때 처리
 	@RequestMapping(method = RequestMethod.GET)
-	public String userWeatherLogView() {
+	public String userTemperatureLogView() {
 	
 		return "weather/userTempLog";
 		
-	}//userWeatherLogView 메서드 끝
+	}//userTemperatureLogView 메서드 끝
 
-}//UserWeatherLogController 클래스 끝
+}//UserTemperatureLogController 클래스 끝

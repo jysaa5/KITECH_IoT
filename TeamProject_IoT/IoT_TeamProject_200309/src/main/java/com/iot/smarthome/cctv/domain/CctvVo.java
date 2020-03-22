@@ -4,14 +4,19 @@ import java.sql.Date;
 
 import org.springframework.web.multipart.MultipartFile;
 
-//StylerVo: 사진 저장시 처음 데이터를 보관하여 전달하는 도메인 클래스
+//CctvVo: 사진, 영상 저장시 처음 데이터를 보관하여 전달하는 도메인 클래스
 public class CctvVo {
 	
-	private int cctvIdx;  //게시글 번호
-	private String cctvType;  //게시글 사진제목 데이터
-	private String cctvFile;  //게시글 사진제목 데이터
-	private MultipartFile cctv;  //게시글 사진 데이터
-	private Date cctvOn;  //게시글 작성 날짜
+	//cctv 인덱스 번호
+	private int cctvIdx;  
+	//cctv 사진: p, 영상: v
+	private String cctvType;  
+	//cctv 사진 또는 영상 제목
+	private String cctvFile;
+	//cctv 사진 또는 영상 데이터
+	private MultipartFile cctv;
+	//cctv 데이터 저장된 날짜, 시간
+	private Date cctvOn;
 
 	
 	//<생성자>//
@@ -19,8 +24,8 @@ public class CctvVo {
 	public CctvVo() {
 		super();
 	}
-
-
+	
+	//생성자
 	public CctvVo(int cctvIdx, String cctvType, String cctvFile, MultipartFile cctv, Date cctvOn) {
 		super();
 		this.cctvIdx = cctvIdx;
@@ -29,8 +34,8 @@ public class CctvVo {
 		this.cctv = cctv;
 		this.cctvOn = cctvOn;
 	}
-
-
+	
+	//getter와 setter
 	public int getCctvIdx() {
 		return cctvIdx;
 	}
@@ -79,26 +84,12 @@ public class CctvVo {
 	public void setCctvOn(Date cctvOn) {
 		this.cctvOn = cctvOn;
 	}
-
-
+	
+	//toString
 	@Override
 	public String toString() {
 		return "CctvVo [cctvIdx=" + cctvIdx + ", cctvType=" + cctvType + ", cctvFile=" + cctvFile + ", cctv=" + cctv
 				+ ", cctvOn=" + cctvOn + "]";
 	}
-	
-	
-
-
-
-
-
-
-	
-
-	
-
-	
-	
 	
 }//CctvVo 클래스 끝

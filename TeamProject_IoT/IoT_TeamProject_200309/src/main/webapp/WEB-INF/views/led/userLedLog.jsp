@@ -12,17 +12,12 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
 
 <style>
-#btn_on, #btn_off {
-	padding: auto 0px;
-	margin: auto 0px;
-	display: block;
+
+#btn_on {
 	font-size: 24px;
 	width: 200px;
 	height: 60px;
 	text-align: center;
-	display: table;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 #click-home {
@@ -39,29 +34,43 @@
 }
 
 #dict_table {
-	padding: auto 0px;
-	margin: auto 0px;
+	width: auto;
+	height: auto;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto 0px;
 }
 
-#date_on{
-	padding: auto 0px;
-	margin: auto 0px;
-	display: block;
+#date_on {
 	font-size: 24px;
 	width: 200px;
 	height: 60px;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
 }
+
+.a_layer {
+	width: auto;
+	height: auto;
+	text-align: center;
+	margin: auto 0px;
+}
+
+.a_content {
+	width: auto;
+	height: auto;
+	display: inline-block;
+}
+
+.dataframe{
+	width: auto;
+	height: auto;
+	display: inline-block;
+}
+
 
 
 </style>
 
-<title>Log View</title>
+<title>LED Log View</title>
 
 <!-- 기본 CSS 처리 시작 -->
 <%@ include file="/WEB-INF/views/include/basic.jsp"%>
@@ -86,17 +95,27 @@
 				<small>Since 2020</small>
 			</div>
 		</div>
+		
 		<div class="my-3 p-3 bg-white rounded box-shadow">
 			<h6 class="border-bottom border-gray pb-2 mb-0">LED Log</h6>
 			<div class="media text-muted pt-3">
 				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"> </p>
 			</div>
+			<br>
 			
-			<div><input type="date" name="date_fingerprint_log" id="date_on"></div><br>
-			<input type="button" class="btn btn-lg btn-block btn-outline-primary" value="확인" id="btn_on"><br>
-			<div id="dict_table"></div>
+			<div class="a_layer">
+			  <div class="a_content ">
+			   <input type="date" name="date_fingerprint_log" id="date_on">
+			   <input type="button" class="btn btn-primary" value="확인" id="btn_on">
+			  </div>
+			</div>
 			
-			<div><a href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home" /></a>
+			<br>
+			  <div id="dict_table"></div>
+			<br>
+			
+			<div>
+			<a href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home" /></a>
 			</div>
 		</div>
 	</main>
@@ -124,27 +143,14 @@
 							$('#dict_table').html(res);
 						}
 
-					}
-				});
-
-			});
-
-			$('#btn_off').click(function() {
-
-				$.ajax({
-					url : 'http://192.168.0.66:5000/light_off',
-					success : function(res) {
-						console.log(res)
-						if (res == 'light off') {
-							$('#h').text('LED OFF');
-						} else {
-							$('#h').text('다시 시도해주세요.');
+					},
+					error: function(res){
+						$('#dict_table').text('다시 시도해주세요.');
 						}
-
-					}
 				});
 
 			});
+
 		});
 	</script>
 
