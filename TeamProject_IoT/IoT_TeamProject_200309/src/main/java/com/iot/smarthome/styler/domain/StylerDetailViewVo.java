@@ -4,12 +4,12 @@ import java.sql.Date;
 
 import org.springframework.web.multipart.MultipartFile;
 
-//StylerDetailViewVo: 사진을 추천해주기 위해 저장되어 있던 데이터를 담는 도메인 클래스
+//BoardDetailViewVo: 게시글을 자세히 보기 위해 저장되어 있던 데이터를 담는 도메인 클래스
 public class StylerDetailViewVo {
 
 	
-	private int stylerIdx;  //사진 인덱스
-	private String stylerUser;  //사용자 데이터
+	private int stylerIdx;  //게시글 번호
+	private String stylerUser;  //게시글 사진제목 데이터
 	private String stylerPhoto;  //게시글 사진제목 데이터
 	private MultipartFile photo;  //게시글 사진 데이터
 	private Date stylerOn;  //게시글 작성 날짜
@@ -29,6 +29,9 @@ public class StylerDetailViewVo {
 		this.photo = photo;
 		this.stylerOn = stylerOn;
 	}
+	
+	
+	
 	
 
 	public int getStylerIdx() {

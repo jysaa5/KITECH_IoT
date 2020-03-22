@@ -81,7 +81,7 @@ text-align: center;
 					<th colspan="2">사진</th>
 					</tr>
 					<tr>
-					<td id="tableimg" colspan="2"><img src="<c:url value="/uploadfile/userphoto/${stylerDetailView.stylerPhoto}"/>" class="photo" alt="사진"></td>
+					<td id="tableimg" colspan="2"><img src="<c:url value="/uploadfile/userphoto/${stylerDetailView.stylerPhoto}"/>" class="photo" alt="사진 또는 동영상"></td>
 					</tr>
 				</table>
 	    <div><a href="<c:url value="/styler/userList"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="뒤로가기" id="click-home"/></a></div>

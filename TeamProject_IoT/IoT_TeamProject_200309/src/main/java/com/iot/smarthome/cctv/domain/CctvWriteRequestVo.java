@@ -157,7 +157,7 @@ public class CctvWriteRequestVo {
 	//toStyler 메서드: Styler 도메인의 객체를 반환하는 메서드
 	public CctvVo toCctv() {
 		
-		return new CctvVo(0, cctvType, null, cctv, null);
+		return new CctvVo(0, null, null, cctv, null);
 	
 	}//toStyler 메서드 끝
 	

@@ -116,8 +116,11 @@
 				var date = $('#date_on').val();
 
 				$.ajax({
-					url : 'http://192.168.0.24:5000/log/' + date,
-					//http://192.168.0.63:8033 ->이게 원래 라즈베리파이 주소
+					/* url:'http://192.168.0.66:5000/'+date, */
+					url : 'http://192.168.0.24:5000/fingerDate/' + date,
+					/* 					type: "GET",
+					 data: {fDate: date}, */
+					/*res: 응답 데이터 -> 문자열로 들어옴.  */
 					success : function(res) {
 						console.log(res)
 						if (res == 'Error') {

@@ -109,7 +109,7 @@
 
 			/*버튼 캐스팅 */
 			$('#btn_webcam').click(function() {
-				$('#resultLine').text('촬영중입니다. 웹캠과 10cm이상 간격을 유지해주세요.');
+				$('#resultLine').text('촬영중입니다. 잠시 기다려주세요.');
 				$.ajax({
 					//와이파이 변경해야 함
 					url : 'http://192.168.0.66:5000/webcam',

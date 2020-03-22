@@ -111,7 +111,8 @@ Custom styles for this template
 						<li>더 안전하게 설정하기</li>
 						<li></li><br>
 					</ul>
-					<a href="<c:url value="/cctv/userCctv"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
+					<button type="button"
+						class="btn btn-lg btn-block btn-outline-primary">Click</button>
 				</div>
 				
 			</div>

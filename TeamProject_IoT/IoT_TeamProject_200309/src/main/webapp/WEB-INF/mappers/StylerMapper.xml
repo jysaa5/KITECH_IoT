@@ -13,7 +13,7 @@
 
 
 	<!-- 컬럼값과 domain의 필드명이 다를때 설정해줘야 됨. -->
- <resultMap type="com.iot.smarthome.styler.domain.StylerEditVo" id="StylerPhotoSave">
+ <resultMap type="com.iot.smarthome.styler.domain.StylerEditVo" id="StylerPost">
 		<id property="stylerIdx" column="stylerIdx" />
 		<result property="stylerUser" column="stylerUser" />
 		<result property="stylerPhoto" column="stylerPhoto" />
@@ -39,14 +39,6 @@
 		<result property="stylerPhoto" column="stylerPhoto" />
 		<result property="stylerOn" column="stylerOn" />
 	</resultMap>
-	
-				<!-- 컬럼값과 domain의 필드명이 다를때 설정해줘야 됨. -->
-<resultMap type="com.iot.smarthome.styler.domain.StylerRecommendationVo" id="StylerRecommendation">
-		<id property="stylerIdx" column="stylerIdx" />
-		<result property="stylerUser" column="stylerUser" />
-		<result property="stylerPhoto" column="stylerPhoto" />
-		<result property="stylerOn" column="stylerOn" />
-	</resultMap>
 
 
 			<!-- 컬럼값과 domain의 필드명이 다를때 설정해줘야 됨. -->
@@ -63,7 +55,7 @@
 	<!-- 조회: 페이지의 게시글 리스트를 보여줄 때, 페이징 하는 조회 -->
 	<!-- startRow(시작하는 번호), count(보여질 개수)가 들어오는데, 이 데이터들의 값의 순서를 알 수 없기 때문에 
 		param1, param2라고 한 것이다. -->
-    <select id="selectStylerList" resultMap="StylerPhotoSave">
+    <select id="selectStylerList" resultMap="StylerPost">
 
 		select * from stylerdb limit #{param1}, #{param2}
 
@@ -78,7 +70,7 @@
 	</select> 
 
 	<!--조회: idx값을 전달해서 조회 -->
- <select id="selectStylerByIdx" resultMap="StylerPhotoSave">
+ <select id="selectStylerByIdx" resultMap="StylerPost">
 
 		select * from stylerdb where stylerIdx=#{stylerIdx}
 
@@ -92,15 +84,7 @@
 	</select> -->
 	
 		<!--조회: idx값을 전달해서 조회 -->
-	<select id="selectStylerByIdx2" resultMap="DetailView">
-
-		select * from stylerdb where stylerIdx=#{stylerIdx}
-
-	</select>
-	
-	
-			<!--조회: idx값을 전달해서 조회 -->
-	<select id="selectStylerByIdx3" resultMap="StylerRecommendation">
+	<select id="selectStylerByIdx3" resultMap="DetailView">
 
 		select * from stylerdb where stylerIdx=#{stylerIdx}
 
