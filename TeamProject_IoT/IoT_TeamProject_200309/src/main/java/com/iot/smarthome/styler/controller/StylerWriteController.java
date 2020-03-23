@@ -13,7 +13,7 @@ import com.iot.smarthome.styler.service.StylerWriteService;
 
 //StylerWriteController: 사진을 저장할때 입력할 때 데이터를 보내는 컨트롤러
 @Controller
-@RequestMapping("/styler/stylerWrite")
+@RequestMapping("/styler/write")
 public class StylerWriteController {
 	
 	//객체 주입
@@ -33,7 +33,7 @@ public class StylerWriteController {
 
 		model.addAttribute("rCnt",  result);
 		
-		return "styler/stylerWrite";
+		return "styler/write";
 	
 	}//writeStyler 메서드 끝
 	

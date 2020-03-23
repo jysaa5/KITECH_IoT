@@ -41,7 +41,7 @@
 }
 
 #date_on {
-	font-size: 24px;
+	font-size: 20px;
 	width: 200px;
 	height: 60px;
 	text-align: center;
@@ -100,13 +100,14 @@
 			
 			<div class="a_layer">
 				<div class="a_content ">
-					<input type="date" name="date_Cctv_log" id="date_on">
+					<input type="date" class="btn btn-secondary"  name="date_Cctv_log" id="date_on">
 					<input type="button" class="btn btn-primary" value="확인" id="btn_on">
 				</div>
 			</div>
-			
+			<br>
 			<br>
 			<div id="dict_table"></div>
+			<br>
 			<br>
 			<div> <a href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home" /></a>
 			</div>

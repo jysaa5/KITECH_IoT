@@ -86,20 +86,18 @@
 				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">	 </p>
 			</div>
 			
-			<br>
-			<div>
-			<input type="button" class="btn btn-lg btn-block btn-outline-primary" value="촬영" id="btn_webcam"/>
-			</div>
 			
 			<br>
 			<div>
 			<h2 id="resultLine">촬영 버튼을 눌러주세요.</h2>
-			
 			</div>
 			<br>
 			<br>
 			<br>
-				
+			<div>
+			<input type="button" class="btn btn-lg btn-block btn-outline-primary" value="촬영" id="btn_webcam"/>
+			</div>
+			<br>
 			<div>
 			<a href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home"/></a>
 			</div>

@@ -97,15 +97,15 @@ Custom styles for this template
 						사진/영상 <!-- <small class="text-muted">확인</small> -->
 					</h2>
 					<ul class="list-unstyled mt-3 mb-4">
-						<li>오늘의 나의 집 보안 상태는?</li>
+						<li>우리집 보안 상태는?</li>
 						<li>외부인의 무단 침입 방지</li>
-						<li>나의 생활 패턴 확인</li>
+						<li>CCTV 데이터베이스</li>
 						<li></li><br>
 					</ul>
 					<a id="home_a1" href="<c:url value="/cctv/cctvList"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
 				</div>
 				<div class="card-header">
-					<h4 class="my-0 font-weight-normal">CCTV</h4>
+					<h4 class="my-0 font-weight-normal">CCTV Setting</h4>
 				</div>
 				<div class="card-body">
 					<h2 class="card-title pricing-card-title">
@@ -146,9 +146,9 @@ Custom styles for this template
 						데이터 분석 <!-- <small class="text-muted">확인</small> -->
 					</h2>
 					<ul class="list-unstyled mt-3 mb-4">
-						<li>우리집</li>
-						<li>나의 생활 패턴</li>
-						<li>분석</li>
+						<li>CCTV, 출입</li>
+						<li>온습도, LED, Styler</li>
+						<li>로그 분석</li>
 						<li></li><br>
 					</ul>
 					<a id="home_a4" href="<c:url value="/history/userSelectLog"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
@@ -171,7 +171,7 @@ Custom styles for this template
 					<a id="home_a5" href="<c:url value="/styler/userStyler"/>"><button type="button" class="btn btn-lg btn-block btn-outline-primary">Click</button></a>
 				</div>
 				<div class="card-header">
-					<h4 class="my-0 font-weight-normal">Styler</h4>
+					<h4 class="my-0 font-weight-normal">OOTD</h4>
 				</div>
 				<div class="card-body">
 					<h2 class="card-title pricing-card-title">

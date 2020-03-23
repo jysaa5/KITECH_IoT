@@ -13,7 +13,7 @@ import com.iot.smarthome.led.service.LedWriteService;
 
 //LedWriteController:LED On/Off 데이터를 보내는 컨트롤러
 @Controller
-@RequestMapping("/led/ledWrite")
+@RequestMapping("/led/write")
 public class LedWriteController {
 	
 	//객체 주입
@@ -33,7 +33,7 @@ public class LedWriteController {
 		
 		model.addAttribute("rCnt",  result);
 		
-		return "led/ledWrite";
+		return "led/write";
 	
 	}//writeLed 메서드 끝
 	

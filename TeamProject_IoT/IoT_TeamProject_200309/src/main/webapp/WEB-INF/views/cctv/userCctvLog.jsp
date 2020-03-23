@@ -49,7 +49,7 @@
 }
 
 #date_on {
-	font-size: 24px;
+	font-size: 20px;
 	width: 200px;
 	height: 60px;
 	text-align: center;
@@ -112,35 +112,13 @@
 			
 			<div class="a_layer">
 				<div class="a_content ">
-					<input type="date" name="date_Cctv_log" id="date_on">
-					
-					<!-- <div class="container">
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
-                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
-                    <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
-                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker4').datetimepicker({
-                    format: 'L'
-                });
-            }); -->
-        </script>
-    </div>
-</div>
+					<input type="date" class="btn btn-secondary" name="date_Cctv_log" id="date_on">
 					<input type="button" class="btn btn-primary" value="확인" id="btn_on">
 				</div>
 			</div>
 			
 			<br>
-			<div id="dict_table"></div>
+			<div id="dict_table" class="table table-striped"></div>
 			<br>
 			
 			<div>

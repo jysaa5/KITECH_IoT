@@ -60,6 +60,7 @@
 	display: table; 
 	margin-left: auto; 
 	margin-right: auto; 
+	color: yellow;
 
 }
 </style>
@@ -86,61 +87,70 @@
 		<div
 			class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
 			<div class="lh-100">
-				<h6 class="mb-0 text-white lh-100">실시간 CCTV 촬영본 보기</h6>
+				<h6 class="mb-0 text-white lh-100">실시간 CCTV</h6>
 				<small>Since 2020</small>
 			</div>
 		</div>
 
 		<div class="my-3 p-3 bg-white rounded box-shadow">
-			<h6 class="border-bottom border-gray pb-2 mb-0">실시간 CCTV 촬영본 보기</h6>
+			<h6 class="border-bottom border-gray pb-2 mb-0">실시간 CCTV</h6>
 			<div class="media text-muted pt-3">
 				<p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"> </p>
 			</div>
 			<table class="cctvSetting media text-muted pt-3">
 				<tr>
 					<td><iframe src="http://192.168.0.63:8033" height="480" width="640" scrolling="yes" frameborder="1">
-					CCTV 연결을 확인해주세요.
+					이 브라우저는 iframe을 지원하지 않습니다.
 					</iframe></td>
 				</tr>
 				</table>
 				<br>
-			<table class="cctvSetting table table-primary">
+			<table class="cctvSetting table table-striped table-dark">
 				<tr>
-				<td>
-				<br>	
-					<h4>카메라 실시간 컨트롤러</h4>
-				<br>
-				
+				<td colspan="2">	
+					<h4>CCTV 설정</h4>
+				</td>
+				</tr>
+				<tr>
+				<td colspan="2">
 				<div>
 		     	<h2 id="resultLine"></h2>
 		     	</div>
-		     	<br>
-				
-				<h3 style="font-size: 20px" style="cursor: hand;" title="카메라의 좌우방향을 조정합니다.">Left-------Right</h3> 
-				<input type="range" id="br_val" min="2" max="25" value="0"> 
-				<span id="num">0</span>
-				<br>
-				<br>
-				
-				<h3 style="font-size: 20px" style="cursor: hand" title="카메라의 상하방향을 조정합니다.">Up-------Down</h3> 
-				<input type="range" id="br_val2" min="2" max="7" value="0"> <span id="num2">0</span>
-				<br>
-				<br>
-				
-				</td>
-
+		     	</td>
 				</tr>
 				<tr>
 				<td>
-				<h4 style="cursor: hand;" title="저장되는 사진과 영상의 화질 setting 값입니다.
+				<h5>CCTV 좌우방향</h5>
+				</td>
+				<td>
+				<h3 style="font-size: 20px" style="cursor: hand;" title="카메라의 좌우방향을 조정합니다.">Left-------Right</h3> 
+				<input type="range" id="br_val" min="2" max="25" value="0"> 
+				<span id="num">0</span>
+				</td>
+				</tr>
+				
+				<tr>
+				<td>
+				<h5>CCTV 상하방향</h5>
+				</td>
+				<td>
+				<h3 style="font-size: 20px" style="cursor: hand" title="카메라의 상하방향을 조정합니다.">Up-------Down</h3> 
+				<input type="range" id="br_val2" min="2" max="7" value="0"> <span id="num2">0</span>
+				</td>
+				</tr>
+				
+				<tr>
+				<td>
+				<h5 style="cursor: hand;" title="저장되는 사진과 영상의 화질 setting 값입니다.
                                      0=(320,240),
                                      1=(640,480), 
                                      2=(1024,768), 
                                      3=(1280, 960),
                                      4=(1440, 900),
                                      5=(1680, 1050), 
-                                     6=(1920,1200)  ">Setting</h4>
-                  <br>
+                                     6=(1920,1200)  ">CCTV 화질</h5>
+                  </td>
+                  <td>
 						<h3 style="font-size: 20px">Low-------High</h3> 
 						<input type="range" id="s_val" min="0" max="6" value="0"> 
 						<span id="num3">0</span>

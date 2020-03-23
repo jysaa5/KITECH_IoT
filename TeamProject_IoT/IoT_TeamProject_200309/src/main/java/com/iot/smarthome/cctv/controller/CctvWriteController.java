@@ -13,7 +13,7 @@ import com.iot.smarthome.cctv.service.CctvWriteService;
 
 //CctvWriteController: CCTV 사진, 영상 저장하는 컨트롤러
 @Controller
-@RequestMapping("/cctv/cctvWrite")
+@RequestMapping("/cctv/write")
 public class CctvWriteController {
 	
 	//객체 주입
@@ -33,7 +33,7 @@ public class CctvWriteController {
 		System.out.println("결과: " + result );
 		model.addAttribute("rCnt",  result);
 		
-		return "cctv/cctvWrite";
+		return "cctv/write";
 	
 	}//cctvWrite 메서드 끝
 	
