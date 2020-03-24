@@ -130,6 +130,8 @@
 
 <script>
 		$(document).ready(function() {
+			
+			var data ='';
 
 			$('#btn_on').click(function() {
 
@@ -137,21 +139,50 @@
 
 				$.ajax({
 					url : 'http://192.168.0.24:5000/log/' + date,
-					/* url : 'http://192.168.0.78:5050/log/' + date, ->이게 원래 주소 */
+					/*url : 'http://192.168.0.78:5050/log/' + date,*/
 					success : function(res) {
 						console.log(res)
 						if (res == 'Error') {
 							$('#dict_table').text('해당하는 날짜에 저장된 로고가 없습니다.');
 						} else {
 							$('#dict_table').html(res);
+							data = res;
 						}
+						
+						$.ajax({
+							
+							url: 'writeLog',
+							type: 'POST',
+							data: {
+								cctvLogFile: data
+							},
+							success:function(res){
+								console.log('success')
+							}
+							
+						});
 
 					},
 					error: function(res){
 						$('#dict_table').text('다시 시도해주세요.');
 						}
 				});
-
+				
+				
+				/* $.ajax({
+					
+					url: 'writeLog',
+					type: 'POST',
+					data: {
+						cctvLog: data
+					},
+					success:function(res){
+						console.log('success')
+					}
+					
+				}); */
+				
+				
 			});
 
 		});

@@ -15,7 +15,7 @@ import com.iot.smarthome.cctv.domain.CctvVo;
 import com.iot.smarthome.cctv.domain.CctvWriteRequestVo;
 
 //서비스 bean으로 등록하기 
-//CctvWriteService: 게시글을 작성하는 sql을 실행하는 서비스 클래스
+//CctvWriteService: 사진, 영상을 작성하는 sql을 실행하는 서비스 클래스
 @Service("cctvWriteService")
 public class CctvWriteService {
 

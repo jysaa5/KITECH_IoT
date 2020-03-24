@@ -125,8 +125,8 @@
 				var date = $('#date_on').val();
 
 				$.ajax({
-					url : 'http://192.168.0.24:5000/log/' + date,
-					/* url:'http://192.168.0.66:5000/'+date, <- 이게 원래 주소*/
+					/*url : 'http://192.168.0.24:5000/log/' + date,*/
+					url:'http://192.168.0.66:5000/log/'+date,
 					success : function(res) {
 						console.log(res)
 						if (res == 'Error') {

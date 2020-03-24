@@ -125,8 +125,8 @@
 				var date = $('#date_on').val();
 
 				$.ajax({
-					url : 'http://192.168.0.24:5000/log/t-graph/' + date,
-					//http://192.168.0.63:8033 ->이게 원래 라즈베리파이 주소
+					/*url : 'http://192.168.0.24:5000/log/t-graph/' + date,*/
+					url:'http://192.168.0.87:5000/log/t-graph' +date,
 					success : function(res) {
 						console.log(res)
 						if (res == 'Error') {
