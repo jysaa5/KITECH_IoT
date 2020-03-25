@@ -134,7 +134,7 @@
 				<h5>CCTV 상하방향</h5>
 				</td>
 				<td>
-				<h3 style="font-size: 20px" style="cursor: hand" title="카메라의 상하방향을 조정합니다.">Up-------Down</h3> 
+				<h3 style="font-size: 20px" style="cursor: hand" title="카메라의 상하방향을 조정합니다.">Down-------Up</h3> 
 				<input type="range" id="br_val2" min="2" max="7" value="0"> <span id="num2">0</span>
 				</td>
 				</tr>

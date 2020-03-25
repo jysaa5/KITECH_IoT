@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Jekyll v3.8.6">
-<title>Smart Home</title>
+<title>Welcome Smart Home</title>
 
 <!-- 기본 CSS 처리 시작 -->
 <%@ include file="/WEB-INF/views/include/basic.jsp" %>

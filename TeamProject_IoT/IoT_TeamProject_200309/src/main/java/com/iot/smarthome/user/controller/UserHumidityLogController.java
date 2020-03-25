@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 //UserHumidityLogController: 습도를 보여주는 사용자 페이지 컨트롤러
 @Controller
-@RequestMapping("/weather/userHumLog")
+@RequestMapping("/humidity/userHumLog")
 public class UserHumidityLogController {
 	
 	//userHumidityLogView: 사용자 방안의 습도를 보여주는 페이지로 이동하는 메서드
@@ -14,7 +14,7 @@ public class UserHumidityLogController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String userHumidityLogView() {
 	
-		return "weather/userHumLog";
+		return "humidity/userHumLog";
 		
 	}//userHumidityLogView 메서드 끝
 

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.iot.smarthome.cctv.domain.CctvListViewVo;
 import com.iot.smarthome.cctv.service.CctvListService;
 
-//CctvListController: CCTV로 저장된 사진, 동영상 저장된 리스트
+//CctvListController: CCTV로 저장된 사진, 동영상 저장한 리스트
 @Controller
 public class CctvListController {
 

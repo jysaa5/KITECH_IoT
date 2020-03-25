@@ -77,6 +77,7 @@ text-align: center;
 					<th>타입</th>
 					<td>${cctvDetailView.cctvType}</td>
 					<tr> --%>
+					<tr>
 					<th>제목</th>
 					<td>${cctvDetailView.cctvFile}</td>
 					</tr>

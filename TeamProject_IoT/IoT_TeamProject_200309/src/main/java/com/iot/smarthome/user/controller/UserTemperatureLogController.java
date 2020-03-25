@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 //UserTemperatureLogController: 사용자 집안의 온도 로그 컨트롤러
 @Controller
-@RequestMapping("/weather/userTempLog")
+@RequestMapping("/temperature/userTempLog")
 public class UserTemperatureLogController {
 	
 	//userTemperatureLogView: 사용자 집안의 온도 로그 페이지로 이동하는 메서드
@@ -14,7 +14,7 @@ public class UserTemperatureLogController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String userTemperatureLogView() {
 	
-		return "weather/userTempLog";
+		return "temperature/userTempLog";
 		
 	}//userTemperatureLogView 메서드 끝
 

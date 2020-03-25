@@ -5,20 +5,23 @@ public class CctvLogVo {
 	
 	//cctv 로그 인덱스 번호
 	private int cctvLogIdx;   
-	//cctv 로그 제목
+	//cctv 로그 데이터(html)
 	private String cctvLogFile;
+	//cctv 로그 데이터 받는 시간
+	private String cctvLogDate;
 
 	//<생성자>//
 	//기본 생성자
 	public CctvLogVo() {
 		super();
 	}
-	
+
 	//생성자
-	public CctvLogVo(int cctvLogIdx, String cctvLogFile) {
+	public CctvLogVo(int cctvLogIdx, String cctvLogFile, String cctvLogDate) {
 		super();
 		this.cctvLogIdx = cctvLogIdx;
 		this.cctvLogFile = cctvLogFile;
+		this.cctvLogDate = cctvLogDate;
 	}
 
 	//getter, setter
@@ -38,11 +41,20 @@ public class CctvLogVo {
 		this.cctvLogFile = cctvLogFile;
 	}
 
-	//toString
-	@Override
-	public String toString() {
-		return "CctvLogVo [cctvLogIdx=" + cctvLogIdx + ", cctvLogFile=" + cctvLogFile + "]";
+	public String getCctvLogDate() {
+		return cctvLogDate;
 	}
 
+	public void setCctvLogDate(String cctvLogDate) {
+		this.cctvLogDate = cctvLogDate;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "CctvLogVo [cctvLogIdx=" + cctvLogIdx + ", cctvLogFile=" + cctvLogFile + ", cctvLogDate=" + cctvLogDate
+				+ "]";
+	}
+	
 
 }//CctvLogVo 클래스 끝

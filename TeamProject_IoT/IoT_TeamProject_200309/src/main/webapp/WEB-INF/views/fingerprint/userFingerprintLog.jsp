@@ -13,6 +13,15 @@
 
 <style>
 
+#btn_logDB{
+
+	font-size: 24px;
+	width: 200px;
+	height: 60px;
+	text-align: center;
+
+}
+
 #btn_on {
 	font-size: 24px;
 	width: 200px;
@@ -103,8 +112,11 @@
 			
 			<div class="a_layer">
 				<div class="a_content ">
+					<h6>날짜를 선택해주세요.</h6>
+					<br>
 					<input type="date" class="btn btn-secondary"  name="date_Cctv_log" id="date_on">
 					<input type="button" class="btn btn-primary"  value="확인" id="btn_on">
+					<a href="<c:url value="/fingerprint/fingerprintLogList"/>"><input type="button" class="btn btn-success" value="로그 DB" id="btn_logDB"/></a>
 				</div>
 			</div>
 			
@@ -121,6 +133,8 @@
 
 <script>
 		$(document).ready(function() {
+			
+			var logData ='';
 
 			$('#btn_on').click(function() {
 
@@ -135,7 +149,22 @@
 							$('#dict_table').text('해당하는 날짜에 저장된 로고가 없습니다.');
 						} else {
 							$('#dict_table').html(res);
+							logData = res;
 						}
+						
+						$.ajax({
+							
+							url: 'writeLog',
+							type: 'POST',
+							data: {
+								fingerprintLogFile: logData,
+								fingerprintLogDate: date
+							},
+							success:function(res){
+								console.log('success')
+							}
+							
+						});
 
 					},
 					error: function(res){

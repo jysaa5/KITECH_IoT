@@ -80,8 +80,8 @@
 			<a id="home_a1" href="<c:url value="/cctv/userCctvLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="CCTV 로그" id="btn_0"></a><br>
 			<a id="home_a2" href="<c:url value="/fingerprint/userFingerprintLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Fingerprint 로그" id="btn_1"></a><br>
 			<a id="home_a3" href="<c:url value="/led/userLedLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="LED 로그" id="btn_2"></a><br>
-			<a id="home_a4" href="<c:url value="/weather/userTempLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="온도 로그" id="btn_3"></a><br>
-			<a id="home_a5" href="<c:url value="/weather/userHumLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="습도 로그" id="btn_4"></a><br>
+			<a id="home_a4" href="<c:url value="/temperature/userTempLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="온도 로그" id="btn_3"></a><br>
+			<a id="home_a5" href="<c:url value="/humidity/userHumLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="습도 로그" id="btn_4"></a><br>
 			<a id="home_a6" href="<c:url value="/styler/userStylerLog"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Styler 로그" id="btn_5"></a><br>
 			<div>
 				<a id="home_a7" href="<c:url value="/"/>"><input type="button" class="btn btn-lg btn-block btn-outline-primary" value="Home" id="click-home" /></a>

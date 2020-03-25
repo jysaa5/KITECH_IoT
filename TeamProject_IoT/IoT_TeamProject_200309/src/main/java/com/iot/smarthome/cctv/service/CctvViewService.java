@@ -10,7 +10,7 @@ import com.iot.smarthome.cctv.domain.CctvEditVo;
 
 //서비스 bean으로 등록하기 
 //CctvViewService: DB에서 idx와 일치하는 사진, 동영상 데이터를 가져다주는 서비스 클래스 (조회 기능)
-@Service("cctvViewService")
+@Service("CctvViewService")
 public class CctvViewService {
 
 	@Autowired

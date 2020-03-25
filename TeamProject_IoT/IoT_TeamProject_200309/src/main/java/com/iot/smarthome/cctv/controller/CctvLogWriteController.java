@@ -23,11 +23,11 @@ public class CctvLogWriteController {
 	//커맨드형식 
 	//Model에 저장
 	@RequestMapping(method = RequestMethod.POST)
-	public String cctvLogWrite(CctvLogWriteRequestVo writeLog, Model model) {
+	public String cctvLogWrite(CctvLogWriteRequestVo cctvLog, Model model) {
 		
-		System.out.println(writeLog);
+		System.out.println(cctvLog);
 		
-		int result = writeLogService.writeCctvLog(writeLog);
+		int result = writeLogService.writeCctvLog(cctvLog);
 		
 		System.out.println("결과: " + result );
 		model.addAttribute("rCnt",  result);
