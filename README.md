@@ -28,15 +28,12 @@
  <li>팀명: 5G / 팀장: 김주연  <br></li>
  <li>팀원:  <a href="https://github.com/jysaa5">김주연</a>, <a href="https://github.com/jieunin1213">박지은</a>, <a href="https://github.com/capashage2">정용기</a>,  <a href="https://github.com/sjm99198">조성빈</a>, <a href="https://github.com/db3124">조지윤</a><br></li>
  <li>역할: 각자 관심 있는 주제로 웹 페이지 구현 <br></li>
- <li>구현한 기능: Client Program, Server <br></li>
- <li>사용한 기술: Open API, HTML5, CSS3, JavaScript, jQuery, ajax, Bootstrap(4.4.1), Mysql, Java(8), Spring Framework(4.3.18), MyBatis(3.4.6), AWS: EC2, RDS <br></li> 
-</ul>
-<table style="text-align:center; margin:auto;">
+ <table style="text-align:center; margin:auto;">
   <tr>
   <td colspan = "6">
     주제: 포털사이트
   </td>
-  </td>
+  </tr>
   <tr>
     <td>팀원</td> <td>조지윤</td> <td>정용기</td> <td>박지은</td> <td>조성빈</td> <td>김주연</td>
   </tr>
@@ -44,6 +41,28 @@
     <td>소재</td><td>국어사전</td><td>가계부</td><td>금융상품</td><td>컴퓨터 부품 </td><td>게임 추천 게시판&유튜브 검색</td>
   </tr>
   </table>
+ <li>구현한 기능: Server, Client Program<br></li>
+ <li>사용한 기술: Open API, HTML5, CSS3, JavaScript, jQuery, ajax, Bootstrap(4.4.1), Mysql, Java(8), Spring Framework(4.3.18), MyBatis(3.4.6), AWS: EC2, RDS <br></li>
+ <table style="text-align:center; margin:auto;">
+  <tr>
+   <td>
+    기술
+    </td>
+   <td>
+    버전
+    </td>
+  </tr>
+  <tr>
+   <td>
+    Java
+   </td>
+   <td>
+    8
+   </td>
+  </tr>
+ </table>
+   
+</ul>
 <ul>
   <li>프로젝트 업데이트 History<br></li>
    2020.02.16 - 금융감독원 금융상품, 우리말샘 국어사전  Open API xml parsing to html (Use Ajax)<br>
