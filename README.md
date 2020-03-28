@@ -46,7 +46,7 @@
  <table style="text-align:center; margin:auto;">
   <tr>
    <td>
-    기술
+    언어 또는 기술
     </td>
    <td>
     버전
@@ -60,6 +60,13 @@
     8
    </td>
   </tr>
+  <tr>
+   <td>
+    Spring Framework
+   </td>
+   <td>
+    4.3.18
+   </td>
  </table>
    
 </ul>
