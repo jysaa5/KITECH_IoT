@@ -17,5 +17,4 @@
 <hr>
 <h3><a href="https://github.com/jysaa5/KITECH_5G-Hobby_Site"> [팀 프로젝트_Web] </a></h3>
 <br>
-<hr>
 <h3><a href="https://github.com/jysaa5/KITECH_5G-Smart_Home"> [팀 프로젝트_IoT] </a></h3>
