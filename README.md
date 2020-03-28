@@ -42,31 +42,40 @@
   </tr>
   </table>
  <li>구현한 기능: Server, Client Program<br></li>
- <li>사용한 기술: Open API, HTML5, CSS3, JavaScript, jQuery, ajax, Bootstrap(4.4.1), Mysql, Java(8), Spring Framework(4.3.18), MyBatis(3.4.6), AWS: EC2, RDS <br></li>
+ <li>사용한 기술: Open API, JavaScript, jQuery, ajax, Bootstrap(4.4.1), AWS: EC2, RDS <br></li>
  <table style="text-align:center; margin:auto;">
   <tr>
-   <td>
-    언어 또는 기술
-    </td>
-   <td>
-    버전
-    </td>
+   <td>언어 & 기술 & 구조</td>
+   <td>버전</td>
   </tr>
   <tr>
-   <td>
-    Java
-   </td>
-   <td>
-    8
-   </td>
+   <td>Java</td>
+   <td>8</td>
   </tr>
   <tr>
-   <td>
-    Spring Framework
-   </td>
-   <td>
-    4.3.18
-   </td>
+   <td>Spring Framework</td>
+   <td>4.3.18</td>
+  </tr>
+  <tr>
+   <td>MySQL</td>
+   <td>8.0.18</td>
+  </tr>
+  <tr>
+    <td>MyBatis</td>
+    <td>3.4.6</td>
+  </tr>
+  <tr>
+   <td>HTML</td>
+   <td>5</td>
+  </tr>
+  <tr>
+   <td>CSS</td>
+   <td>3</td>
+  </tr>
+  <tr>
+   <td>JavaScript</td>
+   <td></td>
+  </tr>
  </table>
    
 </ul>
