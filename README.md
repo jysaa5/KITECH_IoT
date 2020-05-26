@@ -22,8 +22,8 @@
  </ul>
  <h3>[팀장]</h3>
 <ul>
- <li><a href="https://github.com/jysaa5">김주연</a></li>
- <li><a href="https://github.com/jieunin1213">박지은</a></li>
+ <li><h4><a href="https://github.com/jysaa5">김주연</a></h4></li>
+ <li><h4><a href="https://github.com/jieunin1213">박지은</a></h4></li>
  </ul>
 <h3>[팀원]</h3>
 <ul>
@@ -35,6 +35,6 @@
 <hr>
 <h3>[팀 프로젝트]</h3>
 <ul>
- <li><h5><a href="https://github.com/jysaa5/KITECH_5G-Hobby_Site"> Web Project </a></h5></li>
- <li><h5><a href="https://github.com/jysaa5/KITECH_5G-Smart_Home"> IoT Project </a></h5></li>
+ <li><h4><a href="https://github.com/jysaa5/KITECH_5G-Hobby_Site"> Web Project </a></h4></li>
+ <li><h4><a href="https://github.com/jysaa5/KITECH_5G-Smart_Home"> IoT Project </a></h4></li>
 </ul>
