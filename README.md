@@ -33,5 +33,8 @@
  <li><a href ="https://github.com/db3124">조지윤</a></li>
  </ul>
 <hr>
-<h3><a href="https://github.com/jysaa5/KITECH_5G-Hobby_Site"> [팀 프로젝트_Web] </a></h3>
-<h3><a href="https://github.com/jysaa5/KITECH_5G-Smart_Home"> [팀 프로젝트_IoT] </a></h3>
+<h3>[팀 프로젝트]</h3>
+<ul>
+ <li><a href="https://github.com/jysaa5/KITECH_5G-Hobby_Site"> Web Project </a></li>
+ <li><a href="https://github.com/jysaa5/KITECH_5G-Smart_Home"> IoT Project </a></li>
+</ul>
