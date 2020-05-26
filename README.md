@@ -16,5 +16,10 @@
  <li> Software Configuration Management Tool: GitHub </li>
 </ul>
 <hr>
+<h3>[팀명]</h3>
+<ul>
+ <li>5G</li>
+ </ul>
+<hr>
 <h3><a href="https://github.com/jysaa5/KITECH_5G-Hobby_Site"> [팀 프로젝트_Web] </a></h3>
 <h3><a href="https://github.com/jysaa5/KITECH_5G-Smart_Home"> [팀 프로젝트_IoT] </a></h3>
