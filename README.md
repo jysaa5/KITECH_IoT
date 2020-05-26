@@ -25,6 +25,12 @@
  <li><a href="https://github.com/jysaa5">김주연</a></li>
  <li><a href="https://github.com/jieunin1213">박지은</a></li>
  </ul>
+<h3>[팀원]</h3>
+<ul>
+ <li><a href="https://github.com/jy950902">구자윤</a></li>
+ <li><a href="https://github.com/capashage2">정용기</a></li>
+ <li><a href ="https://github.com/db3124">조지윤</a></li>
+ </ul>
 <hr>
 <h3><a href="https://github.com/jysaa5/KITECH_5G-Hobby_Site"> [팀 프로젝트_Web] </a></h3>
 <h3><a href="https://github.com/jysaa5/KITECH_5G-Smart_Home"> [팀 프로젝트_IoT] </a></h3>
