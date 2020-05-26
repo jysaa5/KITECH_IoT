@@ -13,6 +13,7 @@
  <li> Server: Apache HTTP Server | PuTTY </li>
  <li> Web Application Server(WAS): Tomcat </li>
  <li> Operating System(OS): Window | Linux | Raspbian</li>
+ <li> Software Configuration Management tool: GitHub </li>
 </ul>
 <hr>
 <h3><a href="https://github.com/jysaa5/KITECH_5G-Hobby_Site"> [팀 프로젝트_Web] </a></h3>
