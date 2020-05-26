@@ -9,10 +9,10 @@
  <li> Database: Oracle, MySQL, SQLite <br></li>
  <li> Framework: Spring, Spring boot | Mybatis | Flask <br></li>
  <li> Tool: Eclipse | sqldeveloper, MySQL Workbench 8.0 CE | Brackets | FileZilla | Visual Studio Code | Flask | Android Studio </li>
- <li> Cloud Computing Services: Amazon Web Services(AWS) - EC2, RDS</li>
  <li> Server: Apache HTTP Server | PuTTY </li>
  <li> Web Application Server(WAS): Tomcat </li>
  <li> Operating System(OS): Window | Linux | Raspbian</li>
+ <li> Cloud Computing Services: Amazon Web Services(AWS) - EC2, RDS</li>
  <li> Software Configuration Management Tool: GitHub </li>
 </ul>
 <hr>
