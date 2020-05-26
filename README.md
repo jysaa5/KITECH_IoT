@@ -27,14 +27,14 @@
  </ul>
 <h3>[팀원]</h3>
 <ul>
- <li><a href="https://github.com/jy950902">구자윤</a></li>
- <li><a href="https://github.com/capashage2">정용기</a></li>
- <li><a href ="https://github.com/sjm99198">조성빈</a></li>
- <li><a href ="https://github.com/db3124">조지윤</a></li>
+ <li><h4><a href="https://github.com/jy950902">구자윤</a></h4></li>
+ <li><h4><a href="https://github.com/capashage2">정용기</a></h4></li>
+ <li><h4><a href ="https://github.com/sjm99198">조성빈</a></h4></li>
+ <li><h4><a href ="https://github.com/db3124">조지윤</a></h4></li>
  </ul>
 <hr>
 <h3>[팀 프로젝트]</h3>
 <ul>
- <li><a href="https://github.com/jysaa5/KITECH_5G-Hobby_Site"> Web Project </a></li>
- <li><a href="https://github.com/jysaa5/KITECH_5G-Smart_Home"> IoT Project </a></li>
+ <li><h5><a href="https://github.com/jysaa5/KITECH_5G-Hobby_Site"> Web Project </a></h5></li>
+ <li><h5><a href="https://github.com/jysaa5/KITECH_5G-Smart_Home"> IoT Project </a></h5></li>
 </ul>
