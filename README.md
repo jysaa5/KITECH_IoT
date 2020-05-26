@@ -29,6 +29,7 @@
 <ul>
  <li><a href="https://github.com/jy950902">구자윤</a></li>
  <li><a href="https://github.com/capashage2">정용기</a></li>
+ <li><a href ="https://github.com/sjm99198">조성빈</a></li>
  <li><a href ="https://github.com/db3124">조지윤</a></li>
  </ul>
 <hr>
