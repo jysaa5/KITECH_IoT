@@ -11,7 +11,7 @@
  <li> Tool: Eclipse | sqldeveloper | MySQL Workbench 8.0 CE | Brackets | FileZilla | Visual Studio Code | Android Studio </li>
  <li> Web Application Server(WAS): Tomcat </li>
  <li> Server: Apache HTTP Server | PuTTY </li>
- <li> Operating System(OS): Window | Linux | Raspbian</li>
+ <li> Operating System(OS): Windows | Linux | Raspbian</li>
  <li> Cloud Computing Services: Amazon Web Services(AWS) - EC2, RDS</li>
  <li> Software Configuration Management Tool: GitHub </li>
 </ul>
