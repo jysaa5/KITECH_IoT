@@ -7,7 +7,7 @@
  <li> Hardware: Arduino | RaspberryPi <br></li>
  <li> Language: Java | HTML5, CSS3, JavaScript, jQuery, ajax | Python | Kotlin  <br></li>
  <li> Database: Oracle | MySQL | SQLite <br></li>
- <li> Framework: Spring, Spring boot | Mybatis | Flask <br></li>
+ <li> Framework: Spring, Spring boot | MyBatis | Flask <br></li>
  <li> Tool: Eclipse | sqldeveloper | MySQL Workbench 8.0 CE | Brackets | FileZilla | Visual Studio Code | Android Studio </li>
  <li> Web Application Server(WAS): Tomcat </li>
  <li> Server: Apache HTTP Server </li>
