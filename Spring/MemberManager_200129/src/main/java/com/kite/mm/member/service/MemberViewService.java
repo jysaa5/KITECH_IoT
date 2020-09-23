@@ -7,9 +7,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Service;
 
 /*
-	수정일 : 2019.08.21 
-	작성자 : 유영진  
-	수정 내용  : 인증 상태를 3개 상태로 구분	해서 return, return type 변경
+	수정 내용  : 인증 상태를 3개 상태로 구분해서 return, return type 변경
 			   boolean -> int
 		 	  	0 - 로그인 실패
 				1 - 미인증 계정 로그인	
